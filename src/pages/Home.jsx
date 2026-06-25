@@ -112,6 +112,7 @@ export default function Home() {
                 <img
                   src="/images/zrika/Zrika%2000.jpg"
                   alt="SuJaya Herbals premium Ayurvedic product"
+                  loading="lazy"
                 />
               </div>
             </AnimatedSection>
@@ -135,7 +136,7 @@ export default function Home() {
                   <div className="ingredient-card__front">
                     {ingredient.image ? (
                       <div className="ingredient-card__img">
-                        <img src={ingredient.image} alt={ingredient.name} />
+                        <img src={ingredient.image} alt={ingredient.name} loading="lazy" />
                       </div>
                     ) : (
                       <div className="ingredient-card__emoji">🌿</div>

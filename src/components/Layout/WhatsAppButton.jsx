@@ -22,7 +22,7 @@ export default function WhatsAppButton() {
           position: fixed;
           bottom: 1.5rem;
           right: 1.5rem;
-          z-index: 50;
+          z-index: 90;
           background: #25D366;
           color: white;
           width: 3.5rem;
@@ -34,6 +34,7 @@ export default function WhatsAppButton() {
           box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
           transition: all 0.3s ease;
           animation: pulse 2s infinite;
+          will-change: transform;
         }
         .whatsapp-fab:hover {
           transform: scale(1.12);

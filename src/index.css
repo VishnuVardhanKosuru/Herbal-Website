@@ -370,13 +370,15 @@ p {
 /* Scroll reveal — hidden initially, revealed by JS */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(30px) translateZ(0);
   transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
 }
 
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) translateZ(0);
+  will-change: auto;
 }
 
 .reveal-delay-1 { transition-delay: 0.1s; }
@@ -435,4 +437,20 @@ p {
 ::selection {
   background-color: var(--color-primary);
   color: var(--color-text-on-primary);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

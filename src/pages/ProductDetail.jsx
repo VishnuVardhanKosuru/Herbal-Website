@@ -94,7 +94,7 @@ export default function ProductDetail() {
                         className={`product-gallery__thumb ${currentImageIndex === i ? 'active' : ''}`}
                         onClick={() => setCurrentImageIndex(i)}
                       >
-                        <img src={img} alt={`Thumbnail ${i}`} />
+                        <img src={img} alt={`Thumbnail ${i}`} loading="lazy" />
                       </button>
                     ))}
                   </div>

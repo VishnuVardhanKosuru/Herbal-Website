@@ -1,7 +1,34 @@
+/* ============================================
+   Site Header — Sticky wrapper
+   ============================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-white);
+  transition: box-shadow var(--transition-base);
+  will-change: transform;
+}
+
+.site-header--scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+/* ---- Promo Banner ---- */
 .promo-banner {
   background: var(--color-primary);
   text-align: center;
   padding: 0.625rem 1rem;
+  max-height: 3rem;
+  overflow: hidden;
+  transition: max-height var(--transition-base), padding var(--transition-base), opacity var(--transition-base);
+  opacity: 1;
+}
+
+.promo-banner--hidden {
+  max-height: 0;
+  padding: 0 1rem;
+  opacity: 0;
 }
 
 .promo-banner p {
@@ -10,36 +37,36 @@
   font-weight: 500;
   letter-spacing: 0.02em;
   margin: 0;
+  white-space: nowrap;
 }
 
+/* ---- Navbar ---- */
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 50;
   background: var(--color-white);
-  transition: all var(--transition-base);
+  transition: background var(--transition-base);
 }
 
-.navbar--scrolled {
+.site-header--scrolled .navbar {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-md);
 }
 
 .navbar__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
+  height: 4.5rem;
   gap: 2rem;
 }
 
+/* ---- Logo ---- */
 .navbar__logo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0;
+  flex-shrink: 0;
 }
 
 .navbar__logo-text {
@@ -64,6 +91,7 @@
   letter-spacing: 0.05em;
 }
 
+/* ---- Desktop Links ---- */
 .navbar__links {
   display: flex;
   align-items: center;
@@ -103,24 +131,39 @@
   font-size: 0.875rem;
 }
 
+/* ---- Mobile Toggle ---- */
 .navbar__toggle {
   display: none;
   color: var(--color-text);
   padding: 0.5rem;
+  position: relative;
+  z-index: 110;
 }
 
-/* Mobile Menu */
+/* ---- Mobile Menu Overlay ---- */
+.navbar__mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 105;
+  animation: fadeIn 0.2s ease;
+}
+
+/* ---- Mobile Menu ---- */
 .navbar__mobile {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+  right: 0;
+  width: min(80%, 320px);
+  height: 100dvh;
   background: var(--color-white);
-  z-index: 60;
+  z-index: 106;
   transform: translateX(100%);
   transition: transform var(--transition-base);
   padding-top: 5rem;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .navbar__mobile--open {
@@ -141,12 +184,18 @@
   font-weight: 500;
   border-bottom: 1px solid var(--color-border);
   color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+.navbar__mobile-link:hover {
+  color: var(--color-primary);
 }
 
 .navbar__mobile-link--active {
   color: var(--color-primary);
 }
 
+/* ---- Mobile Breakpoint ---- */
 @media (max-width: 768px) {
   .navbar__links {
     display: none;
@@ -154,10 +203,31 @@
 
   .navbar__toggle {
     display: block;
-    z-index: 70;
   }
 
   .navbar__logo-text {
     font-size: 1.375rem;
+  }
+
+  .navbar__inner {
+    height: 3.75rem;
+  }
+
+  /* On mobile, don't make header sticky — it takes too much space */
+  .site-header {
+    position: relative;
+  }
+
+  /* Always show promo banner on mobile (no hide on scroll since it's not sticky) */
+  .promo-banner--hidden {
+    max-height: 3rem;
+    padding: 0.625rem 1rem;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-banner p {
+    font-size: 0.75rem;
   }
 }
