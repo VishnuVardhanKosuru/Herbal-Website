@@ -13,7 +13,7 @@
 
 .about__story-image img {
   width: 100%;
-  height: 500px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
@@ -137,7 +137,7 @@
   }
 
   .about__story-image img {
-    height: 300px;
+    aspect-ratio: 16 / 9;
   }
 
   .about__values-grid {
