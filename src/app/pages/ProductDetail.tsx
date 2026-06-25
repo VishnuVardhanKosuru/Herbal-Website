@@ -1,0 +1,1086 @@
+import { useState } from 'react';
+import { useParams, Link } from 'react-router';
+import { motion, AnimatePresence } from 'motion/react';
+import { MessageCircle, Star, Leaf, Shield, Award, ArrowLeft, ChevronLeft, ChevronRight, Phone, Mail, X, CheckCircle, Play, ChevronDown } from 'lucide-react';
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { Input } from '../components/ui/input';
+import { Label } from '../components/ui/label';
+
+const productData: Record<string, any> = {
+  'venika-hair-oil': {
+    name: 'Venika - Hair Oil',
+    category: 'Haircare',
+    price: '₹595',
+    mrp: '₹700',
+    description: "Let your hair feel the purity of Ayurveda. SuJaya Herbals Venika hair care oil is meticulously crafted to nourish your scalp, strengthen hair roots and promote healthy growth. Infused with potent herbs it prevents premature greying and brings back your hair's natural shine and vitality.",
+    images: ['/images/venika/Venika 00.jpg', '/images/venika/Venika 01.jpg', '/images/venika/Venika 02.jpg', '/images/venika/Venika 03.jpg'],
+    benefits: [
+      'Enhances natural hair growth',
+      'Strengthens hair from roots',
+      'Reduces hair fall and breakage',
+      'Prevents premature greying',
+      'Conditions scalp for healthy hair'
+    ],
+    ingredients: [
+      { name: 'Bhringraj', benefit: 'Promotes hair growth and prevents premature graying' },
+      { name: 'Amla', benefit: 'Rich in Vitamin C, strengthens hair follicles' },
+      { name: 'Brahmi', benefit: 'Nourishes the scalp and reduces hair fall' },
+      { name: 'Coconut Oil', benefit: 'Deep conditioning and moisturizing base' }
+    ],
+    directions: 'Warm the oil slightly. Massage gently into scalp and hair from roots to tips. Leave on for at least 2 hours or overnight for deep nourishment. Wash with a mild shampoo. Use 2-3 times a week for best results.',
+    volume: '100ml'
+  },
+  'medhini-anti-dandruff-oil': {
+    name: 'Medhini - Anti Dandruff & Hair Oil',
+    category: 'Haircare',
+    price: '₹289',
+    mrp: '₹340',
+    description: 'Flakes, itchiness and scalp irritation? Say good bye to them with SuJaya Herbals Medhini anti dandruff oil. A powerful blend of neem, tea tree and ancient Ayurvedic herbs. This oil deeply purifies the scalp, controls dandruff and support healthy hair growth. Enjoy a clean refreshed and flake free scalp naturally.',
+    images: ['/images/medhini/Medhini 01.jpg', '/images/medhini/Medhini 02.jpg', '/images/medhini/Medhini 03.jpg', '/images/medhini/Medhini 04.jpg'],
+    benefits: [
+      'Significantly reduces dandruff and flakiness',
+      'Soothes itchy and irritated scalp',
+      'Helps unclog hair follicles',
+      'Promotes healthier and thicker hair growth'
+    ],
+    ingredients: [
+      { name: 'Neem', benefit: 'Antibacterial properties that combat dandruff' },
+      { name: 'Tea Tree Oil', benefit: 'Natural antifungal that soothes scalp' },
+      { name: 'Methi (Fenugreek)', benefit: 'Strengthens hair roots and promotes growth' },
+      { name: 'Sesame Oil', benefit: 'Moisturizing base that nourishes scalp' }
+    ],
+    directions: 'Apply oil to scalp and massage gently in circular motions. Leave on for 1-2 hours or overnight. Wash thoroughly with a mild shampoo. Use regularly for best results in controlling dandruff and promoting hair growth.',
+    volume: '100ml'
+  },
+  'vama-lip-balm': {
+    name: 'Vama Lip Balm',
+    category: 'Lip Care',
+    price: '₹234',
+    mrp: '₹275',
+    description: 'Treat your lips to the pure, soothing care of SuJaya Herbals Vama Lip balm. Crafted with a blend of natural butter, essential oils and Ayurvedic herbs, this balm deeply hydrates, heals chapped lips, and leaves a soft healthy glow. Paraben and mercury free. It’s the perfect daily nourishment for naturally beautiful lips.',
+    images: ['/images/vama/Vama 00.jpg', '/images/vama/Vama 01.jpg', '/images/vama/Vama 02.jpg', '/images/vama/Vama 03.jpg'],
+    benefits: [
+      'Deeply moisturizes and heals dry chapped lips',
+      'Protects against harsh weather conditions',
+      'Restores natural lip color and softness',
+      '100% natural, safe and free from harmful chemicals'
+    ],
+    ingredients: [
+      { name: 'Beeswax', benefit: 'Creates a protective barrier and locks in moisture' },
+      { name: 'Shea Butter', benefit: 'Deeply nourishes and softens lips' },
+      { name: 'Vitamin E', benefit: 'Antioxidant protection and healing' },
+      { name: 'Natural Herbs', benefit: 'Gentle care with medicinal benefits' }
+    ],
+    directions: 'Apply generously to lips as needed throughout the day. For extra hydration, apply before bedtime. Use regularly to keep lips soft, smooth, and protected.',
+    volume: '5gms'
+  },
+  'zrika-premium-face-oil': {
+    name: 'Zrika Premium Face Oil',
+    category: 'Skincare',
+    price: '₹979',
+    mrp: '₹1224',
+    description: 'Reveal your skin’s natural radiance with SuJaya Herbals Zrika Premium face oil. Infused with pure saffron and rare Ayurvedic botanicals, this luxurious oil deeply nourishes, brightens your complexion and reduces the appearance of fine lines and blemishes. Experience the golden secret to flawless, glowing skin.',
+    images: ['/images/zrika/Zrika 00.jpg', '/images/zrika/Zrika 01.jpg', '/images/zrika/Zrika 02.jpg', '/images/zrika/Zrika 03.jpg'],
+    benefits: [
+      'Brightens and evens out skin tone',
+      'Deeply moisturizes for soft and supple skin',
+      'Reduces blemishes, dark spots and pigmentation',
+      'Fights sign of aging and improves skin elasticity',
+      'Gives a healthy natural glow'
+    ],
+    ingredients: [
+      { name: 'Saffron', benefit: 'Enhances radiance and brightens complexion' },
+      { name: 'Kumkumadi Oil', benefit: 'Traditional blend for glowing skin' },
+      { name: 'Sandalwood', benefit: 'Cools, clarifies and refines skin tone' },
+      { name: 'Almond Oil', benefit: 'Nourishes and softens skin' }
+    ],
+    directions: 'After cleansing, apply 2-3 drops to face and neck. Gently massage in upward circular motions until absorbed. Use daily, preferably at night, for best results. Can also be mixed with your moisturizer.',
+    volume: '10ml'
+  },
+  'laya-face-care-oil': {
+    name: 'Laya - Face Care Oil',
+    category: 'Skincare',
+    price: '₹595',
+    mrp: '₹700',
+    description: 'Rejuvenate your skin with SuJaya Herbals Laya pre bath oil. Specially formulated to remove stubborn sun tan and restore your natural glow, this enriching oil deeply penetrates to nourish and repair your skin before every bath. Embrace brighter, smoother and tan free skin everyday.',
+    images: ['/images/laya/Laya 00.jpg', '/images/laya/Laya 01.jpg', '/images/laya/Laya 02.jpg', '/images/laya/Laya 03.jpg'],
+    benefits: [
+      'Effectively removes sun tan and dullness',
+      'Deeply hydrates and softens skin',
+      'Improves skin texture and radiance',
+      'Prepares skin for a refreshing bath experience',
+      'Infused with skin loving Ayurvedic herbs'
+    ],
+    ingredients: [
+      { name: 'Turmeric', benefit: 'Natural skin brightening and tan reduction' },
+      { name: 'Vitamin C', benefit: 'Powerful antioxidant that evens skin tone' },
+      { name: 'Licorice Extract', benefit: 'Reduces hyperpigmentation and brightens' },
+      { name: 'Jojoba Oil', benefit: 'Lightweight moisturization and protection' }
+    ],
+    directions: 'Apply oil evenly to face and neck before bathing. Gently massage for 2-3 minutes. Leave on for 15-20 minutes. Rinse with lukewarm water and cleanse as usual. Use regularly for visible reduction in tan and brighter skin.',
+    volume: '15ml'
+  },
+};
+
+export function ProductDetail() {
+  const { id } = useParams();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+  const [showSubmitConfirmation, setShowSubmitConfirmation] = useState(false);
+  const [showContactPopup, setShowContactPopup] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const product = id ? productData[id] : null;
+
+  if (!product) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl mb-4">Product Not Found</h1>
+          <Link to="/products" className="text-primary hover:underline">
+            Return to Products
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/919876543210?text=Hello! I would like to know more about ${product.name}.`, '_blank');
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Just show confirmation, don't connect to WhatsApp
+    setShowSubmitConfirmation(true);
+    // Reset form
+    setFormData({ name: '', email: '', phone: '', message: '' });
+  };
+
+  const handleCall = () => {
+    window.location.href = 'tel:+919876543210';
+  };
+
+  const handleWhatsAppContact = () => {
+    window.open('https://wa.me/919876543210?text=Hello! I would like to know more about your products.', '_blank');
+  };
+
+  const handleEmail = () => {
+    window.location.href = 'mailto:info@sujayaherbals.com';
+  };
+
+  const nextImage = () => {
+    if (product.images && product.images.length > 0) {
+      setCurrentImageIndex((prev) => (prev + 1) % product.images.length);
+    }
+  };
+
+  const prevImage = () => {
+    if (product.images && product.images.length > 0) {
+      setCurrentImageIndex((prev) => (prev - 1 + product.images.length) % product.images.length);
+    }
+  };
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  // Get 3 related products - prefer same category, but fill with others if needed
+  const relatedProducts = Object.keys(productData)
+    .filter(key => key !== id)
+    .sort((a, b) => {
+      // Prioritize same category
+      const aMatch = productData[a].category === product.category ? 0 : 1;
+      const bMatch = productData[b].category === product.category ? 0 : 1;
+      return aMatch - bMatch;
+    })
+    .slice(0, 3);
+
+  // Product-specific FAQs
+  const productFaqs: Record<string, Array<{ question: string; answer: string }>> = {
+    'venika-hair-oil': [
+      {
+        question: 'How often should I use Venika Hair Oil?',
+        answer: 'For best results, use Venika Hair Oil 2-3 times per week. Apply it at least 2 hours before washing, or leave it overnight for deep nourishment.'
+      },
+      {
+        question: 'How long does it take to see results?',
+        answer: 'Most customers notice improvements in hair texture and reduced hair fall within 3-4 weeks of regular use. Visible reduction in premature graying typically appears after 2-3 months of consistent application.'
+      },
+      {
+        question: 'Can I use this oil on colored or chemically treated hair?',
+        answer: 'Yes, Venika Hair Oil is made with 100% natural ingredients and is safe for colored or chemically treated hair. It actually helps nourish and repair damaged hair.'
+      },
+      {
+        question: 'Is this product suitable for all hair types?',
+        answer: 'Absolutely! Venika Hair Oil is formulated to work effectively on all hair types - straight, wavy, curly, or coily, and for both men and women.'
+      },
+      {
+        question: 'Can I use this product daily?',
+        answer: 'While you can use it daily, we recommend 2-3 times per week for optimal results. Daily use is safe but may not be necessary unless your hair is extremely dry or damaged.'
+      },
+      {
+        question: 'Are there any precautions before use?',
+        answer: 'Venika Hair Oil is made from natural ingredients and is generally safe. However, if you have any known allergies to specific herbs, please check the ingredient list. We recommend doing a patch test before first use.'
+      }
+    ],
+    'medhini-anti-dandruff-oil': [
+      {
+        question: 'How often should I use Medhini Anti Dandruff Oil?',
+        answer: 'For active dandruff, use 2-3 times per week until the condition improves. Once controlled, you can reduce to once a week for maintenance.'
+      },
+      {
+        question: 'How long does it take to see results?',
+        answer: 'Most users experience a noticeable reduction in dandruff and itching within 1-2 weeks of regular use. Complete dandruff control typically occurs within 4-6 weeks.'
+      },
+      {
+        question: 'Is it suitable for sensitive scalp?',
+        answer: 'Yes, Medhini is formulated with gentle, natural ingredients suitable for sensitive scalps. The neem and tea tree oil soothe irritation while combating dandruff.'
+      },
+      {
+        question: 'Can I use this product with other hair care products?',
+        answer: 'Yes, Medhini works well alongside other Ayurvedic products. However, avoid using chemical-heavy shampoos immediately after application for best results.'
+      },
+      {
+        question: 'Does this oil help with hair growth too?',
+        answer: 'Absolutely! While primarily formulated for dandruff control, Medhini also contains fenugreek and sesame oil that strengthen roots and promote healthy hair growth.'
+      },
+      {
+        question: 'Will this oil make my hair greasy?',
+        answer: 'Medhini is designed to absorb well. Use the recommended amount and wash thoroughly with a mild shampoo. If you have very fine hair, use slightly less oil.'
+      }
+    ],
+    'vama-lip-balm': [
+      {
+        question: 'How often should I apply Vama Lip Balm?',
+        answer: 'Apply Vama Lip Balm as needed throughout the day. For best results, apply before bedtime and first thing in the morning. Reapply after eating or drinking.'
+      },
+      {
+        question: 'Is Vama Lip Balm truly mercury and paraben-free?',
+        answer: 'Yes, absolutely! Vama Lip Balm is completely free from mercury, parabens, and other harmful chemicals. It\'s crafted with pure, natural ingredients.'
+      },
+      {
+        question: 'Can I use this under lipstick?',
+        answer: 'Yes, Vama Lip Balm makes an excellent base for lipstick. Apply it first, let it absorb for a minute, then apply your lipstick as usual.'
+      },
+      {
+        question: 'Is this product suitable for sensitive lips?',
+        answer: 'Absolutely! Vama is formulated with gentle, medicinal herbs and natural ingredients, making it perfect for even the most sensitive lips.'
+      },
+      {
+        question: 'How long does one balm last?',
+        answer: 'With regular use (3-4 times daily), one 5gm Vama Lip Balm typically lasts 4-6 weeks, depending on usage frequency.'
+      },
+      {
+        question: 'Can children use this lip balm?',
+        answer: 'Yes, Vama Lip Balm is safe for children above 3 years of age. The natural formulation makes it gentle enough for young, delicate lips.'
+      }
+    ],
+    'zrika-premium-face-oil': [
+      {
+        question: 'How often should I use Zrika Premium Face Oil?',
+        answer: 'Use Zrika Premium Face Oil once daily, preferably at night after cleansing. For very dry skin, you can use it twice daily - morning and evening.'
+      },
+      {
+        question: 'How long does it take to see results?',
+        answer: 'You\'ll notice immediate hydration and glow. Visible improvements in complexion and skin tone typically appear within 2-3 weeks of regular use. Optimal results show after 6-8 weeks.'
+      },
+      {
+        question: 'Is it suitable for oily or acne-prone skin?',
+        answer: 'Yes! Despite being an oil, Zrika is lightweight and non-comedogenic. The saffron and sandalwood help balance oil production while providing nourishment.'
+      },
+      {
+        question: 'Can I use this product daily?',
+        answer: 'Absolutely! Zrika is designed for daily use. The premium formulation is gentle enough for everyday application and delivers cumulative benefits over time.'
+      },
+      {
+        question: 'Can this be used with other skincare products?',
+        answer: 'Yes, Zrika integrates beautifully into your routine. Apply it after water-based serums but before heavy creams. You can also mix 1-2 drops with your moisturizer.'
+      },
+      {
+        question: 'Will this oil make my skin greasy?',
+        answer: 'No, Zrika absorbs quickly without leaving a greasy residue. Use 2-3 drops for the entire face and neck. If you have very oily skin, start with 1-2 drops.'
+      }
+    ],
+    'laya-face-care-oil': [
+      {
+        question: 'How often should I use Laya Face Care Oil?',
+        answer: 'Use Laya as a pre-bath ritual 3-4 times per week for best results. Apply 15-20 minutes before bathing to allow the active ingredients to work on tan reduction.'
+      },
+      {
+        question: 'How long does it take to see reduction in tan?',
+        answer: 'Visible tan reduction typically begins within 2-3 weeks of regular use. Complete tan removal depends on skin type and tan severity, usually taking 4-8 weeks.'
+      },
+      {
+        question: 'Is it suitable for sensitive skin?',
+        answer: 'Yes, Laya is formulated with gentle, natural ingredients. However, if you have very sensitive skin, do a patch test first. The turmeric and antioxidants are generally well-tolerated.'
+      },
+      {
+        question: 'Can I use this product on my body as well?',
+        answer: 'Absolutely! While formulated for the face, Laya works wonderfully on tanned areas of your body like arms, neck, and hands. Apply and leave for 15-20 minutes before bathing.'
+      },
+      {
+        question: 'Can this be used with other Ayurvedic products?',
+        answer: 'Yes, Laya complements other Ayurvedic skincare products. Use it as your pre-bath treatment, then follow your regular cleansing and moisturizing routine.'
+      },
+      {
+        question: 'Will this oil clog my pores?',
+        answer: 'No, Laya contains jojoba oil which is non-comedogenic. The lightweight formulation cleanses and brightens without clogging pores. Always rinse thoroughly after use.'
+      }
+    ]
+  };
+
+  const faqs = id ? productFaqs[id] || [] : [];
+
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Breadcrumb */}
+      <div className="bg-cream py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link to="/products" className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors">
+            <ArrowLeft size={20} className="mr-2" />
+            Back to Products
+          </Link>
+        </div>
+      </div>
+
+      {/* Product Details */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Image Gallery */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+            >
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-4 bg-cream">
+                {product.images ? (
+                  <>
+                    <ImageWithFallback
+                      src={product.images[currentImageIndex]}
+                      alt={product.name}
+                      className="w-full aspect-square object-cover"
+                    />
+                    {product.images.length > 1 && (
+                      <>
+                        <button
+                          onClick={prevImage}
+                          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-colors"
+                        >
+                          <ChevronLeft size={24} />
+                        </button>
+                        <button
+                          onClick={nextImage}
+                          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-colors"
+                        >
+                          <ChevronRight size={24} />
+                        </button>
+                      </>
+                    )}
+                  </>
+                ) : (
+                  <div className="w-full aspect-square flex items-center justify-center bg-cream">
+                    <div className="text-center p-8">
+                      <Leaf className="text-primary/30 mx-auto mb-4" size={64} />
+                      <p className="text-muted-foreground text-lg">Product Image</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+              {product.images && product.images.length > 1 && (
+                <div className="flex gap-4 overflow-x-auto pb-2">
+                  {product.images.map((image: string, index: number) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${
+                        currentImageIndex === index ? 'border-primary' : 'border-transparent'
+                      }`}
+                    >
+                      <ImageWithFallback
+                        src={image}
+                        alt={`${product.name} ${index + 1}`}
+                        className="w-24 h-24 object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
+            </motion.div>
+
+            {/* Product Info */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="bg-accent/20 text-accent-foreground px-3 py-1 rounded-full text-sm inline-block mb-4">
+                {product.category}
+              </div>
+              <h1 className="text-4xl md:text-5xl mb-4">{product.name}</h1>
+              <div className="flex items-center gap-2 mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="text-accent fill-accent" size={20} />
+                ))}
+                <span className="text-muted-foreground">(4.8/5 from 234 reviews)</span>
+              </div>
+              <div className="mb-6">
+                <div className="flex items-baseline gap-3">
+                  <span className="text-4xl text-primary">{product.price}</span>
+                  {product.mrp && (
+                    <>
+                      <span className="text-xl text-muted-foreground line-through">{product.mrp}</span>
+                      <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">
+                        Save {Math.round(((parseInt(product.mrp.slice(1)) - parseInt(product.price.slice(1))) / parseInt(product.mrp.slice(1))) * 100)}%
+                      </span>
+                    </>
+                  )}
+                </div>
+                <p className="text-muted-foreground mt-2">Quantity: {product.volume}</p>
+              </div>
+              <p className="text-lg text-muted-foreground mb-8">{product.description}</p>
+
+              {/* Trust Badges */}
+              <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="text-center p-4 bg-primary/10 rounded-lg">
+                  <Leaf className="text-primary mx-auto mb-2" size={24} />
+                  <p className="text-sm">100% Natural</p>
+                </div>
+                <div className="text-center p-4 bg-primary/10 rounded-lg">
+                  <Shield className="text-primary mx-auto mb-2" size={24} />
+                  <p className="text-sm">Patent-Based</p>
+                </div>
+                <div className="text-center p-4 bg-primary/10 rounded-lg">
+                  <Award className="text-primary mx-auto mb-2" size={24} />
+                  <p className="text-sm">Certified</p>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button
+                  onClick={handleWhatsApp}
+                  className="flex-1 bg-primary text-primary-foreground px-8 py-4 rounded-full hover:bg-primary-dark transition-all hover:scale-105 flex items-center justify-center gap-2"
+                >
+                  <MessageCircle size={20} />
+                  Order via WhatsApp
+                </button>
+                <button
+                  onClick={() => setShowContactPopup(true)}
+                  className="flex-1 bg-accent text-accent-foreground px-8 py-4 rounded-full hover:bg-accent/80 transition-all hover:scale-105"
+                >
+                  Contact Us
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION A: About This Product */}
+      <section className="py-16 bg-cream">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <h2 className="text-4xl mb-8">About This Product</h2>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  {product.description}
+                </p>
+                <h3 className="text-2xl mb-4 mt-8">Key Benefits</h3>
+                <ul className="space-y-4">
+                  {product.benefits.map((benefit: string, index: number) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="bg-primary/20 p-1 rounded-full mt-1">
+                        <Leaf className="text-primary" size={16} />
+                      </div>
+                      <span className="text-lg">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl mb-6">Why Customers Choose {product.name}</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <Award className="text-primary mt-1" size={24} />
+                    <div>
+                      <h4 className="font-semibold mb-1">Premium Quality</h4>
+                      <p className="text-muted-foreground">Crafted with the finest Ayurvedic ingredients</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Shield className="text-primary mt-1" size={24} />
+                    <div>
+                      <h4 className="font-semibold mb-1">Authentic Formulation</h4>
+                      <p className="text-muted-foreground">Based on traditional Ayurvedic wisdom</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Star className="text-accent fill-accent mt-1" size={24} />
+                    <div>
+                      <h4 className="font-semibold mb-1">Proven Results</h4>
+                      <p className="text-muted-foreground">Trusted by thousands of satisfied customers</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SECTION B: Product Description */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <h2 className="text-4xl mb-8">Product Description</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                {product.description}
+              </p>
+              <h3 className="text-2xl mb-4 mt-8">How to Use</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                {product.directions}
+              </p>
+              <div className="bg-cream p-6 rounded-2xl mt-8">
+                <h3 className="text-xl mb-4">The Ayurvedic Advantage</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our {product.name} embodies the timeless wisdom of Ayurveda, combining ancient healing knowledge with modern formulation techniques. Each ingredient is carefully selected and traditionally processed to preserve its therapeutic properties, ensuring you receive the full benefits of nature's pharmacy.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SECTION C: Product Specifications & Ingredients */}
+      <section className="py-16 bg-cream">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <h2 className="text-4xl mb-12 text-center">Product Specifications & Ingredients</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* LEFT COLUMN: Specifications */}
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl mb-6 text-primary">Specifications</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center pb-3 border-b border-border">
+                    <span className="font-semibold">Product Size</span>
+                    <span className="text-muted-foreground">{product.volume}</span>
+                  </div>
+                  <div className="flex justify-between items-center pb-3 border-b border-border">
+                    <span className="font-semibold">Category</span>
+                    <span className="text-muted-foreground">{product.category}</span>
+                  </div>
+                  <div className="flex justify-between items-center pb-3 border-b border-border">
+                    <span className="font-semibold">Usage Frequency</span>
+                    <span className="text-muted-foreground">2-3 times per week</span>
+                  </div>
+                  <div className="flex justify-between items-center pb-3 border-b border-border">
+                    <span className="font-semibold">Suitable For</span>
+                    <span className="text-muted-foreground">All skin/hair types</span>
+                  </div>
+                  <div className="flex justify-between items-center pb-3 border-b border-border">
+                    <span className="font-semibold">Storage</span>
+                    <span className="text-muted-foreground">Cool, dry place</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold">Shelf Life</span>
+                    <span className="text-muted-foreground">24 months</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* RIGHT COLUMN: Ingredients */}
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl mb-6 text-primary">Key Ingredients</h3>
+                <div className="space-y-4">
+                  {product.ingredients.map((ingredient: any, index: number) => (
+                    <div key={index} className="pb-4 border-b border-border last:border-0">
+                      <div className="flex items-start gap-3">
+                        <Leaf className="text-primary mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="font-semibold mb-1">{ingredient.name}</h4>
+                          <p className="text-muted-foreground text-sm">{ingredient.benefit}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SECTION D: Customer Video Reviews */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <h2 className="text-4xl mb-4 text-center">Customer Video Reviews</h2>
+            <p className="text-xl text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
+              Hear directly from customers who have experienced the benefits of this product.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  name: 'Priya Sharma',
+                  location: 'Mumbai',
+                  headline: 'Visible Results in 3 Weeks',
+                  thumbnail: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&q=80'
+                },
+                {
+                  name: 'Anjali Reddy',
+                  location: 'Bangalore',
+                  headline: 'My Hair Feels Stronger',
+                  thumbnail: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&q=80'
+                },
+                {
+                  name: 'Meera Patel',
+                  location: 'Delhi',
+                  headline: 'Best Ayurvedic Product I\'ve Used',
+                  thumbnail: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&q=80'
+                },
+              ].map((review, index) => (
+                <motion.div
+                  key={index}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeInUp}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-cream rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:scale-105 cursor-pointer group"
+                  onClick={() => setSelectedVideo('#')}
+                >
+                  <div className="relative">
+                    <ImageWithFallback
+                      src={review.thumbnail}
+                      alt={review.name}
+                      className="w-full h-64 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                      <div className="bg-primary text-primary-foreground p-4 rounded-full group-hover:scale-110 transition-transform">
+                        <Play size={32} fill="currentColor" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-1">{review.name}</h3>
+                    <p className="text-sm text-muted-foreground mb-3">{review.location}</p>
+                    <p className="text-primary italic">"{review.headline}"</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SECTION E: Product Reviews - Auto-scrolling Carousel */}
+      <section className="py-16 bg-cream overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl mb-4">What Our Customers Are Saying</h2>
+            <p className="text-xl text-muted-foreground">Real experiences from verified customers.</p>
+          </motion.div>
+
+          <div className="relative">
+            <div className="flex gap-6 animate-scroll">
+              {[...Array(2)].map((_, setIndex) => (
+                <div key={setIndex} className="flex gap-6 min-w-full">
+                  {[
+                    {
+                      name: 'Rajesh Kumar',
+                      location: 'Chennai',
+                      rating: 5,
+                      review: 'Absolutely amazing product! My hair has never felt healthier. The natural ingredients make all the difference.',
+                      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80'
+                    },
+                    {
+                      name: 'Sneha Kapoor',
+                      location: 'Pune',
+                      rating: 5,
+                      review: 'I\'ve been using this for 2 months and the results are incredible. Highly recommend to anyone looking for authentic Ayurvedic products.',
+                      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80'
+                    },
+                    {
+                      name: 'Arjun Nair',
+                      location: 'Kochi',
+                      rating: 5,
+                      review: 'Best investment for my skincare routine. Natural, effective, and truly delivers on its promises.',
+                      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80'
+                    },
+                    {
+                      name: 'Divya Iyer',
+                      location: 'Hyderabad',
+                      rating: 5,
+                      review: 'The quality is outstanding! You can feel the difference from the first use. Pure Ayurvedic goodness.',
+                      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80'
+                    },
+                    {
+                      name: 'Vikram Rao',
+                      location: 'Bangalore',
+                      rating: 5,
+                      review: 'Finally found a product that actually works! The traditional formulation is evident in the results.',
+                      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80'
+                    },
+                    {
+                      name: 'Kavita Singh',
+                      location: 'Jaipur',
+                      rating: 5,
+                      review: 'Love the natural approach! No harsh chemicals, just pure Ayurvedic ingredients that work wonders.',
+                      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80'
+                    },
+                    {
+                      name: 'Amit Patel',
+                      location: 'Ahmedabad',
+                      rating: 5,
+                      review: 'Exceptional quality and visible results. This is what authentic Ayurvedic products should be like.',
+                      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80'
+                    },
+                    {
+                      name: 'Neha Joshi',
+                      location: 'Kolkata',
+                      rating: 5,
+                      review: 'I\'m impressed with how quickly I saw results. The product is gentle yet effective. Will definitely repurchase!',
+                      image: 'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=100&q=80'
+                    },
+                  ].map((review, index) => (
+                    <div key={`${setIndex}-${index}`} className="bg-white p-6 rounded-2xl shadow-lg w-[350px] h-[280px] flex-shrink-0 flex flex-col">
+                      <div className="flex items-center gap-4 mb-4">
+                        <ImageWithFallback
+                          src={review.image}
+                          alt={review.name}
+                          className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                        />
+                        <div className="min-w-0">
+                          <h4 className="font-bold truncate">{review.name}</h4>
+                          <p className="text-sm text-muted-foreground truncate">{review.location}</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-1 mb-3">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <Star key={i} className="text-accent fill-accent" size={16} />
+                        ))}
+                      </div>
+                      <p className="text-muted-foreground leading-relaxed line-clamp-5">{review.review}</p>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product-Specific FAQ Section */}
+      {faqs.length > 0 && (
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
+              <h2 className="text-4xl mb-12 text-center">Frequently Asked Questions About This Product</h2>
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <div key={index} className="bg-cream rounded-2xl overflow-hidden shadow-md">
+                    <button
+                      onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                      className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-cream/80 transition-colors"
+                    >
+                      <span className="text-lg font-semibold pr-4">{faq.question}</span>
+                      <ChevronDown
+                        className={`flex-shrink-0 text-primary transition-transform duration-300 ${
+                          openFaqIndex === index ? 'rotate-180' : ''
+                        }`}
+                        size={24}
+                      />
+                    </button>
+                    <AnimatePresence>
+                      {openFaqIndex === index && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <div className="px-6 pb-5 text-muted-foreground leading-relaxed">
+                            {faq.answer}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Inquiry Form */}
+      <section id="inquiry" className="py-16 bg-background">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <h2 className="text-4xl mb-8 text-center">Product Inquiry</h2>
+            <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
+              <div>
+                <Label htmlFor="name">Your Name</Label>
+                <Input
+                  id="name"
+                  type="text"
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="mt-2"
+                />
+              </div>
+              <div>
+                <Label htmlFor="email">Email Address</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="mt-2"
+                />
+              </div>
+              <div>
+                <Label htmlFor="phone">Phone Number</Label>
+                <Input
+                  id="phone"
+                  type="tel"
+                  required
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="mt-2"
+                />
+              </div>
+              <div>
+                <Label htmlFor="message">Message (Optional)</Label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  className="mt-2 w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-primary text-primary-foreground px-8 py-4 rounded-full hover:bg-primary-dark transition-all hover:scale-105"
+              >
+                Submit
+              </button>
+            </form>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Related Products */}
+      {relatedProducts.length > 0 && (
+        <section className="py-16 bg-cream">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl mb-12 text-center">You May Also Like</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedProducts.map((productId, index) => {
+                const relatedProduct = productData[productId];
+                return (
+                  <motion.div
+                    key={productId}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeInUp}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <Link to={`/product/${productId}`}>
+                      <div className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:scale-105 group">
+                        {relatedProduct.images && relatedProduct.images.length > 0 ? (
+                          <ImageWithFallback
+                            src={relatedProduct.images[0]}
+                            alt={relatedProduct.name}
+                            className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                          />
+                        ) : (
+                          <div className="w-full h-64 flex items-center justify-center bg-gradient-to-br from-primary/5 to-accent/5">
+                            <div className="text-center p-6">
+                              <Leaf className="text-primary/30 mx-auto mb-2" size={48} />
+                              <p className="text-muted-foreground text-sm">Product Image</p>
+                            </div>
+                          </div>
+                        )}
+                        <div className="p-6">
+                          <h3 className="text-xl mb-2 font-bold min-h-[3.5rem]">{relatedProduct.name}</h3>
+                          <div className="flex justify-between items-center mt-4">
+                            <span className="text-2xl text-primary">{relatedProduct.price}</span>
+                            <span className="text-primary">View Details →</span>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Contact Us Popup */}
+      <AnimatePresence>
+        {showContactPopup && (
+          <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+              onClick={() => setShowContactPopup(false)}
+            />
+
+            {/* Modal */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 16 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 16 }}
+              transition={{ duration: 0.2 }}
+              className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-8"
+            >
+              <button
+                onClick={() => setShowContactPopup(false)}
+                className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <X size={24} />
+              </button>
+
+              <h2 className="text-2xl mb-2 text-foreground">Contact Us</h2>
+              <p className="text-muted-foreground mb-6">Choose your preferred method to reach us</p>
+
+              <div className="space-y-4">
+                <button
+                  onClick={handleCall}
+                  className="w-full flex items-center gap-4 p-4 bg-primary/10 hover:bg-primary/20 rounded-xl transition-colors"
+                >
+                  <div className="bg-primary text-primary-foreground p-3 rounded-full">
+                    <Phone size={24} />
+                  </div>
+                  <div className="text-left">
+                    <p className="font-semibold text-foreground">Call Us</p>
+                    <p className="text-sm text-muted-foreground">+91 98765 43210</p>
+                  </div>
+                </button>
+
+                <button
+                  onClick={handleWhatsAppContact}
+                  className="w-full flex items-center gap-4 p-4 bg-[#25D366]/10 hover:bg-[#25D366]/20 rounded-xl transition-colors"
+                >
+                  <div className="bg-[#25D366] text-white p-3 rounded-full">
+                    <MessageCircle size={24} />
+                  </div>
+                  <div className="text-left">
+                    <p className="font-semibold text-foreground">WhatsApp</p>
+                    <p className="text-sm text-muted-foreground">Chat with us instantly</p>
+                  </div>
+                </button>
+
+                <button
+                  onClick={handleEmail}
+                  className="w-full flex items-center gap-4 p-4 bg-accent/10 hover:bg-accent/20 rounded-xl transition-colors"
+                >
+                  <div className="bg-accent text-accent-foreground p-3 rounded-full">
+                    <Mail size={24} />
+                  </div>
+                  <div className="text-left">
+                    <p className="font-semibold text-foreground">Email</p>
+                    <p className="text-sm text-muted-foreground">info@sujayaherbals.com</p>
+                  </div>
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* Submit Confirmation Popup */}
+      <AnimatePresence>
+        {showSubmitConfirmation && (
+          <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+              onClick={() => setShowSubmitConfirmation(false)}
+            />
+
+            {/* Modal */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 16 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 16 }}
+              transition={{ duration: 0.2 }}
+              className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 text-center"
+            >
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle size={32} className="text-green-600" />
+              </div>
+              <h2 className="text-2xl mb-2 text-foreground">Thank You!</h2>
+              <p className="text-muted-foreground mb-6">
+                Your inquiry has been submitted successfully. We'll get back to you soon.
+              </p>
+              <button
+                onClick={() => setShowSubmitConfirmation(false)}
+                className="bg-primary text-primary-foreground px-8 py-3 rounded-full hover:bg-primary-dark transition-colors"
+              >
+                Close
+              </button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
