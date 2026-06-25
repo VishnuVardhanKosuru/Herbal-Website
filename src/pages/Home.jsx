@@ -6,7 +6,7 @@ import AnimatedSection from '../components/ui/AnimatedSection';
 import ProductCard from '../components/ui/ProductCard';
 import TrustBadges from '../components/ui/TrustBadges';
 import TestimonialCarousel from '../components/ui/TestimonialCarousel';
-import ExpertTestimonials from '../components/ui/ExpertTestimonials';
+
 import './Home.css';
 
 const ingredients = [
@@ -155,8 +155,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Expert Testimonials */}
-      <ExpertTestimonials />
 
       {/* Testimonials */}
       <section className="section">

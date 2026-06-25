@@ -64,17 +64,19 @@
 .navbar__logo {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 0;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
 .navbar__logo-text {
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 2.5vw, 1.875rem);
-  font-weight: 700;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  font-weight: 500;
   color: var(--color-primary);
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
 }
 
 .navbar__logo-divider {
@@ -85,10 +87,10 @@
 }
 
 .navbar__logo-tagline {
-  font-size: 0.625rem;
-  color: var(--color-primary);
-  opacity: 0.8;
-  letter-spacing: 0.05em;
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 /* ---- Desktop Links ---- */

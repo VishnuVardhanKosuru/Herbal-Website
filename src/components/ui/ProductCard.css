@@ -35,14 +35,14 @@
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  background: linear-gradient(135deg, rgba(45, 80, 22, 0.04), rgba(200, 164, 92, 0.06));
-  color: var(--color-primary);
-  opacity: 0.4;
+  background: #FAF9F5;
+  color: var(--color-primary-light);
+  opacity: 0.8;
   transition: opacity var(--transition-base);
 }
 
 .product-card:hover .product-card__placeholder {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .product-card__placeholder span {

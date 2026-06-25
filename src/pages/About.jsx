@@ -9,6 +9,8 @@ const values = [
   { icon: Award, title: 'Scientific Excellence', description: 'Our formulations combine ancient Ayurvedic wisdom with modern scientific research and validation.' },
   { icon: Shield, title: 'Quality Assurance', description: 'Every product undergoes rigorous testing to ensure safety, efficacy, and consistency.' },
   { icon: Heart, title: 'Sustainable Practices', description: 'We are committed to ethical sourcing and eco-friendly packaging to protect our planet.' },
+  { icon: Users, title: 'Our Mission', description: 'To create premium formulations that deliver visible results while nurturing beauty in its purest and most natural form.' },
+  { icon: Sprout, title: 'Our Vision', description: 'To become a globally admired premium beauty brand celebrated for elegance, purity and conscious self care.' },
 ];
 
 export default function About() {
@@ -30,7 +32,7 @@ export default function About() {
           <div className="about__story">
             <AnimatedSection>
               <div className="about__story-image">
-                <img src="/images/zrika/Zrika%2000.jpg" alt="SuJaya Herbals Ayurvedic Products" />
+                <img src="/images/ayurvedic-stack.png" alt="Stack of traditional Ayurvedic herbs and ancient texts" />
               </div>
             </AnimatedSection>
             <AnimatedSection delay={2}>
@@ -45,25 +47,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="section section--primary">
-        <div className="container">
-          <div className="about__mission-grid">
-            <AnimatedSection>
-              <div className="about__mission-card">
-                <h2>Our Mission</h2>
-                <p>To create premium formulations that deliver visible results while nurturing beauty in its purest and most natural form.</p>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={2}>
-              <div className="about__mission-card">
-                <h2>Our Vision</h2>
-                <p>To become a globally admired premium beauty brand celebrated for elegance, purity and conscious self care.</p>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
+
 
       {/* Values */}
       <section className="section">

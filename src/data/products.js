@@ -2,7 +2,7 @@ export const WHATSAPP_NUMBER = '916238416126';
 export const WHATSAPP_QR_LINK = 'https://wa.me/qr/XGEFDXCRSDN5C1';
 export const PHONE_NUMBER = '+91 6238416126';
 export const EMAIL = 'sujayaherbals2025@gmail.com';
-export const ADDRESS = 'SuJaya Herbals, Door No 8/513, Kandachira, Panyam, Kollam (PIN: 691601)';
+export const ADDRESS = 'Sujaya Herbals Pvt. Ltd., 123, Herbal Garden Complex, MG Road, Bangalore - 560001, Karnataka, India';
 
 export const products = [
   {
@@ -15,12 +15,11 @@ export const products = [
     qty: '10ml',
     description: 'Zrika is a magical elixir for your skin, enriched with the golden touch of pure Kashmiri saffron and the richness of 16 precious herbs. This exquisite blend, enriched with nutrient-dense wood-pressed sesame oil and the velvety richness of goat milk, is meticulously crafted to drench your skin in deep nourishment and luminous vitality. With every touch, it imparts a delicate warmth and a natural radiance, as if kissed by sunlight. More than a skincare product, Zrika is a ritual of elegance — restoring, brightening, and unveiling the glow that lies within.',
     benefits: [
-      'Enhances complexion and skin tone',
-      'Fades fine lines and wrinkles',
-      'Evens out undereye circles',
-      'Enhances skin\'s natural glow',
-      'Overall skin rejuvenation',
-      'Suitable for men and women',
+      'Revives skin\'s natural luminosity and glow',
+      'Improves overall complexion',
+      'Refines and evens skin tone',
+      'Enriched with precious saffron essence',
+      'Premium formulation for radiant skin',
     ],
     howToUse: 'Prepare your skin by ensuring it is freshly cleansed, allowing every drop of Zrika to deliver its full potency. Using the dropper, place 2–3 drops onto your face and neck. Massage in slow, upward strokes for about a minute to stimulate circulation and promote deep absorption. For best results, use at night. With consistent use for 10 days, your skin will appear smoother, more radiant, and beautifully rejuvenated.',
     ingredients: [
@@ -46,7 +45,7 @@ export const products = [
   {
     id: 'laya-face-care-oil',
     name: 'Laya Face Care Oil',
-    tagline: 'No more tan, just luminous skin',
+    tagline: 'No more tan just luminous skin',
     category: 'Skincare',
     price: 595,
     mrp: 700,
@@ -122,11 +121,11 @@ export const products = [
     qty: '100ml',
     description: 'Venika is the art of Ayurveda refined into a rare elixir for hair that deserves the finest care. Formulated with handpicked herbs, Venika by SuJaya Herbals delivers stronger roots, natural growth, and protection against premature greying. It enhances every strand with a lustrous glow, while its cooling essence brings soothing calm to the scalp. A celebration of botanical richness and luxury.',
     benefits: [
-      'Strengthens hair strands and reduces breakage',
-      'Delays premature greying of hair',
-      'Maintains naturally black, lustrous hair',
-      'Promotes healthy new growth',
-      'Soothing calm to the scalp',
+      'Promotes longer, healthier hair growth',
+      'Strengthens hair roots from within',
+      'Prevents premature graying naturally',
+      'Nourishes scalp with essential nutrients',
+      'Reduces hair fall and breakage',
     ],
     howToUse: 'Take sufficient amount of Venika Hair Oil and apply it directly onto your scalp. Using your fingertips, gently massage the oil for at least 5 minutes to stimulate blood flow and improve absorption. Wash it off after 10 to 15 minutes with a mild, sulphate-free shampoo. (Avoid massaging if you are currently experiencing excessive hair fall; simply apply and rinse as instructed.)',
     ingredients: [
@@ -150,7 +149,7 @@ export const products = [
   {
     id: 'medhini-anti-dandruff-oil',
     name: 'Medhini Anti Dandruff Oil',
-    tagline: "Nature's cure for a clear scalp",
+    tagline: "Nature's cure for clear scalp",
     category: 'Haircare',
     price: 289,
     mrp: 340,

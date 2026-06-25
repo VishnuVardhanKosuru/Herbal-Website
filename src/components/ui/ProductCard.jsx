@@ -29,7 +29,7 @@ export default function ProductCard({ product }) {
           ) : (
             <div className="product-card__placeholder">
               <Leaf size={48} />
-              <span>{product.name}</span>
+              <span>Product Image</span>
             </div>
           )}
           <span className="product-card__category">{product.category}</span>
