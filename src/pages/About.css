@@ -1,0 +1,146 @@
+.about__story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about__story-image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.about__story-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.about__story-text h2 {
+  margin-bottom: 1.5rem;
+}
+
+.about__story-text p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about__mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about__mission-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about__mission-card h2 {
+  color: var(--color-accent);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.about__mission-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about__values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.about__value-card {
+  padding: 2.5rem;
+}
+
+.about__value-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: rgba(45, 80, 22, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.about__value-card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.about__value-card p {
+  font-size: 1.05rem;
+}
+
+.about__heritage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about__heritage-text h2 {
+  margin-bottom: 1.5rem;
+}
+
+.about__heritage-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about__stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.about__stat-card {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.about__stat-icon {
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.about__stat-card h3 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.about__stat-card p {
+  font-size: 0.9rem;
+}
+
+.about__cta {
+  background: linear-gradient(135deg, var(--color-accent-dark), var(--color-accent));
+}
+
+@media (max-width: 768px) {
+  .about__story,
+  .about__mission-grid,
+  .about__heritage {
+    grid-template-columns: 1fr;
+  }
+
+  .about__story-image img {
+    height: 300px;
+  }
+
+  .about__values-grid {
+    grid-template-columns: 1fr;
+  }
+}

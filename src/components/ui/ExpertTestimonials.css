@@ -1,0 +1,113 @@
+.expert-testimonials__intro {
+  text-align: center;
+  font-size: 1.125rem;
+  max-width: 820px;
+  margin: 0 auto 3.5rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.expert-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.expert-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.expert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.expert-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.expert-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.expert-card__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-text-on-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.expert-card__play:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: var(--color-primary-light);
+}
+
+.expert-card__body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.expert-card__body h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.expert-card__title {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.expert-card__quote {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.expert-testimonials__cta {
+  text-align: center;
+}
+
+.expert-testimonials__cta h2 {
+  margin-bottom: 1.75rem;
+}
+
+@media (max-width: 1024px) {
+  .expert-testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .expert-testimonials__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .expert-testimonials__intro {
+    margin-bottom: 2.5rem;
+  }
+}
