@@ -14,7 +14,7 @@ const productData: Record<string, any> = {
     price: '₹595',
     mrp: '₹700',
     description: 'Venika is the art of Ayurveda refined into a rare elixir for hair that deserves the finest care. Formulated with handpicked herbs, Venika by SuJaya Herbals delivers stronger roots, natural growth, and protection against premature greying. It enhances every strand with a lustrous glow, while its cooling essence brings soothing calm to the scalp. A celebration of botanical richness and luxury, Venika transforms hair care into a ritual of indulgence, radiance, and enduring beauty.',
-    images: ['/images/venika/Venika 00.jpg'],
+    images: null,
     benefits: [
       'Regular use of Venika Hair Oil helps strengthen hair strands',
       'Reduce breakage and delay premature greying of hair',
@@ -35,7 +35,7 @@ const productData: Record<string, any> = {
     price: '₹289',
     mrp: '₹340',
     description: 'Medhini, an exquisite blend crafted to embody nature’s cure for a clear scalp. With the nourishing depth of virgin coconut oil and the restorative strength of fenugreek, this elixir breathes life into every strand, bringing balance, vitality, and grace to your hair. Medhini purifies the scalp with gentle clarity, strengthens roots with natural resilience, and stimulates healthy growth for hair. Each drop is a harmony of tradition and refinement, transforming daily care into a ritual of indulgence. With Medhini, every strand is guided towards a journey of strength, clarity, and lustrous growth.',
-    images: ['/images/medhini/Medhini 01.jpg'],
+    images: null,
     benefits: [
       'Formulated with powerful herbal ingredients',
       'Medhini works effectively to reduce dandruff',
@@ -56,7 +56,7 @@ const productData: Record<string, any> = {
     price: '₹234',
     mrp: '₹275',
     description: 'Vama Lip Balm is a naturally crafted lip care essential made with carefully selected ingredients to nourish and protect your lips. Its smooth, buttery texture glides effortlessly, keeping lips soft, moisturised, and comfortable throughout the day. Infused with a pleasant, gentle fragrance and available in three beautiful shades, VAMA adds a subtle touch of colour while caring for your lips. Free from harsh chemicals, sulphates, and other harmful additives, it is a safe and authentic choice for naturally healthy, beautiful lips.',
-    images: ['/images/vama/Vama 00.jpg'],
+    images: null,
     benefits: [
       'Keeps lips soft, smooth and naturally healthy',
       'Reduce pigmentation',
@@ -77,7 +77,7 @@ const productData: Record<string, any> = {
     price: '₹979',
     mrp: '₹1224',
     description: 'Zrika is a magical elixir for your skin, enriched with the golden touch of pure Kashmiri saffron and the richness of 16 precious herbs. This exquisite blend, enriched with nutrient dense wood-pressed sesame oil and the velvety richness of goat milk, is meticulously crafted to drench your skin in deep nourishment and luminous vitality. With every touch, it imparts a delicate warmth and a natural radiance, as if kissed by sunlight. More than a skincare product, Zrika is a ritual of elegance—restoring, brightening, and unveiling the glow that lies within.',
-    images: ['/images/zrika/Zrika 00.jpg'],
+    images: [zrikaImage],
     benefits: [
       'Enhances complexion and skin tone',
       'Fades fine lines and wrinkles',
@@ -101,7 +101,7 @@ const productData: Record<string, any> = {
     price: '₹595',
     mrp: '₹700',
     description: 'Laya is a refined pre-bath face care oil, designed to reveal a luminous, eventoned complexion while diminishing tan and pigmentation. At its heart lies the ruby richness of fresh pomegranate juice, a potent antioxidant that shields the skin from damage, boosts collagen production, and restores a healthy, youthful glow. Paired with Manjishta, an age old Ayurvedic herb known for its purifying, circulation-boosting, and anti-aging properties, this luxurious blend deeply hydrates and revitalises. With every use, Laya gently erases dullness and unevenness, unveiling skin that radiates clarity, brightness, and natural beauty.',
-    images: ['/images/laya/Laya 00.jpg'],
+    images: null,
     benefits: [
       'Beneficial against sun tan and pigmentation',
       'Prevent dark circles',

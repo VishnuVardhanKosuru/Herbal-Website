@@ -19,7 +19,7 @@ export function Products() {
       price: '₹595',
       mrp: '₹700',
       discount: '15%',
-      image: '/images/venika/Venika 00.jpg'
+      image: null
     },
     {
       id: 'medhini-anti-dandruff-oil',
@@ -30,7 +30,7 @@ export function Products() {
       price: '₹289',
       mrp: '₹340',
       discount: '15%',
-      image: '/images/medhini/Medhini 01.jpg'
+      image: null
     },
     {
       id: 'vama-lip-balm',
@@ -41,7 +41,7 @@ export function Products() {
       price: '₹234',
       mrp: '₹275',
       discount: '15%',
-      image: '/images/vama/Vama 00.jpg'
+      image: null
     },
     {
       id: 'zrika-premium-face-oil',
@@ -52,7 +52,7 @@ export function Products() {
       price: '₹979',
       mrp: '₹1224',
       discount: '20%',
-      image: '/images/zrika/Zrika 00.jpg'
+      image: zrikaImage
     },
     {
       id: 'laya-face-care-oil',
@@ -63,7 +63,7 @@ export function Products() {
       price: '₹595',
       mrp: '₹700',
       discount: '15%',
-      image: '/images/laya/Laya 00.jpg'
+      image: null
     },
   ];
 
