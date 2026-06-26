@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router';
 import { motion, AnimatePresence } from 'motion/react';
-import { MessageCircle, Star, Leaf, Shield, Award, ArrowLeft, ChevronLeft, ChevronRight, Phone, Mail, X, CheckCircle, Play, ChevronDown } from 'lucide-react';
+import { MessageCircle, Star, Leaf, Shield, Award, ArrowLeft, ChevronLeft, ChevronRight, Phone, Mail, X, CheckCircle, ChevronDown } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import zrikaImage from '../../imports/WhatsApp_Image_2026-05-23_at_01.32.33.JPG';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 
@@ -12,14 +13,12 @@ const productData: Record<string, any> = {
     category: 'Haircare',
     price: '₹595',
     mrp: '₹700',
-    description: "Let your hair feel the purity of Ayurveda. SuJaya Herbals Venika hair care oil is meticulously crafted to nourish your scalp, strengthen hair roots and promote healthy growth. Infused with potent herbs it prevents premature greying and brings back your hair's natural shine and vitality.",
-    images: ['/images/venika/Venika 00.jpg', '/images/venika/Venika 01.jpg', '/images/venika/Venika 02.jpg', '/images/venika/Venika 03.jpg'],
+    description: 'Venika is the art of Ayurveda refined into a rare elixir for hair that deserves the finest care. Formulated with handpicked herbs, Venika by SuJaya Herbals delivers stronger roots, natural growth, and protection against premature greying. It enhances every strand with a lustrous glow, while its cooling essence brings soothing calm to the scalp. A celebration of botanical richness and luxury, Venika transforms hair care into a ritual of indulgence, radiance, and enduring beauty.',
+    images: null,
     benefits: [
-      'Enhances natural hair growth',
-      'Strengthens hair from roots',
-      'Reduces hair fall and breakage',
-      'Prevents premature greying',
-      'Conditions scalp for healthy hair'
+      'Regular use of Venika Hair Oil helps strengthen hair strands',
+      'Reduce breakage and delay premature greying of hair',
+      'Maintain naturally black, lustrous hair'
     ],
     ingredients: [
       { name: 'Bhringraj', benefit: 'Promotes hair growth and prevents premature graying' },
@@ -35,13 +34,12 @@ const productData: Record<string, any> = {
     category: 'Haircare',
     price: '₹289',
     mrp: '₹340',
-    description: 'Flakes, itchiness and scalp irritation? Say good bye to them with SuJaya Herbals Medhini anti dandruff oil. A powerful blend of neem, tea tree and ancient Ayurvedic herbs. This oil deeply purifies the scalp, controls dandruff and support healthy hair growth. Enjoy a clean refreshed and flake free scalp naturally.',
-    images: ['/images/medhini/Medhini 01.jpg', '/images/medhini/Medhini 02.jpg', '/images/medhini/Medhini 03.jpg', '/images/medhini/Medhini 04.jpg'],
+    description: 'Medhini, an exquisite blend crafted to embody nature’s cure for a clear scalp. With the nourishing depth of virgin coconut oil and the restorative strength of fenugreek, this elixir breathes life into every strand, bringing balance, vitality, and grace to your hair. Medhini purifies the scalp with gentle clarity, strengthens roots with natural resilience, and stimulates healthy growth for hair. Each drop is a harmony of tradition and refinement, transforming daily care into a ritual of indulgence. With Medhini, every strand is guided towards a journey of strength, clarity, and lustrous growth.',
+    images: null,
     benefits: [
-      'Significantly reduces dandruff and flakiness',
-      'Soothes itchy and irritated scalp',
-      'Helps unclog hair follicles',
-      'Promotes healthier and thicker hair growth'
+      'Formulated with powerful herbal ingredients',
+      'Medhini works effectively to reduce dandruff',
+      'Soothe itchiness and cleanse the scalp'
     ],
     ingredients: [
       { name: 'Neem', benefit: 'Antibacterial properties that combat dandruff' },
@@ -57,13 +55,12 @@ const productData: Record<string, any> = {
     category: 'Lip Care',
     price: '₹234',
     mrp: '₹275',
-    description: 'Treat your lips to the pure, soothing care of SuJaya Herbals Vama Lip balm. Crafted with a blend of natural butter, essential oils and Ayurvedic herbs, this balm deeply hydrates, heals chapped lips, and leaves a soft healthy glow. Paraben and mercury free. It’s the perfect daily nourishment for naturally beautiful lips.',
-    images: ['/images/vama/Vama 00.jpg', '/images/vama/Vama 01.jpg', '/images/vama/Vama 02.jpg', '/images/vama/Vama 03.jpg'],
+    description: 'Vama Lip Balm is a naturally crafted lip care essential made with carefully selected ingredients to nourish and protect your lips. Its smooth, buttery texture glides effortlessly, keeping lips soft, moisturised, and comfortable throughout the day. Infused with a pleasant, gentle fragrance and available in three beautiful shades, VAMA adds a subtle touch of colour while caring for your lips. Free from harsh chemicals, sulphates, and other harmful additives, it is a safe and authentic choice for naturally healthy, beautiful lips.',
+    images: null,
     benefits: [
-      'Deeply moisturizes and heals dry chapped lips',
-      'Protects against harsh weather conditions',
-      'Restores natural lip color and softness',
-      '100% natural, safe and free from harmful chemicals'
+      'Keeps lips soft, smooth and naturally healthy',
+      'Reduce pigmentation',
+      'Helps to heal rough and chapped lips'
     ],
     ingredients: [
       { name: 'Beeswax', benefit: 'Creates a protective barrier and locks in moisture' },
@@ -79,14 +76,15 @@ const productData: Record<string, any> = {
     category: 'Skincare',
     price: '₹979',
     mrp: '₹1224',
-    description: 'Reveal your skin’s natural radiance with SuJaya Herbals Zrika Premium face oil. Infused with pure saffron and rare Ayurvedic botanicals, this luxurious oil deeply nourishes, brightens your complexion and reduces the appearance of fine lines and blemishes. Experience the golden secret to flawless, glowing skin.',
-    images: ['/images/zrika/Zrika 00.jpg', '/images/zrika/Zrika 01.jpg', '/images/zrika/Zrika 02.jpg', '/images/zrika/Zrika 03.jpg'],
+    description: 'Zrika is a magical elixir for your skin, enriched with the golden touch of pure Kashmiri saffron and the richness of 16 precious herbs. This exquisite blend, enriched with nutrient dense wood-pressed sesame oil and the velvety richness of goat milk, is meticulously crafted to drench your skin in deep nourishment and luminous vitality. With every touch, it imparts a delicate warmth and a natural radiance, as if kissed by sunlight. More than a skincare product, Zrika is a ritual of elegance—restoring, brightening, and unveiling the glow that lies within.',
+    images: [zrikaImage],
     benefits: [
-      'Brightens and evens out skin tone',
-      'Deeply moisturizes for soft and supple skin',
-      'Reduces blemishes, dark spots and pigmentation',
-      'Fights sign of aging and improves skin elasticity',
-      'Gives a healthy natural glow'
+      'Enhances complexion and skin tone',
+      'Fades fine lines and wrinkles',
+      'Even out undereye circles',
+      'Enhance skin’s natural glow',
+      'Overall Rejuvenation',
+      'Suitable for men and women'
     ],
     ingredients: [
       { name: 'Saffron', benefit: 'Enhances radiance and brightens complexion' },
@@ -102,14 +100,13 @@ const productData: Record<string, any> = {
     category: 'Skincare',
     price: '₹595',
     mrp: '₹700',
-    description: 'Rejuvenate your skin with SuJaya Herbals Laya pre bath oil. Specially formulated to remove stubborn sun tan and restore your natural glow, this enriching oil deeply penetrates to nourish and repair your skin before every bath. Embrace brighter, smoother and tan free skin everyday.',
-    images: ['/images/laya/Laya 00.jpg', '/images/laya/Laya 01.jpg', '/images/laya/Laya 02.jpg', '/images/laya/Laya 03.jpg'],
+    description: 'Laya is a refined pre-bath face care oil, designed to reveal a luminous, eventoned complexion while diminishing tan and pigmentation. At its heart lies the ruby richness of fresh pomegranate juice, a potent antioxidant that shields the skin from damage, boosts collagen production, and restores a healthy, youthful glow. Paired with Manjishta, an age old Ayurvedic herb known for its purifying, circulation-boosting, and anti-aging properties, this luxurious blend deeply hydrates and revitalises. With every use, Laya gently erases dullness and unevenness, unveiling skin that radiates clarity, brightness, and natural beauty.',
+    images: null,
     benefits: [
-      'Effectively removes sun tan and dullness',
-      'Deeply hydrates and softens skin',
-      'Improves skin texture and radiance',
-      'Prepares skin for a refreshing bath experience',
-      'Infused with skin loving Ayurvedic herbs'
+      'Beneficial against sun tan and pigmentation',
+      'Prevent dark circles',
+      'Enhances skin tone and radiance',
+      'Suitable for men and women'
     ],
     ingredients: [
       { name: 'Turmeric', benefit: 'Natural skin brightening and tan reduction' },
@@ -128,7 +125,7 @@ export function ProductDetail() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [showSubmitConfirmation, setShowSubmitConfirmation] = useState(false);
   const [showContactPopup, setShowContactPopup] = useState(false);
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
@@ -363,19 +360,19 @@ export function ProductDetail() {
                     <ImageWithFallback
                       src={product.images[currentImageIndex]}
                       alt={product.name}
-                      className="w-full aspect-square object-cover"
+                      className="w-full h-96 object-contain p-4"
                     />
                     {product.images.length > 1 && (
                       <>
                         <button
                           onClick={prevImage}
-                          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-colors"
+                          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-colors z-10"
                         >
                           <ChevronLeft size={24} />
                         </button>
                         <button
                           onClick={nextImage}
-                          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-colors"
+                          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-colors z-10"
                         >
                           <ChevronRight size={24} />
                         </button>
@@ -383,7 +380,7 @@ export function ProductDetail() {
                     )}
                   </>
                 ) : (
-                  <div className="w-full aspect-square flex items-center justify-center bg-cream">
+                  <div className="w-full h-96 flex items-center justify-center bg-cream">
                     <div className="text-center p-8">
                       <Leaf className="text-primary/30 mx-auto mb-4" size={64} />
                       <p className="text-muted-foreground text-lg">Product Image</p>
@@ -630,177 +627,6 @@ export function ProductDetail() {
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* SECTION D: Customer Video Reviews */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-          >
-            <h2 className="text-4xl mb-4 text-center">Customer Video Reviews</h2>
-            <p className="text-xl text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
-              Hear directly from customers who have experienced the benefits of this product.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  name: 'Priya Sharma',
-                  location: 'Mumbai',
-                  headline: 'Visible Results in 3 Weeks',
-                  thumbnail: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&q=80'
-                },
-                {
-                  name: 'Anjali Reddy',
-                  location: 'Bangalore',
-                  headline: 'My Hair Feels Stronger',
-                  thumbnail: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&q=80'
-                },
-                {
-                  name: 'Meera Patel',
-                  location: 'Delhi',
-                  headline: 'Best Ayurvedic Product I\'ve Used',
-                  thumbnail: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&q=80'
-                },
-              ].map((review, index) => (
-                <motion.div
-                  key={index}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeInUp}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-cream rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:scale-105 cursor-pointer group"
-                  onClick={() => setSelectedVideo('#')}
-                >
-                  <div className="relative">
-                    <ImageWithFallback
-                      src={review.thumbnail}
-                      alt={review.name}
-                      className="w-full h-64 object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                      <div className="bg-primary text-primary-foreground p-4 rounded-full group-hover:scale-110 transition-transform">
-                        <Play size={32} fill="currentColor" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-1">{review.name}</h3>
-                    <p className="text-sm text-muted-foreground mb-3">{review.location}</p>
-                    <p className="text-primary italic">"{review.headline}"</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* SECTION E: Product Reviews - Auto-scrolling Carousel */}
-      <section className="py-16 bg-cream overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl mb-4">What Our Customers Are Saying</h2>
-            <p className="text-xl text-muted-foreground">Real experiences from verified customers.</p>
-          </motion.div>
-
-          <div className="relative">
-            <div className="flex gap-6 animate-scroll">
-              {[...Array(2)].map((_, setIndex) => (
-                <div key={setIndex} className="flex gap-6 min-w-full">
-                  {[
-                    {
-                      name: 'Rajesh Kumar',
-                      location: 'Chennai',
-                      rating: 5,
-                      review: 'Absolutely amazing product! My hair has never felt healthier. The natural ingredients make all the difference.',
-                      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80'
-                    },
-                    {
-                      name: 'Sneha Kapoor',
-                      location: 'Pune',
-                      rating: 5,
-                      review: 'I\'ve been using this for 2 months and the results are incredible. Highly recommend to anyone looking for authentic Ayurvedic products.',
-                      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80'
-                    },
-                    {
-                      name: 'Arjun Nair',
-                      location: 'Kochi',
-                      rating: 5,
-                      review: 'Best investment for my skincare routine. Natural, effective, and truly delivers on its promises.',
-                      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80'
-                    },
-                    {
-                      name: 'Divya Iyer',
-                      location: 'Hyderabad',
-                      rating: 5,
-                      review: 'The quality is outstanding! You can feel the difference from the first use. Pure Ayurvedic goodness.',
-                      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80'
-                    },
-                    {
-                      name: 'Vikram Rao',
-                      location: 'Bangalore',
-                      rating: 5,
-                      review: 'Finally found a product that actually works! The traditional formulation is evident in the results.',
-                      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80'
-                    },
-                    {
-                      name: 'Kavita Singh',
-                      location: 'Jaipur',
-                      rating: 5,
-                      review: 'Love the natural approach! No harsh chemicals, just pure Ayurvedic ingredients that work wonders.',
-                      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80'
-                    },
-                    {
-                      name: 'Amit Patel',
-                      location: 'Ahmedabad',
-                      rating: 5,
-                      review: 'Exceptional quality and visible results. This is what authentic Ayurvedic products should be like.',
-                      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80'
-                    },
-                    {
-                      name: 'Neha Joshi',
-                      location: 'Kolkata',
-                      rating: 5,
-                      review: 'I\'m impressed with how quickly I saw results. The product is gentle yet effective. Will definitely repurchase!',
-                      image: 'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=100&q=80'
-                    },
-                  ].map((review, index) => (
-                    <div key={`${setIndex}-${index}`} className="bg-white p-6 rounded-2xl shadow-lg w-[350px] h-[280px] flex-shrink-0 flex flex-col">
-                      <div className="flex items-center gap-4 mb-4">
-                        <ImageWithFallback
-                          src={review.image}
-                          alt={review.name}
-                          className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                        />
-                        <div className="min-w-0">
-                          <h4 className="font-bold truncate">{review.name}</h4>
-                          <p className="text-sm text-muted-foreground truncate">{review.location}</p>
-                        </div>
-                      </div>
-                      <div className="flex gap-1 mb-3">
-                        {[...Array(review.rating)].map((_, i) => (
-                          <Star key={i} className="text-accent fill-accent" size={16} />
-                        ))}
-                      </div>
-                      <p className="text-muted-foreground leading-relaxed line-clamp-5">{review.review}</p>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 

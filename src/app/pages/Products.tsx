@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import { MessageCircle, ArrowRight, Leaf } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import zrikaImage from '../../imports/WhatsApp_Image_2026-05-23_at_01.32.33.JPG';
 
 export function Products() {
   const handleWhatsApp = () => {
@@ -18,7 +19,7 @@ export function Products() {
       price: '₹595',
       mrp: '₹700',
       discount: '15%',
-      image: '/images/venika/Venika 00.jpg'
+      image: null
     },
     {
       id: 'medhini-anti-dandruff-oil',
@@ -29,7 +30,7 @@ export function Products() {
       price: '₹289',
       mrp: '₹340',
       discount: '15%',
-      image: '/images/medhini/Medhini 01.jpg'
+      image: null
     },
     {
       id: 'vama-lip-balm',
@@ -40,7 +41,7 @@ export function Products() {
       price: '₹234',
       mrp: '₹275',
       discount: '15%',
-      image: '/images/vama/Vama 00.jpg'
+      image: null
     },
     {
       id: 'zrika-premium-face-oil',
@@ -51,7 +52,7 @@ export function Products() {
       price: '₹979',
       mrp: '₹1224',
       discount: '20%',
-      image: '/images/zrika/Zrika 00.jpg'
+      image: zrikaImage
     },
     {
       id: 'laya-face-care-oil',
@@ -62,7 +63,7 @@ export function Products() {
       price: '₹595',
       mrp: '₹700',
       discount: '15%',
-      image: '/images/laya/Laya 00.jpg'
+      image: null
     },
   ];
 
@@ -132,7 +133,7 @@ export function Products() {
                     </div>
                     <div className="p-6 flex-1 flex flex-col">
                       <h3 className="text-xl mb-2 font-bold">{product.name}</h3>
-                      <p className="text-muted-foreground mb-3 flex-1">{product.description}</p>
+                      <p className="text-muted-foreground mb-3 flex-1 line-clamp-2">{product.description}</p>
                       <p className="text-sm text-muted-foreground mb-4">Quantity: {product.qty}</p>
                       <div className="flex justify-between items-center">
                         <div>

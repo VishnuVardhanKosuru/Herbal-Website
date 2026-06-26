@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Leaf, Award, Shield, Heart, Users, Sprout } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import ayurvedicImage from '../../imports/ayurveda-formulas-001.jpg';
 
 export function About() {
   const fadeInUp = {
@@ -119,7 +120,7 @@ export function About() {
               className="rounded-3xl overflow-hidden shadow-2xl"
             >
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80"
+                src={ayurvedicImage}
                 alt="Natural ingredients"
                 className="w-full h-[400px] object-cover"
               />

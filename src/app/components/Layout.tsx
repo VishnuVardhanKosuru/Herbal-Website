@@ -242,10 +242,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <Link to="/" className="flex flex-col items-center">
+            <Link to="/" className="flex flex-col items-start">
               <h1 className="text-2xl md:text-3xl text-primary leading-tight">SuJaya Herbals</h1>
               <div className="w-full h-[1px] bg-primary/30 my-1"></div>
-              <p className="text-[10px] md:text-xs text-primary/80 tracking-wide text-center">A blend of Purity and Quality</p>
+              <p className="text-[10px] md:text-xs text-primary/80 tracking-wide">A blend of Purity and Quality</p>
             </Link>
 
             {/* Desktop Navigation */}

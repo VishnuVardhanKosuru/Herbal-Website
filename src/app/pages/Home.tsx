@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { Link } from 'react-router';
-import { MessageCircle, Leaf, Award, Shield, Star, ArrowRight, ChevronLeft, ChevronRight, Play, X } from 'lucide-react';
+import { MessageCircle, Leaf, Award, Shield, Star, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import heroImage from '../../imports/New_Product_Image.JPG';
 import ayurvedicImage from '../../imports/ayurveda-formulas-001.jpg';
+import zrikaImage from '../../imports/WhatsApp_Image_2026-05-23_at_01.32.33.JPG';
 
 export function Home() {
   const [currentReviewPage, setCurrentReviewPage] = useState(0);
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   const handleWhatsApp = () => {
     window.open('https://wa.me/919876543210?text=Hello! I would like to know more about Sujaya Herbals products.', '_blank');
@@ -24,18 +24,18 @@ export function Home() {
       price: '₹595',
       mrp: '₹700',
       discount: '15%',
-      image: '/images/venika/Venika 00.jpg'
+      image: null
     },
     {
       id: 'medhini-anti-dandruff-oil',
       name: 'Medhini - Anti Dandruff & Hair Oil',
       category: 'Haircare',
-      description: 'Anti Dandruff & hair growth oil. Nature’s cure for clear scalp',
+      description: "Anti Dandruff & hair growth oil. Nature's cure for clear scalp",
       qty: '100ml',
       price: '₹289',
       mrp: '₹340',
       discount: '15%',
-      image: '/images/medhini/Medhini 01.jpg'
+      image: null
     },
     {
       id: 'zrika-premium-face-oil',
@@ -46,26 +46,26 @@ export function Home() {
       price: '₹979',
       mrp: '₹1224',
       discount: '20%',
-      image: '/images/zrika/Zrika 00.jpg'
+      image: zrikaImage
     },
   ];
 
   const testimonials = [
-    { name: 'Laya Customer', review: 'Loved it! My tan started fading within two weeks, and my skin looks much brighter and healthier now.', rating: 5 },
-    { name: 'Laya Customer', review: 'A simple but effective product. It helped reduce sun tan and gave my face a natural glow.', rating: 5 },
-    { name: 'Laya Customer', review: 'I’ve been using Laya Pre-Bath Oil before my morning bath for about two weeks. The first thing I noticed was that my skin looked less dull. The tanning has reduced.', rating: 5 },
-    { name: 'Medhini Customer', review: 'Several products were tried for dandruff before, but the results never lasted. After using Medhini Anti-Dandruff Oil regularly, there was a noticeable reduction in flaking.', rating: 5 },
-    { name: 'Medhini Customer', review: 'I travel long distances every day and rarely get time for hair care. Dust and pollution made my dandruff worse. Medhini was easy to use and my dandruff reduced significantly.', rating: 5 },
-    { name: 'Medhini Customer', review: 'With a young child to care for, I barely have time for myself. Dandruff had become a constant issue, but Medhini Anti-Dandruff Oil helped a lot.', rating: 5 },
-    { name: 'Zrika Customer', review: 'The first thing that stood out about Zrika was the rich saffron aroma. It genuinely feels like a premium product made with authentic ingredients. With regular use, my skin looks brighter.', rating: 5 },
-    { name: 'Zrika Customer', review: 'At 48, I was looking for something that could nourish my skin without feeling heavy. Zrika Premium Face Oil has improved my skin’s texture noticeably.', rating: 5 },
-    { name: 'Zrika Customer', review: 'Long hours and lack of sleep had left me with dark circles and tired-looking skin. Zrika helped brighten my under-eye area, improve my skin tone, and keep my skin looking fresh and youthful.', rating: 5 },
-    { name: 'Vama Customer', review: 'My lips used to become dry and chapped very easily, especially during changing weather. After using Vama Lip Balm regularly, they feel much softer and smoother.', rating: 5 },
-    { name: 'Vama Customer', review: 'Years of using synthetic lipsticks had left my lips looking darker and unhealthy. I switched to Vama Lip Balm for daily care, and over time my lips started looking healthier.', rating: 5 },
-    { name: 'Vama Customer', review: 'The buttery texture of Vama Lip Balm is what I love most. It glides on effortlessly, feels incredibly smooth on the lips, and the sweet aroma is simply delightful.', rating: 5 },
-    { name: 'Venika Customer', review: 'After my delivery, hair fall had become a major concern, and my hair felt much thinner than before. Regular use of Venika Hair Care Oil helped reduce the hair fall and encouraged healthy new growth.', rating: 5 },
-    { name: 'Venika Customer', review: 'Years of styling and neglect had left my hair looking weak and lifeless. After using Venika Hair Care Oil consistently, my hair feels stronger, healthier.', rating: 5 },
-    { name: 'Venika Customer', review: 'I started noticing a few grey strands much earlier than expected. After using Venika regularly, my hair looks healthier, and the appearance of new grey hairs seems much less noticeable.', rating: 5 },
+    { name: 'Priya Sharma', review: 'Venika Hair Oil has completely transformed my hair! Stronger roots and no more grey hair. Highly recommend!', rating: 5 },
+    { name: 'Anjali Reddy', review: 'Medhini Oil cleared my dandruff in just 2 weeks. My hair feels healthier and grows faster.', rating: 5 },
+    { name: 'Meera Patel', review: 'Vama Lip Balm is a game changer! Natural, moisturizing, and lasts all day. Love it!', rating: 5 },
+    { name: 'Rahul Verma', review: 'Zrika Face Oil gave me glowing skin within a week. The saffron essence is truly premium!', rating: 5 },
+    { name: 'Sneha Kapoor', review: 'Laya Face Oil reduced my tan so effectively. Perfect pre-bath ritual for luminous skin!', rating: 5 },
+    { name: 'Arjun Nair', review: 'Amazing quality and authentic Ayurvedic formulations. SuJaya Herbals is now my go-to brand!', rating: 5 },
+    { name: 'Divya Iyer', review: 'The hair oils are incredible! My hair is longer, thicker, and healthier than ever before.', rating: 5 },
+    { name: 'Kavita Singh', review: 'Natural ingredients that actually work. No harsh chemicals, just pure Ayurvedic goodness!', rating: 5 },
+    { name: 'Rohan Das', review: 'Impressed with the results! Every product delivers exactly what it promises. Excellent brand!', rating: 5 },
+    { name: 'Pooja Menon', review: 'My skin has never looked better. Zrika Premium Face Oil is worth every penny!', rating: 5 },
+    { name: 'Amit Kumar', review: 'Medhini Anti-Dandruff Oil solved my scalp issues. No more itching or flakes. Thank you!', rating: 5 },
+    { name: 'Neha Joshi', review: 'Vama Lip Balm keeps my lips soft and protected all day. Mercury and paraben-free perfection!', rating: 5 },
+    { name: 'Vikram Rao', review: 'Quality products at fair prices. SuJaya Herbals has earned a loyal customer in me!', rating: 5 },
+    { name: 'Shalini Gupta', review: 'Laya Face Oil is my secret weapon against tan. Luminous skin in just a few uses!', rating: 5 },
+    { name: 'Karthik Reddy', review: 'Finally, authentic Ayurvedic products that work! Highly recommend SuJaya Herbals to everyone!', rating: 5 },
   ];
 
   const reviewsPerPage = 3;
@@ -102,7 +102,7 @@ export function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-cream overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-24 md:pt-48 md:pb-32">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial="hidden"
@@ -143,7 +143,7 @@ export function Home() {
                 <ImageWithFallback
                   src={heroImage}
                   alt="Ayurvedic herbs and products"
-                  className="w-full h-auto object-cover"
+                  className="w-full max-h-[600px] object-contain bg-cream"
                 />
               </div>
             </motion.div>
@@ -249,7 +249,7 @@ export function Home() {
                           className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
                         />
                       ) : (
-                        <div className="w-full h-80 flex items-center justify-center bg-gradient-to-br from-primary/5 to-accent/5">
+                        <div className="w-full h-80 flex items-center justify-center bg-cream">
                           <div className="text-center p-6">
                             <Leaf className="text-primary/30 mx-auto mb-2" size={48} />
                             <p className="text-muted-foreground text-sm">Product Image</p>
@@ -269,7 +269,7 @@ export function Home() {
                   <div className="p-6 flex-1 flex flex-col">
                     <Link to={`/product/${product.id}`} className="flex-1 flex flex-col">
                       <h3 className="text-xl mb-2 font-bold">{product.name}</h3>
-                      <p className="text-muted-foreground mb-3">{product.description}</p>
+                      <p className="text-muted-foreground mb-3 line-clamp-2">{product.description}</p>
                       <p className="text-sm text-muted-foreground mb-4">Quantity: {product.qty}</p>
                     </Link>
                     <div className="flex justify-between items-center mt-auto">
@@ -521,8 +521,6 @@ export function Home() {
         </div>
       </section>
 
-
-
       {/* CTA Section */}
       <section className="py-20 bg-accent text-accent-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -546,7 +544,6 @@ export function Home() {
           </motion.div>
         </div>
       </section>
-
 
     </div>
   );
