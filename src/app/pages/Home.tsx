@@ -24,7 +24,7 @@ export function Home() {
       price: '₹595',
       mrp: '₹700',
       discount: '15%',
-      image: null
+      image: '/images/venika/Venika 00.jpg'
     },
     {
       id: 'medhini-anti-dandruff-oil',
@@ -35,7 +35,7 @@ export function Home() {
       price: '₹289',
       mrp: '₹340',
       discount: '15%',
-      image: null
+      image: '/images/medhini/Medhini 01.jpg'
     },
     {
       id: 'zrika-premium-face-oil',
@@ -46,7 +46,7 @@ export function Home() {
       price: '₹979',
       mrp: '₹1224',
       discount: '20%',
-      image: zrikaImage
+      image: '/images/zrika/Zrika 00.jpg'
     },
   ];
 
