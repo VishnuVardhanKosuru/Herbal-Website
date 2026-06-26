@@ -630,6 +630,109 @@ export function ProductDetail() {
         </div>
       </section>
 
+      {/* SECTION E: Product Reviews - Auto-scrolling Carousel */}
+      <section className="py-16 bg-cream overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl mb-4">What Our Customers Are Saying</h2>
+            <p className="text-xl text-muted-foreground">Real experiences from verified customers.</p>
+          </motion.div>
+
+          <div className="relative">
+            <div className="flex gap-6 animate-scroll">
+              {[...Array(2)].map((_, setIndex) => (
+                <div key={setIndex} className="flex gap-6 w-max flex-nowrap">
+                  {[
+                    {
+                      name: 'Rajesh Kumar',
+                      location: 'Chennai',
+                      rating: 5,
+                      review: 'Absolutely amazing product! My hair has never felt healthier. The natural ingredients make all the difference.',
+                      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80'
+                    },
+                    {
+                      name: 'Sneha Kapoor',
+                      location: 'Pune',
+                      rating: 5,
+                      review: 'I\'ve been using this for 2 months and the results are incredible. Highly recommend to anyone looking for authentic Ayurvedic products.',
+                      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80'
+                    },
+                    {
+                      name: 'Arjun Nair',
+                      location: 'Kochi',
+                      rating: 5,
+                      review: 'Best investment for my skincare routine. Natural, effective, and truly delivers on its promises.',
+                      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80'
+                    },
+                    {
+                      name: 'Divya Iyer',
+                      location: 'Hyderabad',
+                      rating: 5,
+                      review: 'The quality is outstanding! You can feel the difference from the first use. Pure Ayurvedic goodness.',
+                      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80'
+                    },
+                    {
+                      name: 'Vikram Rao',
+                      location: 'Bangalore',
+                      rating: 5,
+                      review: 'Finally found a product that actually works! The traditional formulation is evident in the results.',
+                      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80'
+                    },
+                    {
+                      name: 'Kavita Singh',
+                      location: 'Jaipur',
+                      rating: 5,
+                      review: 'Love the natural approach! No harsh chemicals, just pure Ayurvedic ingredients that work wonders.',
+                      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80'
+                    },
+                    {
+                      name: 'Amit Patel',
+                      location: 'Ahmedabad',
+                      rating: 5,
+                      review: 'Exceptional quality and visible results. This is what authentic Ayurvedic products should be like.',
+                      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80'
+                    },
+                    {
+                      name: 'Neha Joshi',
+                      location: 'Kolkata',
+                      rating: 5,
+                      review: 'I\'m impressed with how quickly I saw results. The product is gentle yet effective. Will definitely repurchase!',
+                      image: 'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=100&q=80'
+                    },
+                  ].map((review, index) => (
+                    <div key={`${setIndex}-${index}`} className="bg-white p-6 rounded-2xl shadow-lg w-[350px] h-[280px] flex-shrink-0 flex flex-col">
+                      <div className="flex items-center gap-4 mb-4">
+                        <ImageWithFallback
+                          src={review.image}
+                          alt={review.name}
+                          className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                        />
+                        <div className="min-w-0">
+                          <h4 className="font-bold truncate">{review.name}</h4>
+                          <p className="text-sm text-muted-foreground truncate">{review.location}</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-1 mb-3">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <Star key={i} className="text-accent fill-accent" size={16} />
+                        ))}
+                      </div>
+                      <p className="text-muted-foreground leading-relaxed line-clamp-5">{review.review}</p>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Product-Specific FAQ Section */}
       {faqs.length > 0 && (
         <section className="py-16 bg-white">
