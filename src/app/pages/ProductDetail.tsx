@@ -624,66 +624,88 @@ export function ProductDetail() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-4xl mb-12 text-center">Product Specifications & Ingredients</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* LEFT COLUMN: Specifications */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-2xl mb-6 text-primary">Specifications</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="font-semibold">Product Size</span>
-                    <span className="text-muted-foreground">{product.volume}</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="font-semibold">Category</span>
-                    <span className="text-muted-foreground">{product.category}</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="font-semibold">Usage Frequency</span>
-                    <span className="text-muted-foreground">2-3 times per week</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="font-semibold">Suitable For</span>
-                    <span className="text-muted-foreground">All skin/hair types</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="font-semibold">Storage</span>
-                    <span className="text-muted-foreground">Cool, dry place</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold">Shelf Life</span>
-                    <span className="text-muted-foreground">24 months</span>
+            <h2 className="text-3xl font-serif font-bold text-primary mb-12">
+              Specifications & Ingredients
+            </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+              {/* LEFT COLUMN: Specifications (1/3 width) */}
+              <div className="lg:col-span-1">
+                <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-border">
+                  <h3 className="text-xl font-bold text-primary mb-6">Specifications</h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between py-3 border-b border-border">
+                      <span className="text-muted-foreground font-medium text-sm">Size</span>
+                      <span className="text-primary font-semibold text-sm">{product.volume}</span>
+                    </div>
+                    <div className="flex justify-between py-3 border-b border-border">
+                      <span className="text-muted-foreground font-medium text-sm">Category</span>
+                      <span className="text-primary font-semibold text-sm">{product.category}</span>
+                    </div>
+                    <div className="flex justify-between py-3 border-b border-border">
+                      <span className="text-muted-foreground font-medium text-sm">Usage</span>
+                      <span className="text-primary font-semibold text-sm">2-3 times/week</span>
+                    </div>
+                    <div className="flex justify-between py-3 border-b border-border">
+                      <span className="text-muted-foreground font-medium text-sm">Suitable For</span>
+                      <span className="text-primary font-semibold text-sm">All types</span>
+                    </div>
+                    <div className="flex justify-between py-3 border-b border-border">
+                      <span className="text-muted-foreground font-medium text-sm">Storage</span>
+                      <span className="text-primary font-semibold text-sm">Cool, dry place</span>
+                    </div>
+                    <div className="flex justify-between py-3">
+                      <span className="text-muted-foreground font-medium text-sm">Shelf Life</span>
+                      <span className="text-primary font-semibold text-sm">24 months</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* RIGHT COLUMN: Ingredients */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-2xl mb-6 text-primary">Key Ingredients</h3>
-                <div className="space-y-4">
-                  {product.ingredients.map((ingredient: any, index: number) => (
-                    <div key={index} className="pb-4 border-b border-border last:border-0">
-                      <div className="flex items-center gap-4">
-                        {ingredient.image ? (
-                          <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden shadow-sm">
+              {/* RIGHT COLUMN: Ingredients (2/3 width) */}
+              <div className="lg:col-span-2">
+                <h3 className="text-xl font-bold text-primary mb-6">Key Ingredients</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {product.ingredients.map((ingredient: any, index: number) => {
+                    // Extract scientific name if present in parentheses e.g., "Saffron (Crocus sativus)"
+                    let displayName = ingredient.name;
+                    let scientificName = "";
+                    const match = ingredient.name.match(/^(.*?)\s*\((.*?)\)$/);
+                    if (match) {
+                      displayName = match[1];
+                      scientificName = match[2];
+                    }
+
+                    return (
+                      <div key={index} className="flex items-start gap-4">
+                        <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 bg-cream">
+                          {ingredient.image ? (
                             <ImageWithFallback
                               src={ingredient.image}
-                              alt={ingredient.name}
+                              alt={displayName}
                               className="w-full h-full object-cover"
                             />
-                          </div>
-                        ) : (
-                          <div className="w-12 h-12 flex-shrink-0 rounded-full bg-primary/10 flex items-center justify-center">
-                            <Leaf className="text-primary" size={24} />
-                          </div>
-                        )}
-                        <div>
-                          <h4 className="font-semibold mb-1">{ingredient.name}</h4>
-                          <p className="text-muted-foreground text-sm leading-relaxed">{ingredient.benefit}</p>
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center bg-primary/10 text-primary">
+                              <Leaf size={24} />
+                            </div>
+                          )}
+                        </div>
+                        <div className="flex-1 mt-1">
+                          <h4 className="text-base font-semibold text-primary">
+                            {displayName}
+                            {scientificName && (
+                              <span className="text-xs font-normal text-muted-foreground italic ml-1 block sm:inline">
+                                ({scientificName})
+                              </span>
+                            )}
+                          </h4>
+                          <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                            {ingredient.benefit}
+                          </p>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>
