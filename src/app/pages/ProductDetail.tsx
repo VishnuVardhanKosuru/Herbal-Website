@@ -30,11 +30,10 @@ const productData: Record<string, any> = {
       'Maintain naturally black, lustrous hair'
     ],
     ingredients: [
-      { name: 'Bhringraj', benefit: 'Promotes hair growth and prevents premature graying' },
-      { name: 'Amla', benefit: 'Rich in Vitamin C, strengthens hair follicles', image: '/images/ingredients/4.Amla.jpeg' },
-      { name: 'Indigo', benefit: 'Maintains naturally black, lustrous hair', image: '/images/ingredients/3.Indigo.JPG' },
-      { name: 'Brahmi', benefit: 'Nourishes the scalp and reduces hair fall' },
-      { name: 'Coconut Oil', benefit: 'Deep conditioning and moisturizing base' }
+      { name: 'Gooseberry (Amla)', benefit: 'Rich in Vitamin C, strengthens hair follicles', image: '/images/ingredients/4.Amla.jpeg' },
+      { name: 'Indigo (Indigofera tinctoria)', benefit: 'Natural hair darkener, prevents premature greying', image: '/images/ingredients/3.Indigo.JPG' },
+      { name: 'Sesame Oil', benefit: 'Deep conditioning and moisturizing base' },
+      { name: 'Cow Milk', benefit: 'Rich in proteins for hair nourishment' }
     ],
     directions: 'Warm the oil slightly. Massage gently into scalp and hair from roots to tips. Leave on for at least 2 hours or overnight for deep nourishment. Wash with a mild shampoo. Use 2-3 times a week for best results.',
     volume: '100ml'
@@ -59,10 +58,10 @@ const productData: Record<string, any> = {
       'Soothe itchiness and cleanse the scalp'
     ],
     ingredients: [
-      { name: 'Neem', benefit: 'Antibacterial properties that combat dandruff' },
+      { name: 'Neem (Azadirachta indica)', benefit: 'Antibacterial properties that combat dandruff' },
       { name: 'Tea Tree Oil', benefit: 'Natural antifungal that soothes scalp' },
-      { name: 'Methi (Fenugreek)', benefit: 'Strengthens hair roots and promotes growth', image: '/images/ingredients/2.Fenugreek.jpg' },
-      { name: 'Sesame Oil', benefit: 'Moisturizing base that nourishes scalp' }
+      { name: 'Fenugreek (Trigonella foenum-graecum)', benefit: 'Strengthens hair roots and promotes growth', image: '/images/ingredients/2.Fenugreek.jpg' },
+      { name: 'Virgin Coconut Oil', benefit: 'Moisturizing base that nourishes scalp' }
     ],
     directions: 'Apply oil to scalp and massage gently in circular motions. Leave on for 1-2 hours or overnight. Wash thoroughly with a mild shampoo. Use regularly for best results in controlling dandruff and promoting hair growth.',
     volume: '100ml'
@@ -90,10 +89,10 @@ const productData: Record<string, any> = {
       'Helps to heal rough and chapped lips'
     ],
     ingredients: [
+      { name: 'Indian Madder (Rubia cordifolia)', benefit: 'Natural colorant and skin purifier', image: '/images/ingredients/5.Indian_maddar.png' },
+      { name: 'Vetiver', benefit: 'Cooling and healing properties', image: '/images/ingredients/8.Vetiver.jpg' },
       { name: 'Beeswax', benefit: 'Creates a protective barrier and locks in moisture' },
-      { name: 'Shea Butter', benefit: 'Deeply nourishes and softens lips' },
-      { name: 'Vitamin E', benefit: 'Antioxidant protection and healing' },
-      { name: 'Vetiver', benefit: 'Gentle care with natural medicinal cooling benefits', image: '/images/ingredients/8.Vetiver.jpg' }
+      { name: 'Castor Oil', benefit: 'Deep conditioning and softening' }
     ],
     directions: 'Apply generously to lips as needed throughout the day. For extra hydration, apply before bedtime. Use regularly to keep lips soft, smooth, and protected.',
     volume: '5gms'
@@ -124,11 +123,12 @@ const productData: Record<string, any> = {
       'Suitable for men and women'
     ],
     ingredients: [
-      { name: 'Saffron', benefit: 'Enhances radiance and brightens complexion', image: '/images/ingredients/1.Saffron.jpg' },
-      { name: 'Kumkumadi Oil', benefit: 'Traditional blend for glowing skin' },
-      { name: 'Sandalwood', benefit: 'Cools, clarifies and refines skin tone', image: '/images/ingredients/7.Sandalwood.jpg' },
-      { name: 'Goat Milk', benefit: 'Velvety richness that provides deep nourishment', image: '/images/ingredients/6.Goat_milk.jpeg' },
-      { name: 'Almond Oil', benefit: 'Nourishes and softens skin' }
+      { name: 'Saffron (Crocus sativus)', benefit: 'Enhances radiance and brightens complexion naturally', image: '/images/ingredients/1.Saffron.jpg' },
+      { name: 'Sandalwood (Santalum album)', benefit: 'Cools, clarifies and refines skin tone', image: '/images/ingredients/7.Sandalwood.jpg' },
+      { name: 'Indian Madder (Rubia cordifolia)', benefit: 'Purifies blood and improves skin clarity', image: '/images/ingredients/5.Indian_maddar.png' },
+      { name: 'Lotus (Nelumbo nucifera)', benefit: 'Deeply hydrates and soothes irritated skin' },
+      { name: 'Goat Milk', benefit: 'Rich in vitamins, provides deep nourishment', image: '/images/ingredients/6.Goat_milk.jpeg' },
+      { name: 'Sesame Oil (Wood-pressed)', benefit: 'Nutrient-dense base for deep absorption' }
     ],
     directions: 'After cleansing, apply 2-3 drops to face and neck. Gently massage in upward circular motions until absorbed. Use daily, preferably at night, for best results. Can also be mixed with your moisturizer.',
     volume: '10ml'
@@ -157,11 +157,10 @@ const productData: Record<string, any> = {
       'Suitable for men and women'
     ],
     ingredients: [
-      { name: 'Manjishta (Indian Maddar)', benefit: 'Age old Ayurvedic herb known for purifying and anti-aging', image: '/images/ingredients/5.Indian_maddar.png' },
-      { name: 'Turmeric', benefit: 'Natural skin brightening and tan reduction' },
-      { name: 'Vitamin C', benefit: 'Powerful antioxidant that evens skin tone' },
-      { name: 'Licorice Extract', benefit: 'Reduces hyperpigmentation and brightens' },
-      { name: 'Jojoba Oil', benefit: 'Lightweight moisturization and protection' }
+      { name: 'Licorice (Glycyrrhiza glabra)', benefit: 'Reduces hyperpigmentation and brightens skin' },
+      { name: 'Vetiver (Vetiveria zizanioides)', benefit: 'Cooling and soothing, reduces blemishes', image: '/images/ingredients/8.Vetiver.jpg' },
+      { name: 'Lodh Bark (Symplocos racemosa)', benefit: 'Traditional skin brightening herb' },
+      { name: 'Sesame Oil', benefit: 'Nourishing base for deep penetration' }
     ],
     directions: 'Apply oil evenly to face and neck before bathing. Gently massage for 2-3 minutes. Leave on for 15-20 minutes. Rinse with lukewarm water and cleanse as usual. Use regularly for visible reduction in tan and brighter skin.',
     volume: '15ml'
@@ -403,13 +402,13 @@ export function ProductDetail() {
               animate="visible"
               variants={fadeInUp}
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-4 bg-gradient-to-br from-primary/10 via-cream to-accent/10">
+              <div className="relative rounded-3xl overflow-hidden shadow-sm border border-border mb-4 bg-white aspect-[4/5]">
                 {product.images ? (
                   <>
                     <ImageWithFallback
                       src={product.images[currentImageIndex]}
                       alt={product.name}
-                      className="w-full h-96 object-contain mix-blend-multiply p-4"
+                      className="w-full h-full object-contain p-4"
                     />
                     {product.images.length > 1 && (
                       <>
@@ -429,7 +428,7 @@ export function ProductDetail() {
                     )}
                   </>
                 ) : (
-                  <div className="w-full h-96 flex items-center justify-center bg-gradient-to-br from-primary/10 via-cream to-accent/10">
+                  <div className="w-full h-full flex items-center justify-center bg-white">
                     <div className="text-center p-8">
                       <Leaf className="text-primary/30 mx-auto mb-4" size={64} />
                       <p className="text-muted-foreground text-lg">Product Image</p>
@@ -450,7 +449,7 @@ export function ProductDetail() {
                       <ImageWithFallback
                         src={image}
                         alt={`${product.name} ${index + 1}`}
-                        className="w-24 h-24 object-contain mix-blend-multiply bg-gradient-to-br from-primary/10 via-cream to-accent/10"
+                        className="h-24 w-[76px] object-contain bg-white rounded-lg border border-border"
                       />
                     </button>
                   ))}
