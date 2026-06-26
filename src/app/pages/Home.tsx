@@ -139,11 +139,11 @@ export function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
+              <div className="rounded-[2.5rem] overflow-hidden shadow-2xl">
                 <ImageWithFallback
                   src={heroImage}
                   alt="Ayurvedic herbs and products"
-                  className="w-full max-h-[600px] object-contain bg-cream"
+                  className="w-full max-h-[600px] object-cover"
                 />
               </div>
             </motion.div>
