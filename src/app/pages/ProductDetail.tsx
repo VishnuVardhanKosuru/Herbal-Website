@@ -403,13 +403,13 @@ export function ProductDetail() {
               animate="visible"
               variants={fadeInUp}
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-4 bg-cream">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-4 bg-gradient-to-br from-primary/10 via-cream to-accent/10">
                 {product.images ? (
                   <>
                     <ImageWithFallback
                       src={product.images[currentImageIndex]}
                       alt={product.name}
-                      className="w-full h-96 object-cover p-4"
+                      className="w-full h-96 object-contain mix-blend-multiply p-4"
                     />
                     {product.images.length > 1 && (
                       <>
@@ -429,7 +429,7 @@ export function ProductDetail() {
                     )}
                   </>
                 ) : (
-                  <div className="w-full h-96 flex items-center justify-center bg-cream">
+                  <div className="w-full h-96 flex items-center justify-center bg-gradient-to-br from-primary/10 via-cream to-accent/10">
                     <div className="text-center p-8">
                       <Leaf className="text-primary/30 mx-auto mb-4" size={64} />
                       <p className="text-muted-foreground text-lg">Product Image</p>
@@ -450,7 +450,7 @@ export function ProductDetail() {
                       <ImageWithFallback
                         src={image}
                         alt={`${product.name} ${index + 1}`}
-                        className="w-24 h-24 object-cover"
+                        className="w-24 h-24 object-contain mix-blend-multiply bg-gradient-to-br from-primary/10 via-cream to-accent/10"
                       />
                     </button>
                   ))}
