@@ -16,13 +16,13 @@ const productData: Record<string, any> = {
     description: 'Venika is the art of Ayurveda refined into a rare elixir for hair that deserves the finest care. Formulated with handpicked herbs, Venika by SuJaya Herbals delivers stronger roots, natural growth, and protection against premature greying. It enhances every strand with a lustrous glow, while its cooling essence brings soothing calm to the scalp. A celebration of botanical richness and luxury, Venika transforms hair care into a ritual of indulgence, radiance, and enduring beauty.',
     images: [
       '/images/venika/Venika_00.jpg',
-      '/images/venika/Venika_00a.jpg',
-      '/images/venika/Venika_00b.jpg',
       '/images/venika/Venika_01.jpg',
       '/images/venika/Venika_02.jpg',
-      '/images/venika/Venika_02_a.jpg',
       '/images/venika/Venika_03.jpg',
-      '/images/venika/Venika_04a.jpg'
+      '/images/venika/Venika_04a.jpg',
+      '/images/venika/Venika_00a.jpg',
+      '/images/venika/Venika_00b.jpg',
+      '/images/venika/Venika_02_a.jpg'
     ],
     benefits: [
       'Regular use of Venika Hair Oil helps strengthen hair strands',
@@ -48,9 +48,9 @@ const productData: Record<string, any> = {
     images: [
       '/images/medhini/Medhini_01.jpg',
       '/images/medhini/Medhini_02.jpg',
-      '/images/medhini/Medhini_02a.jpg',
       '/images/medhini/Medhini_03.jpg',
       '/images/medhini/Medhini_04.jpg',
+      '/images/medhini/Medhini_02a.jpg',
       '/images/medhini/Medhini_05a.jpg'
     ],
     benefits: [
@@ -75,14 +75,14 @@ const productData: Record<string, any> = {
     description: 'Vama Lip Balm is a naturally crafted lip care essential made with carefully selected ingredients to nourish and protect your lips. Its smooth, buttery texture glides effortlessly, keeping lips soft, moisturised, and comfortable throughout the day. Infused with a pleasant, gentle fragrance and available in three beautiful shades, VAMA adds a subtle touch of colour while caring for your lips. Free from harsh chemicals, sulphates, and other harmful additives, it is a safe and authentic choice for naturally healthy, beautiful lips.',
     images: [
       '/images/vama/Vama_00.jpg',
-      '/images/vama/Vama_00a.jpg',
       '/images/vama/Vama_01.jpg',
       '/images/vama/Vama_02.jpg',
       '/images/vama/Vama_03.jpg',
       '/images/vama/Vama_04.jpg',
       '/images/vama/Vama_05.jpg',
-      '/images/vama/Vama_05a.jpg',
-      '/images/vama/Vama_06.jpg'
+      '/images/vama/Vama_06.jpg',
+      '/images/vama/Vama_00a.jpg',
+      '/images/vama/Vama_05a.jpg'
     ],
     benefits: [
       'Keeps lips soft, smooth and naturally healthy',
@@ -107,13 +107,13 @@ const productData: Record<string, any> = {
     images: [
       '/images/zrika/Zrika_00.jpg',
       '/images/zrika/Zrika_01.jpg',
-      '/images/zrika/Zrika_01a.jpg',
       '/images/zrika/Zrika_02.jpg',
       '/images/zrika/Zrika_03.jpg',
-      '/images/zrika/Zrika_03b.jpg',
       '/images/zrika/Zrika_04.jpg',
       '/images/zrika/Zrika_05.jpg',
-      '/images/zrika/Zrika_06.jpg'
+      '/images/zrika/Zrika_06.jpg',
+      '/images/zrika/Zrika_01a.jpg',
+      '/images/zrika/Zrika_03b.jpg'
     ],
     benefits: [
       'Enhances complexion and skin tone',
@@ -142,13 +142,13 @@ const productData: Record<string, any> = {
     images: [
       '/images/laya/Laya_00.jpg',
       '/images/laya/Laya_01.jpg',
-      '/images/laya/Laya_01a.jpg',
       '/images/laya/Laya_02.jpg',
       '/images/laya/Laya_03.jpg',
       '/images/laya/Laya_04.jpg',
       '/images/laya/Laya_05.jpg',
       '/images/laya/Laya_06.jpg',
-      '/images/laya/Laya_07.jpg'
+      '/images/laya/Laya_07.jpg',
+      '/images/laya/Laya_01a.jpg'
     ],
     benefits: [
       'Beneficial against sun tan and pigmentation',
@@ -403,13 +403,13 @@ export function ProductDetail() {
               animate="visible"
               variants={fadeInUp}
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-4 bg-cream">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-4 bg-gradient-to-br from-primary/10 via-cream to-accent/10">
                 {product.images ? (
                   <>
                     <ImageWithFallback
                       src={product.images[currentImageIndex]}
                       alt={product.name}
-                      className="w-full h-96 object-contain p-4"
+                      className="w-full h-96 object-contain p-4 mix-blend-multiply"
                     />
                     {product.images.length > 1 && (
                       <>
@@ -429,7 +429,7 @@ export function ProductDetail() {
                     )}
                   </>
                 ) : (
-                  <div className="w-full h-96 flex items-center justify-center bg-cream">
+                  <div className="w-full h-96 flex items-center justify-center bg-gradient-to-br from-primary/10 via-cream to-accent/10">
                     <div className="text-center p-8">
                       <Leaf className="text-primary/30 mx-auto mb-4" size={64} />
                       <p className="text-muted-foreground text-lg">Product Image</p>
@@ -450,7 +450,7 @@ export function ProductDetail() {
                       <ImageWithFallback
                         src={image}
                         alt={`${product.name} ${index + 1}`}
-                        className="w-24 h-24 object-cover"
+                        className="w-24 h-24 object-cover mix-blend-multiply bg-cream"
                       />
                     </button>
                   ))}

@@ -241,15 +241,15 @@ export function Home() {
               >
                 <div className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col">
                   <Link to={`/product/${product.id}`}>
-                    <div className="relative overflow-hidden bg-cream">
+                    <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-cream to-accent/10">
                       {product.image ? (
                         <ImageWithFallback
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                          className="w-full h-80 object-contain group-hover:scale-110 transition-transform duration-500 mix-blend-multiply"
                         />
                       ) : (
-                        <div className="w-full h-80 flex items-center justify-center bg-cream">
+                        <div className="w-full h-80 flex items-center justify-center bg-gradient-to-br from-primary/10 via-cream to-accent/10">
                           <div className="text-center p-6">
                             <Leaf className="text-primary/30 mx-auto mb-2" size={48} />
                             <p className="text-muted-foreground text-sm">Product Image</p>
