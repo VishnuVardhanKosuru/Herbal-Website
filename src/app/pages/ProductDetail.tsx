@@ -14,7 +14,16 @@ const productData: Record<string, any> = {
     price: '₹595',
     mrp: '₹700',
     description: 'Venika is the art of Ayurveda refined into a rare elixir for hair that deserves the finest care. Formulated with handpicked herbs, Venika by SuJaya Herbals delivers stronger roots, natural growth, and protection against premature greying. It enhances every strand with a lustrous glow, while its cooling essence brings soothing calm to the scalp. A celebration of botanical richness and luxury, Venika transforms hair care into a ritual of indulgence, radiance, and enduring beauty.',
-    images: ['/images/ingredients/4.Amla.jpeg'],
+    images: [
+      '/images/venika/Venika_00.jpg',
+      '/images/venika/Venika_00a.jpg',
+      '/images/venika/Venika_00b.jpg',
+      '/images/venika/Venika_01.jpg',
+      '/images/venika/Venika_02.jpg',
+      '/images/venika/Venika_02_a.jpg',
+      '/images/venika/Venika_03.jpg',
+      '/images/venika/Venika_04a.jpg'
+    ],
     benefits: [
       'Regular use of Venika Hair Oil helps strengthen hair strands',
       'Reduce breakage and delay premature greying of hair',
@@ -22,7 +31,8 @@ const productData: Record<string, any> = {
     ],
     ingredients: [
       { name: 'Bhringraj', benefit: 'Promotes hair growth and prevents premature graying' },
-      { name: 'Amla', benefit: 'Rich in Vitamin C, strengthens hair follicles' },
+      { name: 'Amla', benefit: 'Rich in Vitamin C, strengthens hair follicles', image: '/images/ingredients/4.Amla.jpeg' },
+      { name: 'Indigo', benefit: 'Maintains naturally black, lustrous hair', image: '/images/ingredients/3.Indigo.JPG' },
       { name: 'Brahmi', benefit: 'Nourishes the scalp and reduces hair fall' },
       { name: 'Coconut Oil', benefit: 'Deep conditioning and moisturizing base' }
     ],
@@ -35,7 +45,14 @@ const productData: Record<string, any> = {
     price: '₹289',
     mrp: '₹340',
     description: 'Medhini, an exquisite blend crafted to embody nature’s cure for a clear scalp. With the nourishing depth of virgin coconut oil and the restorative strength of fenugreek, this elixir breathes life into every strand, bringing balance, vitality, and grace to your hair. Medhini purifies the scalp with gentle clarity, strengthens roots with natural resilience, and stimulates healthy growth for hair. Each drop is a harmony of tradition and refinement, transforming daily care into a ritual of indulgence. With Medhini, every strand is guided towards a journey of strength, clarity, and lustrous growth.',
-    images: ['/images/ingredients/2.Fenugreek.jpg'],
+    images: [
+      '/images/medhini/Medhini_01.jpg',
+      '/images/medhini/Medhini_02.jpg',
+      '/images/medhini/Medhini_02a.jpg',
+      '/images/medhini/Medhini_03.jpg',
+      '/images/medhini/Medhini_04.jpg',
+      '/images/medhini/Medhini_05a.jpg'
+    ],
     benefits: [
       'Formulated with powerful herbal ingredients',
       'Medhini works effectively to reduce dandruff',
@@ -44,7 +61,7 @@ const productData: Record<string, any> = {
     ingredients: [
       { name: 'Neem', benefit: 'Antibacterial properties that combat dandruff' },
       { name: 'Tea Tree Oil', benefit: 'Natural antifungal that soothes scalp' },
-      { name: 'Methi (Fenugreek)', benefit: 'Strengthens hair roots and promotes growth' },
+      { name: 'Methi (Fenugreek)', benefit: 'Strengthens hair roots and promotes growth', image: '/images/ingredients/2.Fenugreek.jpg' },
       { name: 'Sesame Oil', benefit: 'Moisturizing base that nourishes scalp' }
     ],
     directions: 'Apply oil to scalp and massage gently in circular motions. Leave on for 1-2 hours or overnight. Wash thoroughly with a mild shampoo. Use regularly for best results in controlling dandruff and promoting hair growth.',
@@ -56,7 +73,17 @@ const productData: Record<string, any> = {
     price: '₹234',
     mrp: '₹275',
     description: 'Vama Lip Balm is a naturally crafted lip care essential made with carefully selected ingredients to nourish and protect your lips. Its smooth, buttery texture glides effortlessly, keeping lips soft, moisturised, and comfortable throughout the day. Infused with a pleasant, gentle fragrance and available in three beautiful shades, VAMA adds a subtle touch of colour while caring for your lips. Free from harsh chemicals, sulphates, and other harmful additives, it is a safe and authentic choice for naturally healthy, beautiful lips.',
-    images: ['/images/ingredients/8.Vetiver.jpg'],
+    images: [
+      '/images/vama/Vama_00.jpg',
+      '/images/vama/Vama_00a.jpg',
+      '/images/vama/Vama_01.jpg',
+      '/images/vama/Vama_02.jpg',
+      '/images/vama/Vama_03.jpg',
+      '/images/vama/Vama_04.jpg',
+      '/images/vama/Vama_05.jpg',
+      '/images/vama/Vama_05a.jpg',
+      '/images/vama/Vama_06.jpg'
+    ],
     benefits: [
       'Keeps lips soft, smooth and naturally healthy',
       'Reduce pigmentation',
@@ -66,7 +93,7 @@ const productData: Record<string, any> = {
       { name: 'Beeswax', benefit: 'Creates a protective barrier and locks in moisture' },
       { name: 'Shea Butter', benefit: 'Deeply nourishes and softens lips' },
       { name: 'Vitamin E', benefit: 'Antioxidant protection and healing' },
-      { name: 'Natural Herbs', benefit: 'Gentle care with medicinal benefits' }
+      { name: 'Vetiver', benefit: 'Gentle care with natural medicinal cooling benefits', image: '/images/ingredients/8.Vetiver.jpg' }
     ],
     directions: 'Apply generously to lips as needed throughout the day. For extra hydration, apply before bedtime. Use regularly to keep lips soft, smooth, and protected.',
     volume: '5gms'
@@ -77,7 +104,17 @@ const productData: Record<string, any> = {
     price: '₹979',
     mrp: '₹1224',
     description: 'Zrika is a magical elixir for your skin, enriched with the golden touch of pure Kashmiri saffron and the richness of 16 precious herbs. This exquisite blend, enriched with nutrient dense wood-pressed sesame oil and the velvety richness of goat milk, is meticulously crafted to drench your skin in deep nourishment and luminous vitality. With every touch, it imparts a delicate warmth and a natural radiance, as if kissed by sunlight. More than a skincare product, Zrika is a ritual of elegance—restoring, brightening, and unveiling the glow that lies within.',
-    images: [zrikaImage],
+    images: [
+      '/images/zrika/Zrika_00.jpg',
+      '/images/zrika/Zrika_01.jpg',
+      '/images/zrika/Zrika_01a.jpg',
+      '/images/zrika/Zrika_02.jpg',
+      '/images/zrika/Zrika_03.jpg',
+      '/images/zrika/Zrika_03b.jpg',
+      '/images/zrika/Zrika_04.jpg',
+      '/images/zrika/Zrika_05.jpg',
+      '/images/zrika/Zrika_06.jpg'
+    ],
     benefits: [
       'Enhances complexion and skin tone',
       'Fades fine lines and wrinkles',
@@ -87,9 +124,10 @@ const productData: Record<string, any> = {
       'Suitable for men and women'
     ],
     ingredients: [
-      { name: 'Saffron', benefit: 'Enhances radiance and brightens complexion' },
+      { name: 'Saffron', benefit: 'Enhances radiance and brightens complexion', image: '/images/ingredients/1.Saffron.jpg' },
       { name: 'Kumkumadi Oil', benefit: 'Traditional blend for glowing skin' },
-      { name: 'Sandalwood', benefit: 'Cools, clarifies and refines skin tone' },
+      { name: 'Sandalwood', benefit: 'Cools, clarifies and refines skin tone', image: '/images/ingredients/7.Sandalwood.jpg' },
+      { name: 'Goat Milk', benefit: 'Velvety richness that provides deep nourishment', image: '/images/ingredients/6.Goat_milk.jpeg' },
       { name: 'Almond Oil', benefit: 'Nourishes and softens skin' }
     ],
     directions: 'After cleansing, apply 2-3 drops to face and neck. Gently massage in upward circular motions until absorbed. Use daily, preferably at night, for best results. Can also be mixed with your moisturizer.',
@@ -101,7 +139,17 @@ const productData: Record<string, any> = {
     price: '₹595',
     mrp: '₹700',
     description: 'Laya is a refined pre-bath face care oil, designed to reveal a luminous, eventoned complexion while diminishing tan and pigmentation. At its heart lies the ruby richness of fresh pomegranate juice, a potent antioxidant that shields the skin from damage, boosts collagen production, and restores a healthy, youthful glow. Paired with Manjishta, an age old Ayurvedic herb known for its purifying, circulation-boosting, and anti-aging properties, this luxurious blend deeply hydrates and revitalises. With every use, Laya gently erases dullness and unevenness, unveiling skin that radiates clarity, brightness, and natural beauty.',
-    images: ['/images/ingredients/5.Indian maddar.png'],
+    images: [
+      '/images/laya/Laya_00.jpg',
+      '/images/laya/Laya_01.jpg',
+      '/images/laya/Laya_01a.jpg',
+      '/images/laya/Laya_02.jpg',
+      '/images/laya/Laya_03.jpg',
+      '/images/laya/Laya_04.jpg',
+      '/images/laya/Laya_05.jpg',
+      '/images/laya/Laya_06.jpg',
+      '/images/laya/Laya_07.jpg'
+    ],
     benefits: [
       'Beneficial against sun tan and pigmentation',
       'Prevent dark circles',
@@ -109,6 +157,7 @@ const productData: Record<string, any> = {
       'Suitable for men and women'
     ],
     ingredients: [
+      { name: 'Manjishta (Indian Maddar)', benefit: 'Age old Ayurvedic herb known for purifying and anti-aging', image: '/images/ingredients/5.Indian_maddar.png' },
       { name: 'Turmeric', benefit: 'Natural skin brightening and tan reduction' },
       { name: 'Vitamin C', benefit: 'Powerful antioxidant that evens skin tone' },
       { name: 'Licorice Extract', benefit: 'Reduces hyperpigmentation and brightens' },
@@ -354,7 +403,7 @@ export function ProductDetail() {
               animate="visible"
               variants={fadeInUp}
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-4 bg-gradient-to-br from-primary/5 to-accent/5">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-4 bg-cream">
                 {product.images ? (
                   <>
                     <ImageWithFallback
@@ -380,7 +429,7 @@ export function ProductDetail() {
                     )}
                   </>
                 ) : (
-                  <div className="w-full h-96 flex items-center justify-center bg-gradient-to-br from-primary/5 to-accent/5">
+                  <div className="w-full h-96 flex items-center justify-center bg-cream">
                     <div className="text-center p-8">
                       <Leaf className="text-primary/30 mx-auto mb-4" size={64} />
                       <p className="text-muted-foreground text-lg">Product Image</p>
@@ -614,11 +663,23 @@ export function ProductDetail() {
                 <div className="space-y-4">
                   {product.ingredients.map((ingredient: any, index: number) => (
                     <div key={index} className="pb-4 border-b border-border last:border-0">
-                      <div className="flex items-start gap-3">
-                        <Leaf className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <div className="flex items-center gap-4">
+                        {ingredient.image ? (
+                          <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden border-2 border-primary/20 shadow-sm">
+                            <ImageWithFallback
+                              src={ingredient.image}
+                              alt={ingredient.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        ) : (
+                          <div className="w-12 h-12 flex-shrink-0 rounded-full bg-primary/10 flex items-center justify-center">
+                            <Leaf className="text-primary" size={24} />
+                          </div>
+                        )}
                         <div>
                           <h4 className="font-semibold mb-1">{ingredient.name}</h4>
-                          <p className="text-muted-foreground text-sm">{ingredient.benefit}</p>
+                          <p className="text-muted-foreground text-sm leading-relaxed">{ingredient.benefit}</p>
                         </div>
                       </div>
                     </div>

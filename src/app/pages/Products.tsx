@@ -19,7 +19,7 @@ export function Products() {
       price: '₹595',
       mrp: '₹700',
       discount: '15%',
-      image: '/images/ingredients/4.Amla.jpeg'
+      image: '/images/venika/Venika_00.jpg'
     },
     {
       id: 'medhini-anti-dandruff-oil',
@@ -30,7 +30,7 @@ export function Products() {
       price: '₹289',
       mrp: '₹340',
       discount: '15%',
-      image: '/images/ingredients/2.Fenugreek.jpg'
+      image: '/images/medhini/Medhini_01.jpg'
     },
     {
       id: 'vama-lip-balm',
@@ -41,7 +41,7 @@ export function Products() {
       price: '₹234',
       mrp: '₹275',
       discount: '15%',
-      image: '/images/ingredients/8.Vetiver.jpg'
+      image: '/images/vama/Vama_00.jpg'
     },
     {
       id: 'zrika-premium-face-oil',
@@ -52,7 +52,7 @@ export function Products() {
       price: '₹979',
       mrp: '₹1224',
       discount: '20%',
-      image: zrikaImage
+      image: '/images/zrika/Zrika_00.jpg'
     },
     {
       id: 'laya-face-care-oil',
@@ -63,7 +63,7 @@ export function Products() {
       price: '₹595',
       mrp: '₹700',
       discount: '15%',
-      image: '/images/ingredients/5.Indian maddar.png'
+      image: '/images/laya/Laya_00.jpg'
     },
   ];
 
@@ -107,7 +107,7 @@ export function Products() {
               >
                 <Link to={`/product/${product.id}`}>
                   <div className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col">
-                    <div className="relative overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5">
+                    <div className="relative overflow-hidden bg-cream">
                       {product.image ? (
                         <ImageWithFallback
                           src={product.image}
@@ -115,7 +115,7 @@ export function Products() {
                           className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
                         />
                       ) : (
-                        <div className="w-full h-72 flex items-center justify-center bg-gradient-to-br from-primary/5 to-accent/5">
+                        <div className="w-full h-72 flex items-center justify-center bg-cream">
                           <div className="text-center p-6">
                             <Leaf className="text-primary/30 mx-auto mb-2" size={48} />
                             <p className="text-muted-foreground text-sm">Product Image</p>
