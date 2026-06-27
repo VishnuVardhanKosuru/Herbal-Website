@@ -11,11 +11,6 @@ export function About() {
 
   const values = [
     {
-      icon: <Leaf size={32} />,
-      title: 'Natural Purity',
-      description: 'We use only the finest botanical ingredients, free from harmful chemicals and synthetic additives.'
-    },
-    {
       icon: <Award size={32} />,
       title: 'Our Mission',
       description: 'Our mission is to create premium formulations that deliver visible results while nurturing beauty in its purest and most natural form.'
@@ -24,6 +19,11 @@ export function About() {
       icon: <Shield size={32} />,
       title: 'Our Vision',
       description: 'To become globally admired premium beauty brand celebrated for elegance, purity and conscious self care.'
+    },
+    {
+      icon: <Leaf size={32} />,
+      title: 'Natural Purity',
+      description: 'We use only the finest botanical ingredients, free from harmful chemicals and synthetic additives.'
     },
     {
       icon: <Heart size={32} />,

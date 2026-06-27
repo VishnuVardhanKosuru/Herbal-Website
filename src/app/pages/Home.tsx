@@ -102,7 +102,7 @@ export function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-cream overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-24 md:pt-48 md:pb-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial="hidden"
@@ -139,11 +139,11 @@ export function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="rounded-[2.5rem] overflow-hidden shadow-2xl">
+              <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <ImageWithFallback
                   src={heroImage}
                   alt="Ayurvedic herbs and products"
-                  className="w-full max-h-[600px] object-cover"
+                  className="w-full h-[500px] object-cover"
                 />
               </div>
             </motion.div>
@@ -366,52 +366,52 @@ export function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                name: 'Neem',
-                benefit: 'Purifies & Protects',
-                description: 'Known as the "village pharmacy," neem has powerful antibacterial and anti-inflammatory properties that cleanse and protect the skin.',
-                image: 'https://images.unsplash.com/photo-1669574753113-6442f2cc69b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZWVtJTIwbGVhdmVzfGVufDF8fHx8MTc3OTY2MzkxOHww&ixlib=rb-4.1.0&q=80&w=1080'
-              },
-              {
-                name: 'Turmeric',
-                benefit: 'Brightens & Heals',
-                description: 'Golden spice rich in curcumin, renowned for its anti-inflammatory and skin-brightening benefits. A timeless beauty secret.',
-                image: 'https://images.unsplash.com/photo-1615485500834-bc10199bc727?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0dXJtZXJpYyUyMHJvb3QlMjBpc29sYXRlZHxlbnwxfHx8fDE3Nzk3MzQ2NDF8MA&ixlib=rb-4.1.0&q=80&w=1080'
-              },
-              {
-                name: 'Bhringraj',
-                benefit: 'Nourishes & Strengthens',
-                description: 'The "king of herbs" for hair, promoting growth, preventing premature graying, and strengthening roots from within.',
-                image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500&q=80'
-              },
-              {
                 name: 'Saffron',
                 benefit: 'Revives & Radiates',
-                description: 'Precious spice that enhances skin luminosity, improves complexion, and brings a natural glow to your skin.',
-                image: 'https://images.unsplash.com/photo-1631189945107-34e33ff1c648?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYWZmcm9uJTIwZmxvd2VyfGVufDF8fHx8MTc3OTY2MzkxN3ww&ixlib=rb-4.1.0&q=80&w=1080'
+                description: 'Precious spice that enhances skin luminosity, improves complexion, and brings a natural glow.',
+                image: '/images/ingredients/1.Saffron.jpg'
               },
               {
-                name: 'Amla',
+                name: 'Gooseberry',
                 benefit: 'Strengthens & Rejuvenates',
-                description: 'Rich in Vitamin C and antioxidants, amla strengthens hair follicles, promotes growth, and rejuvenates the scalp.',
-                image: 'https://images.unsplash.com/photo-1600445512359-cc7e5c51bf75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb29zZWJlcnJ5JTIwZnJ1aXQlMjBncmVlbnxlbnwxfHx8fDE3Nzk2NjM5MjR8MA&ixlib=rb-4.1.0&q=80&w=1080'
+                description: 'Rich in Vitamin C, strengthens hair follicles, promotes growth, and rejuvenates the scalp.',
+                image: '/images/ingredients/4.Amla.jpeg'
+              },
+              {
+                name: 'Fenugreek',
+                benefit: 'Purifies & Heals',
+                description: 'Powerful herb that fights dandruff, strengthens roots, and promotes healthy hair growth.',
+                image: '/images/ingredients/2.Fenugreek.jpg'
               },
               {
                 name: 'Sandalwood',
                 benefit: 'Cools & Clarifies',
-                description: 'Cooling and soothing properties that clarify the skin, reduce inflammation, and provide a calming effect.',
-                image: 'https://images.unsplash.com/photo-1583418007992-a8e33a92e7ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYW5kYWx3b29kfGVufDF8fHx8MTc3OTY2MzkxOXww&ixlib=rb-4.1.0&q=80&w=1080'
+                description: 'Cooling properties that clarify skin, reduce inflammation, and provide a calming effect.',
+                image: '/images/ingredients/7.Sandalwood.jpg'
               },
               {
-                name: 'Rose',
-                benefit: 'Hydrates & Soothes',
-                description: 'Timeless beauty ingredient that hydrates, tones, and soothes the skin while balancing pH levels naturally.',
-                image: 'https://images.unsplash.com/photo-1578439231583-9eca0a363860?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb3NlJTIwcGV0YWxzfGVufDF8fHx8MTc3OTY2MzkxOXww&ixlib=rb-4.1.0&q=80&w=1080'
+                name: 'Vetiver',
+                benefit: 'Soothes & Restores',
+                description: 'Aromatic root that soothes skin, reduces blemishes, and restores natural balance.',
+                image: '/images/ingredients/8.Vetiver.jpg'
               },
               {
-                name: 'Aloe Vera',
-                benefit: 'Heals & Moisturizes',
-                description: 'Nature\'s healing plant that deeply moisturizes, soothes irritation, and promotes skin repair and regeneration.',
-                image: 'https://images.unsplash.com/photo-1702416062979-dc44baa952c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbG9lJTIwdmVyYSUyMGxlYWYlMjBpc29sYXRlZHxlbnwxfHx8fDE3Nzk3MzQ2NDB8MA&ixlib=rb-4.1.0&q=80&w=1080'
+                name: 'Indian Maddar',
+                benefit: 'Purifies & Brightens',
+                description: 'Ancient blood-purifying herb (Manjistha) that reduces dark spots, clears blemishes, and restores an even, radiant skin tone.',
+                image: '/images/ingredients/5.Indian_maddar.png'
+              },
+              {
+                name: 'Indigo',
+                benefit: 'Colors & Nourishes',
+                description: 'Traditional herb that naturally darkens hair, prevents premature greying, and nourishes strands.',
+                image: '/images/ingredients/3.Indigo.JPG'
+              },
+              {
+                name: 'Goat Milk',
+                benefit: 'Nourishes & Moisturizes',
+                description: 'Rich in lactic acid, vitamins and minerals, deeply nourishes and softens skin while gently exfoliating for a healthy glow.',
+                image: '/images/ingredients/6.Goat_milk.jpeg'
               },
             ].map((ingredient, index) => (
               <motion.div
@@ -427,11 +427,17 @@ export function Home() {
                   {/* Front Face */}
                   <div className="absolute inset-0 h-full w-full rounded-2xl [backface-visibility:hidden]">
                     <div className="bg-white rounded-2xl overflow-hidden shadow-lg h-full flex flex-col">
-                      <ImageWithFallback
-                        src={ingredient.image}
-                        alt={ingredient.name}
-                        className="w-full h-48 object-cover"
-                      />
+                      {ingredient.image ? (
+                        <ImageWithFallback
+                          src={ingredient.image}
+                          alt={ingredient.name}
+                          className="w-full h-48 object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-48 bg-primary/10 flex items-center justify-center">
+                          <Leaf className="text-primary/40" size={48} />
+                        </div>
+                      )}
                       <div className="p-6 flex-1 flex flex-col justify-center text-center">
                         <h3 className="text-2xl mb-2">{ingredient.name}</h3>
                         <p className="text-accent">{ingredient.benefit}</p>
@@ -468,22 +474,22 @@ export function Home() {
           </motion.div>
 
           <div className="relative">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
               {currentReviews.map((testimonial, index) => (
                 <motion.div
                   key={currentReviewPage * reviewsPerPage + index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-cream p-8 rounded-2xl"
+                  className="bg-cream p-8 rounded-2xl flex flex-col"
                 >
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="text-accent fill-accent" size={20} />
                     ))}
                   </div>
-                  <p className="text-lg mb-4 text-foreground">{testimonial.review}</p>
-                  <p className="text-primary">— {testimonial.name}</p>
+                  <p className="text-lg mb-4 text-foreground flex-1">{testimonial.review}</p>
+                  <p className="text-primary font-semibold">— {testimonial.name}</p>
                 </motion.div>
               ))}
             </div>
