@@ -6,52 +6,19 @@ import zrikaImage from '../../imports/WhatsApp_Image_2026-05-23_at_01.32.33.JPG'
 
 export function Products() {
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919876543210?text=Hello! I would like to know more about Sujaya Herbals products.', '_blank');
+    window.open('https://wa.me/qr/XGEFDXCRSDN5C1', '_blank');
   };
 
   const products = [
-    {
-      id: 'venika-hair-oil',
-      name: 'Venika - Hair Oil',
-      category: 'Haircare',
-      description: 'Longer hair, stronger roots, No more premature greys',
-      qty: '100ml',
-      price: '₹595',
-      mrp: '₹700',
-      discount: '15%',
-      image: '/images/venika/Venika_00.jpg'
-    },
-    {
-      id: 'medhini-anti-dandruff-oil',
-      name: 'Medhini - Anti Dandruff & Hair Oil',
-      category: 'Haircare',
-      description: "Anti Dandruff & hair growth oil. Nature's cure for clear scalp",
-      qty: '100ml',
-      price: '₹289',
-      mrp: '₹340',
-      discount: '15%',
-      image: '/images/medhini/Medhini_01.jpg'
-    },
-    {
-      id: 'vama-lip-balm',
-      name: 'Vama Lip Balm',
-      category: 'Lip Care',
-      description: 'Where nature kisses your lip',
-      qty: '5gms',
-      price: '₹234',
-      mrp: '₹275',
-      discount: '15%',
-      image: '/images/vama/Vama_00.jpg'
-    },
     {
       id: 'zrika-premium-face-oil',
       name: 'Zrika Premium Face Oil',
       category: 'Skincare',
       description: 'Every drop glows with the essence of Saffron',
       qty: '10ml',
-      price: '₹979',
-      mrp: '₹1224',
-      discount: '20%',
+      price: '₹1225',
+      mrp: '₹1749',
+      discount: '30%',
       image: '/images/zrika/Zrika_00.jpg'
     },
     {
@@ -60,10 +27,43 @@ export function Products() {
       category: 'Skincare',
       description: 'No more tan just luminous skin',
       qty: '15ml',
-      price: '₹595',
-      mrp: '₹700',
-      discount: '15%',
+      price: '₹360',
+      mrp: '₹450',
+      discount: '20%',
       image: '/images/laya/Laya_00.jpg'
+    },
+    {
+      id: 'venika-hair-oil',
+      name: 'Venika - Hair Oil',
+      category: 'Haircare',
+      description: 'Longer hair, stronger roots, No more premature greys',
+      qty: '100ml',
+      price: '₹630',
+      mrp: '₹700',
+      discount: '10%',
+      image: '/images/venika/Venika_00.jpg'
+    },
+    {
+      id: 'medhini-anti-dandruff-oil',
+      name: 'Medhini - Anti Dandruff & Hair Oil',
+      category: 'Haircare',
+      description: "Anti Dandruff & hair growth oil. Nature's cure for clear scalp",
+      qty: '100ml',
+      price: '₹400',
+      mrp: '₹500',
+      discount: '20%',
+      image: '/images/medhini/Medhini_01.jpg'
+    },
+    {
+      id: 'vama-lip-balm',
+      name: 'Vama Lip Balm',
+      category: 'Lip Care',
+      description: 'Where nature kisses your lip',
+      qty: '5gms',
+      price: '₹206.25',
+      mrp: '₹275',
+      discount: '25%',
+      image: '/images/vama/Vama_00.jpg'
     },
   ];
 

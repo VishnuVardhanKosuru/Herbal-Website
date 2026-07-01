@@ -26,7 +26,7 @@ function BookingModal({ onClose }: { onClose: () => void }) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = `Hello! I'd like to book a consultation at Sujaya Herbals.%0A%0A*Name:* ${form.name}%0A*Phone:* ${form.phone}%0A*Concern:* ${form.concern}%0A*Date:* ${form.date}%0A*Time:* ${form.time}`;
-    window.open(`https://wa.me/919876543210?text=${msg}`, '_blank');
+    window.open(`https://wa.me/916238416126?text=${msg}`, '_blank');
     setSubmitted(true);
   };
 
@@ -216,7 +216,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   }, [isBookingOpen]);
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919876543210?text=Hello! I would like to know more about Sujaya Herbals products.', '_blank');
+    window.open('https://wa.me/qr/XGEFDXCRSDN5C1', '_blank');
   };
 
   const navLinks = [
@@ -230,7 +230,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-background">
       {/* Promotional Banner */}
       <div className="bg-primary text-primary-foreground py-2 px-4 text-center text-sm">
-        <p>Limited Time Offer: Shop Premium Herbal Care & SAVE UPTO 20%</p>
+        <p>Limited Time Offer: Shop Premium Herbal Care & SAVE UPTO 30%</p>
       </div>
 
       {/* Sticky Navigation */}
@@ -348,9 +348,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h4 className="mb-4">Contact</h4>
               <p className="text-primary-foreground/80">
-                Email: info@sujayaherbals.com<br />
-                Phone: +91 98765 43210<br />
-                WhatsApp: +91 98765 43210
+                Email: sujayaherbals2025@gmail.com<br />
+                Phone: +91 6238416126<br />
+                WhatsApp: +91 6238416126
               </p>
             </div>
           </div>
