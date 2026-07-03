@@ -9,6 +9,16 @@ import { Label } from '../components/ui/label';
 
 const productData: Record<string, any> = {
   'venika-hair-oil': {
+    executiveSummary: 'Venika focuses on health-conscious consumers seeking safe, chemical-free, and effective hair care products. By emphasizing its authentic herbal formulation, premium quality, and Ayurvedic heritage, this hair oil aims to build strong brand awareness, customer trust, and long-term loyalty while expanding its presence through digital marketing, retail partnerships, and word-of-mouth recommendationsns.',
+    productDescription: '"Longer hair stronger roots, no more premature greys". Made with the juice of indigo, gooseburry,vetiver, balloon vine, false daisy and kwatha of ajwain infused in coconut milk and sesame oil and cow milk. This oil nourishes hair follicles, remedy for premature greying, strengthen hair roots prevent hair fall and promote hair growth.',
+    specifications: [
+      { label: 'Product size', value: '100 ml' },
+      { label: 'Category', value: 'Hair care' },
+      { label: 'Usage frequency', value: '4-5 times per week' },
+      { label: 'Suitable for', value: 'All hair types' },
+      { label: 'Storage', value: 'Cool dry place' },
+      { label: 'Shelf life', value: '24months' }
+    ],
     name: 'Venika - Hair Oil',
     category: 'Haircare',
     price: '₹630',
@@ -39,6 +49,16 @@ const productData: Record<string, any> = {
     volume: '100ml'
   },
   'medhini-anti-dandruff-oil': {
+    executiveSummary: "Medhini targets consumers seeking safe, chemical-free hair care products. It's natural formulation, visible relief from dandruff and itching from the first use, and its ability to nourish the scalp and promote healthy hair growth. Through digital marketing, retail partnerships, and brand storytelling rooted in Ayurveda, Medhini aims to establish a trusted presence in the premium herbal hair care market.",
+    productDescription: 'The anti dandruff oil is made of aloe vera,hibiscus,licorice, mexican mint, fenugreek, little iron weed, black cumin all these herbs are infused in coconut oil. Aimed at controlling dandruff and itching from first use.',
+    specifications: [
+      { label: 'Product size', value: '100ml' },
+      { label: 'Category', value: 'Hair care' },
+      { label: 'Usage frequency', value: '4 to 5 times per week' },
+      { label: 'Suitable for', value: 'All hair types' },
+      { label: 'Storage', value: 'Cool dry place' },
+      { label: 'Shelf life', value: '24 months' }
+    ],
     name: 'Medhini - Anti Dandruff & Hair Oil',
     category: 'Haircare',
     price: '₹400',
@@ -66,6 +86,16 @@ const productData: Record<string, any> = {
     volume: '100ml'
   },
   'vama-lip-balm': {
+    executiveSummary: 'Vama combines natural care with a subtle tint, appealing to consumers seeking safe, chemical-free personal care products. The marketing strategy focuses on promoting its herbal formulation, premium quality, and everyday usability to build brand trust and expand its presence in the natural beauty and wellness market.',
+    productDescription: 'Made with herbal infusions of indian madder and licorice, bee wax, almond, ghee and castor oil. Vama deeply moisturizes and protects dry chapped lips. Creates a smooth, moisturizing base for lipstick application.',
+    specifications: [
+      { label: 'Product size', value: '5 gram' },
+      { label: 'Category', value: 'Lip care' },
+      { label: 'Usage frequency', value: 'As often as required' },
+      { label: 'Suitable for', value: 'All skin types' },
+      { label: 'Storage', value: 'Cool dry place' },
+      { label: 'Shelf life', value: '18 months' }
+    ],
     name: 'Vama Lip Balm',
     category: 'Lip Care',
     price: '₹206.25',
@@ -97,6 +127,16 @@ const productData: Record<string, any> = {
     volume: '5gms'
   },
   'zrika-premium-face-oil': {
+    executiveSummary: 'Zrika is marketed not just as a standard skincare item, but as a "ritual of elegance." It bridges the gap between traditional holistic remedies and luxury skincare, offering consumers a holistic, restorative experience with visible results.',
+    productDescription: 'Radiance in every drop. A blend of 16 anti aging herbs in wood pressed sesame oil and goat milk with saffron as key ingredient. This magical oil detoxifies, nourishes and vanishes lines, wrinkles and age defying overall rejuvenation. Ideal for dull,uneven or tired skin. Recommended for both men and women.',
+    specifications: [
+      { label: 'Product size', value: '10ml' },
+      { label: 'Category', value: 'Skin care' },
+      { label: 'Usage frequency', value: 'Daily at night' },
+      { label: 'Suitable for', value: 'All skin type' },
+      { label: 'Storage', value: 'Cool dry place' },
+      { label: 'Shelf life', value: '24 months' }
+    ],
     name: 'Zrika Premium Face Oil',
     category: 'Skincare',
     price: '₹1225',
@@ -133,6 +173,16 @@ const productData: Record<string, any> = {
     volume: '10ml'
   },
   'laya-face-care-oil': {
+    executiveSummary: 'Laya is a premium, Ayurvedic-inspired pre-bath facial oil . With a 4.8/5 rating across 234 reviews, it shows strong customer validation and clear DTC e-commerce potential. The product is positioned as a premium, ritual-based skincare SKU targeting beauty-conscious consumers seeking natural, heritage-backed formulations.',
+    productDescription: '"No more tan just luminous skin". Pre bath oil for hyperpigmented and dull skin. This anti tan oil made with indian madder, red sandal, licorice vetiver, lodh tree bark etc blends in wood pressed sesame oil and goat milk. By regular use you can see the change, reduce pigmentation, improves skin elasticity.',
+    specifications: [
+      { label: 'Product size', value: '15ml' },
+      { label: 'Category', value: 'Skin care' },
+      { label: 'Usage frequency', value: 'Daily at day time' },
+      { label: 'Suitable for', value: 'All skin type' },
+      { label: 'Storage', value: 'Cool dry place' },
+      { label: 'Shelf life', value: '24 months' }
+    ],
     name: 'Laya - Face Care Oil',
     category: 'Skincare',
     price: '₹360',
@@ -164,6 +214,40 @@ const productData: Record<string, any> = {
     directions: 'Apply oil evenly to face and neck before bathing. Gently massage for 2-3 minutes. Leave on for 30 - 60 minutes. Rinse with lukewarm water and cleanse as usual. Use regularly for visible reduction in tan and brighter skin.',
     volume: '15ml'
   },
+};
+
+const productReviews: Record<string, Array<{name: string, location: string, rating: number, review: string, image: string}>> = {
+  'laya-face-care-oil': [
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Loved it! My tan started fading within two weeks, and my skin looks much brighter and healthier now.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'A simple but effective product. It helped reduce sun tan and gave my face a natural glow.', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'I’ve been using Laya Pre-Bath Oil before my morning bath for about two weeks. The first thing I noticed was that my skin looked less dull. The tanning on my forehead and around my mouth has reduced, and my complexion looks more even now. It feels very gentle on the skin too.', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Really impressed with the results. My skin feels smoother, brighter, and the tan has visibly reduced.', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'The oil is lightweight and easy to apply. Within a couple of weeks, my face looked noticeably brighter. It helped reduce the tanning from my daily commute and gave my skin a healthy glow.', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'I wasn’t expecting dramatic results, but Laya Pre-Bath Oil pleasantly surprised me. I applied it regularly before bathing for just over two weeks. The tanning that had built up over months started fading, especially around my forehead, nose, and neck. My skin tone looks more even, and some of the pigmentation marks appear lighter than before. The best part is that my face doesn’t just look brighter—it looks naturally refreshed and healthy. I’ll definitely continue using it.', image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'I’ve struggled with uneven skin tone for a while, and this oil has helped a lot. The pigmentation appears lighter, and my skin looks more radiant than before. Consistent use before bathing gave me visible results in a short time.', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80' }
+  ],
+  'medhini-anti-dandruff-oil': [
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Several products were tried for dandruff before, but the results never lasted. After using Medhini Anti-Dandruff Oil regularly, there was a noticeable reduction in flaking and itching within a few weeks. The scalp feels healthier now, and the oil suited the scalp really well without causing any irritation.', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'I travel long distances every day and rarely get time for hair care. Dust and pollution made my dandruff worse. Medhini was easy to use, and with regular application, my dandruff reduced significantly. I also liked how gentle and comfortable it felt on my scalp', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'With a young child to care for, I barely have time for myself. Dandruff had become a constant issue, but Medhini Anti-Dandruff Oil helped a lot. It reduced the flakes and itching, and my hair feels healthier without requiring much effort.', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Medhini worked wonders for my flaky scalp. Dandruff reduced noticeably, and my hair feels refreshed and healthy.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Finally found an anti-dandruff oil that actually works! Less itching, less dandruff, and healthier-looking hair.', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80' }
+  ],
+  'zrika-premium-face-oil': [
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'The first thing that stood out about Zrika was the rich saffron aroma. It genuinely feels like a premium product made with authentic ingredients. With regular use, my skin looks brighter, smoother, and much more radiant.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'At 48, I was looking for something that could nourish my skin without feeling heavy. Zrika Premium Face Oil has improved my skin’s texture noticeably, and the fine lines around my eyes and mouth appear softer. My skin feels healthier and more youthful.', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Long hours and lack of sleep had left me with dark circles and tired-looking skin. Zrika helped brighten my under-eye area, improve my skin tone, and keep my skin looking fresh and youthful.', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'As someone who practices face yoga regularly, Zrika has been a wonderful addition to my routine. It provides the perfect glide for massage and leaves my skin soft, nourished, and glowing.', image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'I wasn’t expecting such a visible difference. Within a few weeks, my skin looked brighter, smoother, and much more refreshed. The change has been truly impressive.', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'My skin often felt dull and uneven. After using Zrika consistently, the texture feels much smoother, and my face has a healthy, natural glow.', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Zrika has become my favorite nighttime skincare product. It leaves my skin feeling deeply nourished, and I wake up with a fresh, radiant glow.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Regular use of Zrika has made my skin look more even-toned and luminous. My face feels softer, healthier, and beautifully nourished every day.', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80' }
+  ],
+  'vama-lip-balm': [
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'My lips used to become dry and chapped very easily, especially during changing weather. After using Vama Lip Balm regularly, they feel much softer and smoother. It keeps my lips moisturized for hours, and the sweet fragrance makes it even more pleasant to use.', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Years of using synthetic lipsticks had left my lips looking darker and unhealthy. I switched to Vama Lip Balm for daily care, and over time my lips started looking healthier and better nourished. It’s now an essential part of my routine, especially on days when I avoid makeup.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80' },
+    { name: 'Verified Customer', location: 'India', rating: 5, review: 'The buttery texture of Vama Lip Balm is what I love most. It glides on effortlessly, feels incredibly smooth on the lips, and the sweet aroma is simply delightful.', image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80' }
+  ]
 };
 
 export function ProductDetail() {
@@ -378,6 +462,40 @@ export function ProductDetail() {
   };
 
   const faqs = id ? productFaqs[id] || [] : [];
+  
+  const defaultReviews = [
+    {
+      name: 'Rajesh Kumar',
+      location: 'Chennai',
+      rating: 5,
+      review: 'Absolutely amazing product! My hair has never felt healthier. The natural ingredients make all the difference.',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80'
+    },
+    {
+      name: 'Sneha Kapoor',
+      location: 'Pune',
+      rating: 5,
+      review: "I've been using this for 2 months and the results are incredible. Highly recommend to anyone looking for authentic Ayurvedic products.",
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80'
+    },
+    {
+      name: 'Arjun Nair',
+      location: 'Kochi',
+      rating: 5,
+      review: 'Best investment for my skincare routine. Natural, effective, and truly delivers on its promises.',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80'
+    },
+    {
+      name: 'Divya Iyer',
+      location: 'Hyderabad',
+      rating: 5,
+      review: 'The quality is outstanding! You can feel the difference from the first use. Pure Ayurvedic goodness.',
+      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80'
+    }
+  ];
+  
+  const reviews = (id && productReviews[id]) ? productReviews[id] : defaultReviews;
+  
 
   return (
     <div className="min-h-screen bg-background">
@@ -487,7 +605,7 @@ export function ProductDetail() {
                 </div>
                 <p className="text-muted-foreground mt-2">Quantity: {product.volume}</p>
               </div>
-              <p className="text-lg text-muted-foreground mb-8">{product.description}</p>
+              <p className="text-lg text-muted-foreground mb-8">{product.executiveSummary || product.description}</p>
 
               {/* Trust Badges */}
               <div className="grid grid-cols-3 gap-4 mb-8">
@@ -596,7 +714,7 @@ export function ProductDetail() {
             <h2 className="text-4xl mb-8">Product Description</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                {product.description}
+                {product.productDescription || product.description}
               </p>
               <h3 className="text-2xl mb-4 mt-8">How to Use</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -628,30 +746,39 @@ export function ProductDetail() {
               <div className="bg-white p-8 rounded-2xl shadow-lg">
                 <h3 className="text-2xl mb-6 text-primary">Specifications</h3>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="font-semibold">Product Size</span>
-                    <span className="text-muted-foreground">{product.volume}</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="font-semibold">Category</span>
-                    <span className="text-muted-foreground">{product.category}</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="font-semibold">Usage Frequency</span>
-                    <span className="text-muted-foreground">2-3 times per week</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="font-semibold">Suitable For</span>
-                    <span className="text-muted-foreground">All skin/hair types</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="font-semibold">Storage</span>
-                    <span className="text-muted-foreground">Cool, dry place</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold">Shelf Life</span>
-                    <span className="text-muted-foreground">24 months</span>
-                  </div>
+                  {product.specifications ? product.specifications.map((spec: any, idx: number) => (
+                    <div key={idx} className="flex justify-between items-center pb-3 border-b border-border last:border-0">
+                      <span className="font-semibold">{spec.label}</span>
+                      <span className="text-muted-foreground">{spec.value}</span>
+                    </div>
+                  )) : (
+                    <>
+                      <div className="flex justify-between items-center pb-3 border-b border-border">
+                        <span className="font-semibold">Product Size</span>
+                        <span className="text-muted-foreground">{product.volume}</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-3 border-b border-border">
+                        <span className="font-semibold">Category</span>
+                        <span className="text-muted-foreground">{product.category}</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-3 border-b border-border">
+                        <span className="font-semibold">Usage Frequency</span>
+                        <span className="text-muted-foreground">2-3 times per week</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-3 border-b border-border">
+                        <span className="font-semibold">Suitable For</span>
+                        <span className="text-muted-foreground">All skin/hair types</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-3 border-b border-border">
+                        <span className="font-semibold">Storage</span>
+                        <span className="text-muted-foreground">Cool, dry place</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="font-semibold">Shelf Life</span>
+                        <span className="text-muted-foreground">24 months</span>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
 
@@ -695,64 +822,7 @@ export function ProductDetail() {
             <div className="flex gap-6 animate-scroll w-max">
               {[...Array(2)].map((_, setIndex) => (
                 <div key={setIndex} className="flex gap-6 flex-nowrap">
-                  {[
-                    {
-                      name: 'Rajesh Kumar',
-                      location: 'Chennai',
-                      rating: 5,
-                      review: 'Absolutely amazing product! My hair has never felt healthier. The natural ingredients make all the difference.',
-                      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80'
-                    },
-                    {
-                      name: 'Sneha Kapoor',
-                      location: 'Pune',
-                      rating: 5,
-                      review: 'I\'ve been using this for 2 months and the results are incredible. Highly recommend to anyone looking for authentic Ayurvedic products.',
-                      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80'
-                    },
-                    {
-                      name: 'Arjun Nair',
-                      location: 'Kochi',
-                      rating: 5,
-                      review: 'Best investment for my skincare routine. Natural, effective, and truly delivers on its promises.',
-                      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80'
-                    },
-                    {
-                      name: 'Divya Iyer',
-                      location: 'Hyderabad',
-                      rating: 5,
-                      review: 'The quality is outstanding! You can feel the difference from the first use. Pure Ayurvedic goodness.',
-                      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80'
-                    },
-                    {
-                      name: 'Vikram Rao',
-                      location: 'Bangalore',
-                      rating: 5,
-                      review: 'Finally found a product that actually works! The traditional formulation is evident in the results.',
-                      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80'
-                    },
-                    {
-                      name: 'Kavita Singh',
-                      location: 'Jaipur',
-                      rating: 5,
-                      review: 'Love the natural approach! No harsh chemicals, just pure Ayurvedic ingredients that work wonders.',
-                      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80'
-                    },
-                    {
-                      name: 'Amit Patel',
-                      location: 'Ahmedabad',
-                      rating: 5,
-                      review: 'Exceptional quality and visible results. This is what authentic Ayurvedic products should be like.',
-                      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80'
-                    },
-                    {
-                      name: 'Neha Joshi',
-                      location: 'Kolkata',
-                      rating: 5,
-                      review: 'I\'m impressed with how quickly I saw results. The product is gentle yet effective. Will definitely repurchase!',
-                      image: 'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=100&q=80'
-                    },
-                  ].map((review, index) => (
+                  {reviews.map((review, index) => (
                     <div key={`${setIndex}-${index}`} className="bg-white p-6 rounded-2xl shadow-lg w-[350px] h-[280px] flex-shrink-0 flex flex-col">
                       <div className="flex items-center gap-4 mb-4">
                         <ImageWithFallback
