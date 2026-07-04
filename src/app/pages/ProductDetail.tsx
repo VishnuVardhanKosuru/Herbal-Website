@@ -216,37 +216,37 @@ const productData: Record<string, any> = {
   },
 };
 
-const productReviews: Record<string, Array<{name: string, location: string, rating: number, review: string, image: string}>> = {
+const productReviews: Record<string, Array<{name: string, location: string, rating: number, review: string}>> = {
   'laya-face-care-oil': [
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Loved it! My tan started fading within two weeks, and my skin looks much brighter and healthier now.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'A simple but effective product. It helped reduce sun tan and gave my face a natural glow.', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'I’ve been using Laya Pre-Bath Oil before my morning bath for about two weeks. The first thing I noticed was that my skin looked less dull. The tanning on my forehead and around my mouth has reduced, and my complexion looks more even now. It feels very gentle on the skin too.', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Really impressed with the results. My skin feels smoother, brighter, and the tan has visibly reduced.', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'The oil is lightweight and easy to apply. Within a couple of weeks, my face looked noticeably brighter. It helped reduce the tanning from my daily commute and gave my skin a healthy glow.', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'I wasn’t expecting dramatic results, but Laya Pre-Bath Oil pleasantly surprised me. I applied it regularly before bathing for just over two weeks. The tanning that had built up over months started fading, especially around my forehead, nose, and neck. My skin tone looks more even, and some of the pigmentation marks appear lighter than before. The best part is that my face doesn’t just look brighter—it looks naturally refreshed and healthy. I’ll definitely continue using it.', image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'I’ve struggled with uneven skin tone for a while, and this oil has helped a lot. The pigmentation appears lighter, and my skin looks more radiant than before. Consistent use before bathing gave me visible results in a short time.', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80' }
+    { name: 'Anjali Menon', location: 'Kerala', rating: 5, review: 'Loved it! My tan started fading within two weeks, and my skin looks much brighter and healthier now.' },
+    { name: 'Radhika Nair', location: 'Kerala', rating: 5, review: 'A simple but effective product. It helped reduce sun tan and gave my face a natural glow.' },
+    { name: 'Lakshmi Pillai', location: 'Kerala', rating: 5, review: 'I’ve been using Laya Pre-Bath Oil before my morning bath for about two weeks. The first thing I noticed was that my skin looked less dull. The tanning on my forehead and around my mouth has reduced, and my complexion looks more even now. It feels very gentle on the skin too.' },
+    { name: 'Meera Nambiar', location: 'Kerala', rating: 5, review: 'Really impressed with the results. My skin feels smoother, brighter, and the tan has visibly reduced.' },
+    { name: 'Divya Reddy', location: 'Hyderabad', rating: 5, review: 'The oil is lightweight and easy to apply. Within a couple of weeks, my face looked noticeably brighter. It helped reduce the tanning from my daily commute and gave my skin a healthy glow.' },
+    { name: 'Shruti Rao', location: 'Bengaluru', rating: 5, review: 'I wasn’t expecting dramatic results, but Laya Pre-Bath Oil pleasantly surprised me. I applied it regularly before bathing for just over two weeks. The tanning that had built up over months started fading, especially around my forehead, nose, and neck. My skin tone looks more even, and some of the pigmentation marks appear lighter than before. The best part is that my face doesn’t just look brighter—it looks naturally refreshed and healthy. I’ll definitely continue using it.' },
+    { name: 'Neha Sharma', location: 'Delhi', rating: 5, review: 'I’ve struggled with uneven skin tone for a while, and this oil has helped a lot. The pigmentation appears lighter, and my skin looks more radiant than before. Consistent use before bathing gave me visible results in a short time.' }
   ],
   'medhini-anti-dandruff-oil': [
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Several products were tried for dandruff before, but the results never lasted. After using Medhini Anti-Dandruff Oil regularly, there was a noticeable reduction in flaking and itching within a few weeks. The scalp feels healthier now, and the oil suited the scalp really well without causing any irritation.', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'I travel long distances every day and rarely get time for hair care. Dust and pollution made my dandruff worse. Medhini was easy to use, and with regular application, my dandruff reduced significantly. I also liked how gentle and comfortable it felt on my scalp', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'With a young child to care for, I barely have time for myself. Dandruff had become a constant issue, but Medhini Anti-Dandruff Oil helped a lot. It reduced the flakes and itching, and my hair feels healthier without requiring much effort.', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Medhini worked wonders for my flaky scalp. Dandruff reduced noticeably, and my hair feels refreshed and healthy.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Finally found an anti-dandruff oil that actually works! Less itching, less dandruff, and healthier-looking hair.', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80' }
+    { name: 'Devika Varma', location: 'Kerala', rating: 5, review: 'Several products were tried for dandruff before, but the results never lasted. After using Medhini Anti-Dandruff Oil regularly, there was a noticeable reduction in flaking and itching within a few weeks. The scalp feels healthier now, and the oil suited the scalp really well without causing any irritation.' },
+    { name: 'Sneha Panicker', location: 'Kerala', rating: 5, review: 'I travel long distances every day and rarely get time for hair care. Dust and pollution made my dandruff worse. Medhini was easy to use, and with regular application, my dandruff reduced significantly. I also liked how gentle and comfortable it felt on my scalp' },
+    { name: 'Kavya Krishnan', location: 'Kerala', rating: 5, review: 'With a young child to care for, I barely have time for myself. Dandruff had become a constant issue, but Medhini Anti-Dandruff Oil helped a lot. It reduced the flakes and itching, and my hair feels healthier without requiring much effort.' },
+    { name: 'Nithya Balasubramanian', location: 'Chennai', rating: 5, review: 'Medhini worked wonders for my flaky scalp. Dandruff reduced noticeably, and my hair feels refreshed and healthy.' },
+    { name: 'Priya Singh', location: 'Mumbai', rating: 5, review: 'Finally found an anti-dandruff oil that actually works! Less itching, less dandruff, and healthier-looking hair.' }
   ],
   'zrika-premium-face-oil': [
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'The first thing that stood out about Zrika was the rich saffron aroma. It genuinely feels like a premium product made with authentic ingredients. With regular use, my skin looks brighter, smoother, and much more radiant.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'At 48, I was looking for something that could nourish my skin without feeling heavy. Zrika Premium Face Oil has improved my skin’s texture noticeably, and the fine lines around my eyes and mouth appear softer. My skin feels healthier and more youthful.', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Long hours and lack of sleep had left me with dark circles and tired-looking skin. Zrika helped brighten my under-eye area, improve my skin tone, and keep my skin looking fresh and youthful.', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'As someone who practices face yoga regularly, Zrika has been a wonderful addition to my routine. It provides the perfect glide for massage and leaves my skin soft, nourished, and glowing.', image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'I wasn’t expecting such a visible difference. Within a few weeks, my skin looked brighter, smoother, and much more refreshed. The change has been truly impressive.', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'My skin often felt dull and uneven. After using Zrika consistently, the texture feels much smoother, and my face has a healthy, natural glow.', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Zrika has become my favorite nighttime skincare product. It leaves my skin feeling deeply nourished, and I wake up with a fresh, radiant glow.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Regular use of Zrika has made my skin look more even-toned and luminous. My face feels softer, healthier, and beautifully nourished every day.', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80' }
+    { name: 'Athira Suresh', location: 'Kerala', rating: 5, review: 'The first thing that stood out about Zrika was the rich saffron aroma. It genuinely feels like a premium product made with authentic ingredients. With regular use, my skin looks brighter, smoother, and much more radiant.' },
+    { name: 'Parvathy Mohan', location: 'Kerala', rating: 5, review: 'At 48, I was looking for something that could nourish my skin without feeling heavy. Zrika Premium Face Oil has improved my skin’s texture noticeably, and the fine lines around my eyes and mouth appear softer. My skin feels healthier and more youthful.' },
+    { name: 'Arya Rajesh', location: 'Kerala', rating: 5, review: 'Long hours and lack of sleep had left me with dark circles and tired-looking skin. Zrika helped brighten my under-eye area, improve my skin tone, and keep my skin looking fresh and youthful.' },
+    { name: 'Gouri Kumar', location: 'Kerala', rating: 5, review: 'As someone who practices face yoga regularly, Zrika has been a wonderful addition to my routine. It provides the perfect glide for massage and leaves my skin soft, nourished, and glowing.' },
+    { name: 'Nandana Menon', location: 'Kerala', rating: 5, review: 'I wasn’t expecting such a visible difference. Within a few weeks, my skin looked brighter, smoother, and much more refreshed. The change has been truly impressive.' },
+    { name: 'Bhavana Gowda', location: 'Bengaluru', rating: 5, review: 'My skin often felt dull and uneven. After using Zrika consistently, the texture feels much smoother, and my face has a healthy, natural glow.' },
+    { name: 'Sindhu Iyer', location: 'Chennai', rating: 5, review: 'Zrika has become my favorite nighttime skincare product. It leaves my skin feeling deeply nourished, and I wake up with a fresh, radiant glow.' },
+    { name: 'Riya Kapoor', location: 'Delhi', rating: 5, review: 'Regular use of Zrika has made my skin look more even-toned and luminous. My face feels softer, healthier, and beautifully nourished every day.' }
   ],
   'vama-lip-balm': [
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'My lips used to become dry and chapped very easily, especially during changing weather. After using Vama Lip Balm regularly, they feel much softer and smoother. It keeps my lips moisturized for hours, and the sweet fragrance makes it even more pleasant to use.', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'Years of using synthetic lipsticks had left my lips looking darker and unhealthy. I switched to Vama Lip Balm for daily care, and over time my lips started looking healthier and better nourished. It’s now an essential part of my routine, especially on days when I avoid makeup.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80' },
-    { name: 'Verified Customer', location: 'India', rating: 5, review: 'The buttery texture of Vama Lip Balm is what I love most. It glides on effortlessly, feels incredibly smooth on the lips, and the sweet aroma is simply delightful.', image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80' }
+    { name: 'Shilpa Nair', location: 'Kerala', rating: 5, review: 'My lips used to become dry and chapped very easily, especially during changing weather. After using Vama Lip Balm regularly, they feel much softer and smoother. It keeps my lips moisturized for hours, and the sweet fragrance makes it even more pleasant to use.' },
+    { name: 'Malavika Pillai', location: 'Kerala', rating: 5, review: 'Years of using synthetic lipsticks had left my lips looking darker and unhealthy. I switched to Vama Lip Balm for daily care, and over time my lips started looking healthier and better nourished. It’s now an essential part of my routine, especially on days when I avoid makeup.' },
+    { name: 'Swathi M', location: 'Hyderabad', rating: 5, review: 'The buttery texture of Vama Lip Balm is what I love most. It glides on effortlessly, feels incredibly smooth on the lips, and the sweet aroma is simply delightful.' }
   ]
 };
 
@@ -430,7 +430,7 @@ export function ProductDetail() {
       },
       {
         question: 'Will this oil make my skin greasy?',
-        answer: 'No, Zrika absorbs quickly without leaving a greasy residue. Use 2-3 drops for the entire face and neck. If you have very oily skin, start with 1-2 drops.'
+        answer: 'No, Zrika absorbs quickly without leaving a greasy residue. Use 4-5 drops for the entire face and neck. If you have very oily skin, start with 2-3 drops.'
       }
     ],
     'laya-face-care-oil': [
@@ -465,32 +465,28 @@ export function ProductDetail() {
   
   const defaultReviews = [
     {
-      name: 'Rajesh Kumar',
+      name: 'Anupama Nair',
+      location: 'Kerala',
+      rating: 5,
+      review: 'Absolutely amazing product! My hair has never felt healthier. The natural ingredients make all the difference.'
+    },
+    {
+      name: 'Geetha Pillai',
+      location: 'Kerala',
+      rating: 5,
+      review: "I've been using this for 2 months and the results are incredible. Highly recommend to anyone looking for authentic Ayurvedic products."
+    },
+    {
+      name: 'Aarthi R',
       location: 'Chennai',
       rating: 5,
-      review: 'Absolutely amazing product! My hair has never felt healthier. The natural ingredients make all the difference.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80'
+      review: 'Best investment for my skincare routine. Natural, effective, and truly delivers on its promises.'
     },
     {
-      name: 'Sneha Kapoor',
-      location: 'Pune',
+      name: 'Megha Gupta',
+      location: 'Delhi',
       rating: 5,
-      review: "I've been using this for 2 months and the results are incredible. Highly recommend to anyone looking for authentic Ayurvedic products.",
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80'
-    },
-    {
-      name: 'Arjun Nair',
-      location: 'Kochi',
-      rating: 5,
-      review: 'Best investment for my skincare routine. Natural, effective, and truly delivers on its promises.',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80'
-    },
-    {
-      name: 'Divya Iyer',
-      location: 'Hyderabad',
-      rating: 5,
-      review: 'The quality is outstanding! You can feel the difference from the first use. Pure Ayurvedic goodness.',
-      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80'
+      review: 'The quality is outstanding! You can feel the difference from the first use. Pure Ayurvedic goodness.'
     }
   ];
   
@@ -825,11 +821,6 @@ export function ProductDetail() {
                   {reviews.map((review, index) => (
                     <div key={`${setIndex}-${index}`} className="bg-white p-6 rounded-2xl shadow-lg w-[350px] h-[280px] flex-shrink-0 flex flex-col">
                       <div className="flex items-center gap-4 mb-4">
-                        <ImageWithFallback
-                          src={review.image}
-                          alt={review.name}
-                          className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                        />
                         <div className="min-w-0">
                           <h4 className="font-bold truncate">{review.name}</h4>
                           <p className="text-sm text-muted-foreground truncate">{review.location}</p>
