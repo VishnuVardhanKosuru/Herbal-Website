@@ -11,11 +11,6 @@ export function About() {
 
   const values = [
     {
-      icon: <Leaf size={32} />,
-      title: 'Natural Purity',
-      description: 'We use only the finest botanical ingredients, free from harmful chemicals and synthetic additives.'
-    },
-    {
       icon: <Award size={32} />,
       title: 'Our Mission',
       description: 'Our mission is to create premium formulations that deliver visible results while nurturing beauty in its purest and most natural form.'
@@ -24,6 +19,11 @@ export function About() {
       icon: <Shield size={32} />,
       title: 'Our Vision',
       description: 'To become globally admired premium beauty brand celebrated for elegance, purity and conscious self care.'
+    },
+    {
+      icon: <Leaf size={32} />,
+      title: 'Natural Purity',
+      description: 'We use only the finest botanical ingredients, free from harmful chemicals and synthetic additives.'
     },
     {
       icon: <Heart size={32} />,
@@ -78,15 +78,15 @@ export function About() {
               variants={fadeInUp}
               transition={{ delay: 0.2 }}
             >
-              <h2 className="text-4xl md:text-5xl mb-6">About Us</h2>
+              <h2 className="text-4xl md:text-5xl mb-6">Rooted in Ancient Wisdom</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                SuJaya herbals was founded in 2025 with deep passion for Ayurveda, natural heeling and holistic beauty by Dr. Sujatha and Dr. Jayakumary. Rooted in timeless tradition of Ayurveda, our brand is dedicated for creating premium herbal skin and hair care products that nurture beauty naturally and safely.
+                Sujaya Herbals was born from a deep reverence for Ayurveda, the 5,000-year-old science of life and wellness. Our founder, inspired by her grandmother's traditional herbal remedies, embarked on a mission to bring authentic Ayurvedic skincare and haircare to the modern world.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                Every formulation of SuJaya herbals is thoughtfully crafted using carefully selected herbs, hot pressed oils and traditional ayurvedic principles to provide gentle yet effective care for skin and hair.
+                What started in a small kitchen has blossomed into a trusted brand, serving thousands of customers who seek the purity and efficacy of nature-based beauty solutions.
               </p>
               <p className="text-lg text-muted-foreground">
-                At SuJaya herbals we believe true beauty comes to balance, purity and healthy living. Our products are designed to address everyday concerns such as hairfall, dandruff, dryness, pigmentation dullness (sun tan) and scalp imbalance while supporting long term wellness.
+                Every Sujaya Herbals product is a labor of love, crafted with hand-selected botanicals, time-honored techniques, and an unwavering commitment to quality.
               </p>
             </motion.div>
           </div>
@@ -181,7 +181,7 @@ export function About() {
                 Ayurveda, meaning "the science of life," originated in India over 5,000 years ago. It is one of the world's oldest holistic healing systems, emphasizing balance between mind, body, and spirit.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                Our formulations draw from classical Ayurvedic texts such as the Charaka Samhita and Sushruta Samhita, which document the therapeutic properties of hundreds of medicinal plants.
+                Our formulations draw from classical Ayurvedic texts such as the Charaka Samhita, Chakra Datta and Sushruta Samhita, which document the therapeutic properties of hundreds of medicinal plants.
               </p>
               <p className="text-lg text-muted-foreground">
                 By honoring these time-tested traditions and combining them with contemporary research, we create products that are both effective and deeply rooted in natural wellness.

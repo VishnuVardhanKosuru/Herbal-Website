@@ -42,7 +42,7 @@ export function RefundPolicy() {
               <div>
                 <h2 className="text-3xl mb-4">Return Eligibility</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  You may return products within <strong>15 days</strong> of receiving your order if:
+                  You may return products within <strong>5 days</strong> of receiving your order if:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
                   <li>The product is unused and in its original packaging</li>
@@ -72,7 +72,7 @@ export function RefundPolicy() {
                   To initiate a return, please follow these steps:
                 </p>
                 <ol className="list-decimal pl-6 space-y-3 text-muted-foreground">
-                  <li>Contact our customer support team via email at <strong>support@sujayaherbals.com</strong> or WhatsApp at <strong>+91 98765 43210</strong></li>
+                  <li>Contact our customer support team via email at <strong>sujayaherbals2025@gmail.com</strong> or WhatsApp at <strong>+91 6238416126</strong></li>
                   <li>Provide your order number and reason for return</li>
                   <li>Our team will review your request and provide a return authorization within 24-48 hours</li>
                   <li>Pack the product securely in its original packaging</li>
@@ -122,9 +122,9 @@ export function RefundPolicy() {
                 <div className="mt-4 p-6 bg-cream rounded-lg">
                   <p className="text-foreground">
                     <strong>Sujaya Herbals Pvt. Ltd.</strong><br />
-                    Email: support@sujayaherbals.com<br />
-                    WhatsApp: +91 98765 43210<br />
-                    Phone: +91 98765 43210
+                    Email: sujayaherbals2025@gmail.com<br />
+                    WhatsApp: +91 6238416126<br />
+                    Phone: +91 6238416126
                   </p>
                 </div>
               </div>

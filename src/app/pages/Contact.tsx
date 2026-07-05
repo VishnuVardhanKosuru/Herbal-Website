@@ -40,11 +40,11 @@ export function Contact() {
   const handleCallbackSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `Callback Request%0AName: ${callbackForm.name}%0APhone: ${callbackForm.phone}%0APreferred Time: ${callbackForm.preferredTime}`;
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    window.open(`https://wa.me/916238416126?text=${message}`, '_blank');
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919876543210?text=Hello! I would like to know more about Sujaya Herbals.', '_blank');
+    window.open('https://wa.me/qr/XGEFDXCRSDN5C1', '_blank');
   };
 
   const fadeInUp = {
@@ -76,7 +76,7 @@ export function Contact() {
     },
     {
       question: 'How can I contact your team?',
-      answer: 'You can reach us through multiple channels: WhatsApp (+91 98765 43210), phone (+91 98765 43210), or email (info@sujayaherbals.com). We\'re available Monday-Saturday, 9 AM - 7 PM. For instant responses, WhatsApp is the fastest option.'
+      answer: 'You can reach us through multiple channels: WhatsApp (+91 6238416126), phone (+91 6238416126), or email (sujayaherbals2025@gmail.com). We\'re available Monday-Saturday, 9 AM - 7 PM. For instant responses, WhatsApp is the fastest option.'
     },
     {
       question: 'Do you offer nationwide delivery?',
@@ -91,7 +91,7 @@ export function Contact() {
   const handleBookConsultation = () => {
     // This would typically open a booking modal or redirect to booking page
     // For now, using WhatsApp as the primary consultation booking method
-    window.open('https://wa.me/919876543210?text=Hello! I would like to book a consultation with your wellness experts.', '_blank');
+    window.open('https://wa.me/916238416126?text=Hello! I would like to book a consultation with your wellness experts.', '_blank');
   };
 
   return (
@@ -130,8 +130,8 @@ export function Contact() {
               </div>
               <h3 className="text-xl mb-2">Phone</h3>
               <p className="text-muted-foreground mb-4">Mon-Sat, 9 AM - 7 PM</p>
-              <a href="tel:+919876543210" className="text-primary hover:underline">
-                +91 98765 43210
+              <a href="tel:+916238416126" className="text-primary hover:underline">
+                +91 6238416126
               </a>
             </motion.div>
 
@@ -148,8 +148,8 @@ export function Contact() {
               </div>
               <h3 className="text-xl mb-2">Email</h3>
               <p className="text-muted-foreground mb-4">We'll respond within 24 hours</p>
-              <a href="mailto:info@sujayaherbals.com" className="text-primary hover:underline">
-                info@sujayaherbals.com
+              <a href="mailto:sujayaherbals2025@gmail.com" className="text-primary hover:underline">
+                sujayaherbals2025@gmail.com
               </a>
             </motion.div>
 
@@ -426,10 +426,9 @@ export function Contact() {
                   <div>
                     <h3 className="text-xl mb-2">Head Office</h3>
                     <p className="text-muted-foreground">
-                      Sujaya Herbals Pvt. Ltd.<br />
-                      123, Herbal Garden Complex<br />
-                      MG Road, Bangalore - 560001<br />
-                      Karnataka, India
+                      SuJaya Herbals, door no 8/513<br />
+                      Kandachira, Panyam, Kollam<br />
+                      PIN: 691601
                     </p>
                   </div>
                 </div>
@@ -438,8 +437,7 @@ export function Contact() {
                   <div>
                     <h3 className="text-xl mb-2">Phone</h3>
                     <p className="text-muted-foreground">
-                      +91 98765 43210<br />
-                      +91 98765 43211 (Customer Care)
+                      +91 6238416126
                     </p>
                   </div>
                 </div>
@@ -448,8 +446,7 @@ export function Contact() {
                   <div>
                     <h3 className="text-xl mb-2">Email</h3>
                     <p className="text-muted-foreground">
-                      info@sujayaherbals.com<br />
-                      support@sujayaherbals.com
+                      sujayaherbals2025@gmail.com
                     </p>
                   </div>
                 </div>

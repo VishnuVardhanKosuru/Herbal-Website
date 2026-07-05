@@ -9,9 +9,19 @@ import { Label } from '../components/ui/label';
 
 const productData: Record<string, any> = {
   'venika-hair-oil': {
+    executiveSummary: 'Venika focuses on health-conscious consumers seeking safe, chemical-free, and effective hair care products. By emphasizing its authentic herbal formulation, premium quality, and Ayurvedic heritage, this hair oil aims to build strong brand awareness, customer trust, and long-term loyalty while expanding its presence through digital marketing, retail partnerships, and word-of-mouth recommendationsns.',
+    productDescription: '"Longer hair stronger roots, no more premature greys". Made with the juice of indigo, gooseburry,vetiver, balloon vine, false daisy and kwatha of ajwain infused in coconut milk and sesame oil and cow milk. This oil nourishes hair follicles, remedy for premature greying, strengthen hair roots prevent hair fall and promote hair growth.',
+    specifications: [
+      { label: 'Product size', value: '100 ml' },
+      { label: 'Category', value: 'Hair care' },
+      { label: 'Usage frequency', value: '4-5 times per week' },
+      { label: 'Suitable for', value: 'All hair types' },
+      { label: 'Storage', value: 'Cool dry place' },
+      { label: 'Shelf life', value: '24months' }
+    ],
     name: 'Venika - Hair Oil',
     category: 'Haircare',
-    price: '₹595',
+    price: '₹630',
     mrp: '₹700',
     description: 'Venika is the art of Ayurveda refined into a rare elixir for hair that deserves the finest care. Formulated with handpicked herbs, Venika by SuJaya Herbals delivers stronger roots, natural growth, and protection against premature greying. It enhances every strand with a lustrous glow, while its cooling essence brings soothing calm to the scalp. A celebration of botanical richness and luxury, Venika transforms hair care into a ritual of indulgence, radiance, and enduring beauty.',
     images: [
@@ -35,18 +45,28 @@ const productData: Record<string, any> = {
       { name: 'Sesame Oil', benefit: 'Deep conditioning and moisturizing base' },
       { name: 'Cow Milk', benefit: 'Rich in proteins for hair nourishment' }
     ],
-    directions: 'Warm the oil slightly. Massage gently into scalp and hair from roots to tips. Leave on for at least 2 hours or overnight for deep nourishment. Wash with a mild shampoo. Use 2-3 times a week for best results.',
+    directions: 'Take sufficient amount of Venika Hair Oil and apply it directly onto your scalp. Using your fingertips, gently massage the oil for at least 5 minutes to stimulate blood flow and improve absorption. Wash it off after 10 to 15 minutes with a mild, sulphate-free shampoo. (Avoid massaging if you are currently experiencing excessive hair fall; simply apply and rinse as instructed.)',
     volume: '100ml'
   },
   'medhini-anti-dandruff-oil': {
+    executiveSummary: "Medhini targets consumers seeking safe, chemical-free hair care products. It's natural formulation, visible relief from dandruff and itching from the first use, and its ability to nourish the scalp and promote healthy hair growth. Through digital marketing, retail partnerships, and brand storytelling rooted in Ayurveda, Medhini aims to establish a trusted presence in the premium herbal hair care market.",
+    productDescription: 'The anti dandruff oil is made of aloe vera,hibiscus,licorice, mexican mint, fenugreek, little iron weed, black cumin all these herbs are infused in coconut oil. Aimed at controlling dandruff and itching from first use.',
+    specifications: [
+      { label: 'Product size', value: '100ml' },
+      { label: 'Category', value: 'Hair care' },
+      { label: 'Usage frequency', value: '4 to 5 times per week' },
+      { label: 'Suitable for', value: 'All hair types' },
+      { label: 'Storage', value: 'Cool dry place' },
+      { label: 'Shelf life', value: '24 months' }
+    ],
     name: 'Medhini - Anti Dandruff & Hair Oil',
     category: 'Haircare',
-    price: '₹289',
-    mrp: '₹340',
+    price: '₹400',
+    mrp: '₹500',
     description: 'Medhini, an exquisite blend crafted to embody nature’s cure for a clear scalp. With the nourishing depth of virgin coconut oil and the restorative strength of fenugreek, this elixir breathes life into every strand, bringing balance, vitality, and grace to your hair. Medhini purifies the scalp with gentle clarity, strengthens roots with natural resilience, and stimulates healthy growth for hair. Each drop is a harmony of tradition and refinement, transforming daily care into a ritual of indulgence. With Medhini, every strand is guided towards a journey of strength, clarity, and lustrous growth.',
     images: [
-      '/images/medhini/Medhini_01.jpg',
       '/images/medhini/Medhini_02.jpg',
+      '/images/medhini/Medhini_01.jpg',
       '/images/medhini/Medhini_03.jpg',
       '/images/medhini/Medhini_04.jpg',
       '/images/medhini/Medhini_02a.jpg',
@@ -59,19 +79,28 @@ const productData: Record<string, any> = {
     ],
     ingredients: [
       { name: 'Neem (Azadirachta indica)', benefit: 'Antibacterial properties that combat dandruff' },
-      { name: 'Tea Tree Oil', benefit: 'Natural antifungal that soothes scalp' },
       { name: 'Fenugreek (Trigonella foenum-graecum)', benefit: 'Strengthens hair roots and promotes growth', image: '/images/ingredients/2.Fenugreek.jpg' },
       { name: 'Virgin Coconut Oil', benefit: 'Moisturizing base that nourishes scalp' }
     ],
-    directions: 'Apply oil to scalp and massage gently in circular motions. Leave on for 1-2 hours or overnight. Wash thoroughly with a mild shampoo. Use regularly for best results in controlling dandruff and promoting hair growth.',
+    directions: 'Take generous amount of Medhini Anti-Dandruff Hair Oil and apply it evenly to the scalp. Gently massage with your fingertips for at least 5 minutes to promote absorption and relaxation. Leave the oil on for 10 to 15 minutes before rinsing with a mild, natural shampoo. (If you are experiencing excessive hair fall, avoid massaging vigorously.)',
     volume: '100ml'
   },
   'vama-lip-balm': {
+    executiveSummary: 'Vama combines natural care with a subtle tint, appealing to consumers seeking safe, chemical-free personal care products. The marketing strategy focuses on promoting its herbal formulation, premium quality, and everyday usability to build brand trust and expand its presence in the natural beauty and wellness market.',
+    productDescription: 'Made with herbal infusions of indian madder and licorice, bee wax, almond, ghee and castor oil. Vama deeply moisturizes and protects dry chapped lips. Creates a smooth, moisturizing base for lipstick application.',
+    specifications: [
+      { label: 'Product size', value: '5 gram' },
+      { label: 'Category', value: 'Lip care' },
+      { label: 'Usage frequency', value: 'As often as required' },
+      { label: 'Suitable for', value: 'All skin types' },
+      { label: 'Storage', value: 'Cool dry place' },
+      { label: 'Shelf life', value: '18 months' }
+    ],
     name: 'Vama Lip Balm',
     category: 'Lip Care',
-    price: '₹234',
+    price: '₹206',
     mrp: '₹275',
-    description: 'Vama Lip Balm is a naturally crafted lip care essential made with carefully selected ingredients to nourish and protect your lips. Its smooth, buttery texture glides effortlessly, keeping lips soft, moisturised, and comfortable throughout the day. Infused with a pleasant, gentle fragrance and available in three beautiful shades, VAMA adds a subtle touch of colour while caring for your lips. Free from harsh chemicals, sulphates, and other harmful additives, it is a safe and authentic choice for naturally healthy, beautiful lips.',
+    description: 'Vama Lip Balm is a naturally crafted lip care essential made with carefully selected ingredients to nourish and protect your lips. Its smooth, buttery texture glides effortlessly, keeping lips soft, moisturised, and comfortable throughout the day. Free from harsh chemicals, sulphates, and other harmful additives, it is a safe and authentic choice for naturally healthy, beautiful lips.',
     images: [
       '/images/vama/Vama_00.jpg',
       '/images/vama/Vama_01.jpg',
@@ -98,14 +127,24 @@ const productData: Record<string, any> = {
     volume: '5gms'
   },
   'zrika-premium-face-oil': {
+    executiveSummary: 'Zrika is marketed not just as a standard skincare item, but as a "ritual of elegance." It bridges the gap between traditional holistic remedies and luxury skincare, offering consumers a holistic, restorative experience with visible results.',
+    productDescription: 'Radiance in every drop. A blend of 16 anti aging herbs in wood pressed sesame oil and goat milk with saffron as key ingredient. This magical oil detoxifies, nourishes and vanishes lines, wrinkles and age defying overall rejuvenation. Ideal for dull,uneven or tired skin. Recommended for both men and women.',
+    specifications: [
+      { label: 'Product size', value: '10ml' },
+      { label: 'Category', value: 'Skin care' },
+      { label: 'Usage frequency', value: 'Daily at night' },
+      { label: 'Suitable for', value: 'All skin type' },
+      { label: 'Storage', value: 'Cool dry place' },
+      { label: 'Shelf life', value: '24 months' }
+    ],
     name: 'Zrika Premium Face Oil',
     category: 'Skincare',
-    price: '₹979',
-    mrp: '₹1224',
+    price: '₹1225',
+    mrp: '₹1749',
     description: 'Zrika is a magical elixir for your skin, enriched with the golden touch of pure Kashmiri saffron and the richness of 16 precious herbs. This exquisite blend, enriched with nutrient dense wood-pressed sesame oil and the velvety richness of goat milk, is meticulously crafted to drench your skin in deep nourishment and luminous vitality. With every touch, it imparts a delicate warmth and a natural radiance, as if kissed by sunlight. More than a skincare product, Zrika is a ritual of elegance—restoring, brightening, and unveiling the glow that lies within.',
     images: [
-      '/images/zrika/Zrika_00.jpg',
       '/images/zrika/Zrika_01.jpg',
+      '/images/zrika/Zrika_00.jpg',
       '/images/zrika/Zrika_02.jpg',
       '/images/zrika/Zrika_03.jpg',
       '/images/zrika/Zrika_04.jpg',
@@ -130,18 +169,28 @@ const productData: Record<string, any> = {
       { name: 'Goat Milk', benefit: 'Rich in vitamins, provides deep nourishment', image: '/images/ingredients/6.Goat_milk.jpeg' },
       { name: 'Sesame Oil (Wood-pressed)', benefit: 'Nutrient-dense base for deep absorption' }
     ],
-    directions: 'After cleansing, apply 2-3 drops to face and neck. Gently massage in upward circular motions until absorbed. Use daily, preferably at night, for best results. Can also be mixed with your moisturizer.',
+    directions: 'Prepare your skin by ensuring it is freshly cleansed, allowing every drop of Zrika to deliver its full potency. Using the dropper, place 2–3 drops onto your face and neck. Massage in slow, upward strokes for about a minute to stimulate circulation and promote deep absorption. For best results, use at night. With consistent use for 10 days, your skin will appear smoother, more radiant, and beautifully rejuvenated.',
     volume: '10ml'
   },
   'laya-face-care-oil': {
+    executiveSummary: 'Laya is a premium, Ayurvedic-inspired pre-bath facial oil . With a 4.8/5 rating across 234 reviews, it shows strong customer validation and clear DTC e-commerce potential. The product is positioned as a premium, ritual-based skincare SKU targeting beauty-conscious consumers seeking natural, heritage-backed formulations.',
+    productDescription: '"No more tan just luminous skin". Pre bath oil for hyperpigmented and dull skin. This anti tan oil made with indian madder, red sandal, licorice vetiver, lodh tree bark etc blends in wood pressed sesame oil and goat milk. By regular use you can see the change, reduce pigmentation, improves skin elasticity.',
+    specifications: [
+      { label: 'Product size', value: '15ml' },
+      { label: 'Category', value: 'Skin care' },
+      { label: 'Usage frequency', value: 'Daily at day time' },
+      { label: 'Suitable for', value: 'All skin type' },
+      { label: 'Storage', value: 'Cool dry place' },
+      { label: 'Shelf life', value: '24 months' }
+    ],
     name: 'Laya - Face Care Oil',
     category: 'Skincare',
-    price: '₹595',
-    mrp: '₹700',
-    description: 'Laya is a refined pre-bath face care oil, designed to reveal a luminous, eventoned complexion while diminishing tan and pigmentation. At its heart lies the ruby richness of fresh pomegranate juice, a potent antioxidant that shields the skin from damage, boosts collagen production, and restores a healthy, youthful glow. Paired with Manjishta, an age old Ayurvedic herb known for its purifying, circulation-boosting, and anti-aging properties, this luxurious blend deeply hydrates and revitalises. With every use, Laya gently erases dullness and unevenness, unveiling skin that radiates clarity, brightness, and natural beauty.',
+    price: '₹360',
+    mrp: '₹450',
+    description: 'Laya is a refined pre-bath face care oil, designed to reveal a luminous, eventoned complexion while diminishing tan and pigmentation. Licorice, a potent antioxidant that shields the skin from damage, boosts collagen production, and restores a healthy, youthful glow. Paired with Manjishta, an age old Ayurvedic herb known for its purifying, circulation-boosting, and anti-aging properties, this luxurious blend deeply hydrates and revitalises. With every use, Laya gently erases dullness and unevenness, unveiling skin that radiates clarity, brightness, and natural beauty.',
     images: [
-      '/images/laya/Laya_00.jpg',
       '/images/laya/Laya_01.jpg',
+      '/images/laya/Laya_00.jpg',
       '/images/laya/Laya_02.jpg',
       '/images/laya/Laya_03.jpg',
       '/images/laya/Laya_04.jpg',
@@ -162,9 +211,43 @@ const productData: Record<string, any> = {
       { name: 'Lodh Bark (Symplocos racemosa)', benefit: 'Traditional skin brightening herb' },
       { name: 'Sesame Oil', benefit: 'Nourishing base for deep penetration' }
     ],
-    directions: 'Apply oil evenly to face and neck before bathing. Gently massage for 2-3 minutes. Leave on for 15-20 minutes. Rinse with lukewarm water and cleanse as usual. Use regularly for visible reduction in tan and brighter skin.',
+    directions: 'Dispense 5–6 drops of Laya and gently massage over your face, neck, and areas of pigmentation using slow, upward strokes. Allow the oil to rest on your skin for about an hour before bathing, giving its potent natural actives time to penetrate deeply and work in harmony with your skin. This pre-bath ritual not only prepares your skin for cleansing but also infuses it with nourishing antioxidants and age-defying hydration. With regular use, it helps fade tan, soften dark spots, and even out skin tone, revealing a complexion that is visibly brighter, smoother, and more radiant. Each application becomes a moment of self-indulgence, embracing your skin in a veil of pure luxury.',
     volume: '15ml'
   },
+};
+
+const productReviews: Record<string, Array<{name: string, location: string, rating: number, review: string}>> = {
+  'laya-face-care-oil': [
+    { name: 'Anjali Menon', location: 'Kerala', rating: 5, review: 'Loved it! My tan started fading within two weeks, and my skin looks much brighter and healthier now.' },
+    { name: 'Radhika Nair', location: 'Kerala', rating: 5, review: 'A simple but effective product. It helped reduce sun tan and gave my face a natural glow.' },
+    { name: 'Lakshmi Pillai', location: 'Kerala', rating: 5, review: 'I’ve been using Laya Pre-Bath Oil before my morning bath for about two weeks. The first thing I noticed was that my skin looked less dull. The tanning on my forehead and around my mouth has reduced, and my complexion looks more even now. It feels very gentle on the skin too.' },
+    { name: 'Meera Nambiar', location: 'Kerala', rating: 5, review: 'Really impressed with the results. My skin feels smoother, brighter, and the tan has visibly reduced.' },
+    { name: 'Divya Reddy', location: 'Hyderabad', rating: 5, review: 'The oil is lightweight and easy to apply. Within a couple of weeks, my face looked noticeably brighter. It helped reduce the tanning from my daily commute and gave my skin a healthy glow.' },
+    { name: 'Shruti Rao', location: 'Bengaluru', rating: 5, review: 'I wasn’t expecting dramatic results, but Laya Pre-Bath Oil pleasantly surprised me. I applied it regularly before bathing for just over two weeks. The tanning that had built up over months started fading, especially around my forehead, nose, and neck. My skin tone looks more even, and some of the pigmentation marks appear lighter than before. The best part is that my face doesn’t just look brighter—it looks naturally refreshed and healthy. I’ll definitely continue using it.' },
+    { name: 'Neha Sharma', location: 'Delhi', rating: 5, review: 'I’ve struggled with uneven skin tone for a while, and this oil has helped a lot. The pigmentation appears lighter, and my skin looks more radiant than before. Consistent use before bathing gave me visible results in a short time.' }
+  ],
+  'medhini-anti-dandruff-oil': [
+    { name: 'Devika Varma', location: 'Kerala', rating: 5, review: 'Several products were tried for dandruff before, but the results never lasted. After using Medhini Anti-Dandruff Oil regularly, there was a noticeable reduction in flaking and itching within a few weeks. The scalp feels healthier now, and the oil suited the scalp really well without causing any irritation.' },
+    { name: 'Sneha Panicker', location: 'Kerala', rating: 5, review: 'I travel long distances every day and rarely get time for hair care. Dust and pollution made my dandruff worse. Medhini was easy to use, and with regular application, my dandruff reduced significantly. I also liked how gentle and comfortable it felt on my scalp' },
+    { name: 'Kavya Krishnan', location: 'Kerala', rating: 5, review: 'With a young child to care for, I barely have time for myself. Dandruff had become a constant issue, but Medhini Anti-Dandruff Oil helped a lot. It reduced the flakes and itching, and my hair feels healthier without requiring much effort.' },
+    { name: 'Nithya Balasubramanian', location: 'Chennai', rating: 5, review: 'Medhini worked wonders for my flaky scalp. Dandruff reduced noticeably, and my hair feels refreshed and healthy.' },
+    { name: 'Priya Singh', location: 'Mumbai', rating: 5, review: 'Finally found an anti-dandruff oil that actually works! Less itching, less dandruff, and healthier-looking hair.' }
+  ],
+  'zrika-premium-face-oil': [
+    { name: 'Athira Suresh', location: 'Kerala', rating: 5, review: 'The first thing that stood out about Zrika was the rich saffron aroma. It genuinely feels like a premium product made with authentic ingredients. With regular use, my skin looks brighter, smoother, and much more radiant.' },
+    { name: 'Parvathy Mohan', location: 'Kerala', rating: 5, review: 'At 48, I was looking for something that could nourish my skin without feeling heavy. Zrika Premium Face Oil has improved my skin’s texture noticeably, and the fine lines around my eyes and mouth appear softer. My skin feels healthier and more youthful.' },
+    { name: 'Arya Rajesh', location: 'Kerala', rating: 5, review: 'Long hours and lack of sleep had left me with dark circles and tired-looking skin. Zrika helped brighten my under-eye area, improve my skin tone, and keep my skin looking fresh and youthful.' },
+    { name: 'Gouri Kumar', location: 'Kerala', rating: 5, review: 'As someone who practices face yoga regularly, Zrika has been a wonderful addition to my routine. It provides the perfect glide for massage and leaves my skin soft, nourished, and glowing.' },
+    { name: 'Nandana Menon', location: 'Kerala', rating: 5, review: 'I wasn’t expecting such a visible difference. Within a few weeks, my skin looked brighter, smoother, and much more refreshed. The change has been truly impressive.' },
+    { name: 'Bhavana Gowda', location: 'Bengaluru', rating: 5, review: 'My skin often felt dull and uneven. After using Zrika consistently, the texture feels much smoother, and my face has a healthy, natural glow.' },
+    { name: 'Sindhu Iyer', location: 'Chennai', rating: 5, review: 'Zrika has become my favorite nighttime skincare product. It leaves my skin feeling deeply nourished, and I wake up with a fresh, radiant glow.' },
+    { name: 'Riya Kapoor', location: 'Delhi', rating: 5, review: 'Regular use of Zrika has made my skin look more even-toned and luminous. My face feels softer, healthier, and beautifully nourished every day.' }
+  ],
+  'vama-lip-balm': [
+    { name: 'Shilpa Nair', location: 'Kerala', rating: 5, review: 'My lips used to become dry and chapped very easily, especially during changing weather. After using Vama Lip Balm regularly, they feel much softer and smoother. It keeps my lips moisturized for hours, and the sweet fragrance makes it even more pleasant to use.' },
+    { name: 'Malavika Pillai', location: 'Kerala', rating: 5, review: 'Years of using synthetic lipsticks had left my lips looking darker and unhealthy. I switched to Vama Lip Balm for daily care, and over time my lips started looking healthier and better nourished. It’s now an essential part of my routine, especially on days when I avoid makeup.' },
+    { name: 'Swathi M', location: 'Hyderabad', rating: 5, review: 'The buttery texture of Vama Lip Balm is what I love most. It glides on effortlessly, feels incredibly smooth on the lips, and the sweet aroma is simply delightful.' }
+  ]
 };
 
 export function ProductDetail() {
@@ -193,7 +276,7 @@ export function ProductDetail() {
   }
 
   const handleWhatsApp = () => {
-    window.open(`https://wa.me/919876543210?text=Hello! I would like to know more about ${product.name}.`, '_blank');
+    window.open(`https://wa.me/916238416126?text=Hello! I would like to know more about ${product.name}.`, '_blank');
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -205,11 +288,11 @@ export function ProductDetail() {
   };
 
   const handleCall = () => {
-    window.location.href = 'tel:+919876543210';
+    window.location.href = 'tel:+916238416126';
   };
 
   const handleWhatsAppContact = () => {
-    window.open('https://wa.me/919876543210?text=Hello! I would like to know more about your products.', '_blank');
+    window.open('https://wa.me/qr/XGEFDXCRSDN5C1', '_blank');
   };
 
   const handleEmail = () => {
@@ -283,7 +366,7 @@ export function ProductDetail() {
       },
       {
         question: 'Is it suitable for sensitive scalp?',
-        answer: 'Yes, Medhini is formulated with gentle, natural ingredients suitable for sensitive scalps. The neem and tea tree oil soothe irritation while combating dandruff.'
+        answer: 'Yes, Medhini is formulated with gentle, natural ingredients suitable for sensitive scalps. The neem and fenugreek soothe irritation while combating dandruff.'
       },
       {
         question: 'Can I use this product with other hair care products?',
@@ -291,7 +374,7 @@ export function ProductDetail() {
       },
       {
         question: 'Does this oil help with hair growth too?',
-        answer: 'Absolutely! While primarily formulated for dandruff control, Medhini also contains fenugreek and sesame oil that strengthen roots and promote healthy hair growth.'
+        answer: 'Absolutely! While primarily formulated for dandruff control, Medhini also contains fenugreek and coconut oil that strengthen roots and promote healthy hair growth.'
       },
       {
         question: 'Will this oil make my hair greasy?',
@@ -327,11 +410,11 @@ export function ProductDetail() {
     'zrika-premium-face-oil': [
       {
         question: 'How often should I use Zrika Premium Face Oil?',
-        answer: 'Use Zrika Premium Face Oil once daily, preferably at night after cleansing. For very dry skin, you can use it twice daily - morning and evening.'
+        answer: 'Use Zrika Premium Face Oil once daily, preferably at night after cleansing.'
       },
       {
         question: 'How long does it take to see results?',
-        answer: 'You\'ll notice immediate hydration and glow. Visible improvements in complexion and skin tone typically appear within 2-3 weeks of regular use. Optimal results show after 6-8 weeks.'
+        answer: 'You\'ll notice immediate hydration and glow. Visible improvements in complexion and skin tone typically appear within 1-2 weeks of regular use. Optimal results show after 1 month.'
       },
       {
         question: 'Is it suitable for oily or acne-prone skin?',
@@ -343,17 +426,17 @@ export function ProductDetail() {
       },
       {
         question: 'Can this be used with other skincare products?',
-        answer: 'Yes, Zrika integrates beautifully into your routine. Apply it after water-based serums but before heavy creams. You can also mix 1-2 drops with your moisturizer.'
+        answer: 'Yes, Zrika integrates beautifully into your routine.'
       },
       {
         question: 'Will this oil make my skin greasy?',
-        answer: 'No, Zrika absorbs quickly without leaving a greasy residue. Use 2-3 drops for the entire face and neck. If you have very oily skin, start with 1-2 drops.'
+        answer: 'No, Zrika absorbs quickly without leaving a greasy residue. Use 4-5 drops for the entire face and neck. If you have very oily skin, start with 2-3 drops.'
       }
     ],
     'laya-face-care-oil': [
       {
         question: 'How often should I use Laya Face Care Oil?',
-        answer: 'Use Laya as a pre-bath ritual 3-4 times per week for best results. Apply 15-20 minutes before bathing to allow the active ingredients to work on tan reduction.'
+        answer: 'Use Laya as a pre-bath ritual 3-4 times per week for best results. Apply 30 - 60 minutes before bathing to allow the active ingredients to work on tan reduction.'
       },
       {
         question: 'How long does it take to see reduction in tan?',
@@ -361,11 +444,11 @@ export function ProductDetail() {
       },
       {
         question: 'Is it suitable for sensitive skin?',
-        answer: 'Yes, Laya is formulated with gentle, natural ingredients. However, if you have very sensitive skin, do a patch test first. The turmeric and antioxidants are generally well-tolerated.'
+        answer: 'Yes, Laya is formulated with gentle, natural ingredients. However, if you have very sensitive skin, do a patch test first.'
       },
       {
         question: 'Can I use this product on my body as well?',
-        answer: 'Absolutely! While formulated for the face, Laya works wonderfully on tanned areas of your body like arms, neck, and hands. Apply and leave for 15-20 minutes before bathing.'
+        answer: 'Absolutely! While formulated for the face, Laya works wonderfully on tanned areas of your body like arms, neck, and hands. Apply and leave for 30 - 60 minutes before bathing.'
       },
       {
         question: 'Can this be used with other Ayurvedic products?',
@@ -373,12 +456,42 @@ export function ProductDetail() {
       },
       {
         question: 'Will this oil clog my pores?',
-        answer: 'No, Laya contains jojoba oil which is non-comedogenic. The lightweight formulation cleanses and brightens without clogging pores. Always rinse thoroughly after use.'
+        answer: 'No. The lightweight formulation cleanses and brightens without clogging pores. Always rinse thoroughly after use.'
       }
     ]
   };
 
   const faqs = id ? productFaqs[id] || [] : [];
+  
+  const defaultReviews = [
+    {
+      name: 'Anupama Nair',
+      location: 'Kerala',
+      rating: 5,
+      review: 'Absolutely amazing product! My hair has never felt healthier. The natural ingredients make all the difference.'
+    },
+    {
+      name: 'Geetha Pillai',
+      location: 'Kerala',
+      rating: 5,
+      review: "I've been using this for 2 months and the results are incredible. Highly recommend to anyone looking for authentic Ayurvedic products."
+    },
+    {
+      name: 'Aarthi R',
+      location: 'Chennai',
+      rating: 5,
+      review: 'Best investment for my skincare routine. Natural, effective, and truly delivers on its promises.'
+    },
+    {
+      name: 'Megha Gupta',
+      location: 'Delhi',
+      rating: 5,
+      review: 'The quality is outstanding! You can feel the difference from the first use. Pure Ayurvedic goodness.'
+    }
+  ];
+  
+  const reviews = (id && productReviews[id]) ? productReviews[id] : defaultReviews;
+  
 
   return (
     <div className="min-h-screen bg-background">
@@ -402,13 +515,13 @@ export function ProductDetail() {
               animate="visible"
               variants={fadeInUp}
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-sm border border-border mb-4 bg-white aspect-[4/5]">
+              <div className="relative rounded-3xl overflow-hidden shadow-sm border border-border mb-4 bg-white" style={{ height: '480px' }}>
                 {product.images ? (
                   <>
                     <ImageWithFallback
                       src={product.images[currentImageIndex]}
                       alt={product.name}
-                      className="w-full h-full object-contain p-4"
+                      className="w-full h-full object-contain p-6"
                     />
                     {product.images.length > 1 && (
                       <>
@@ -488,7 +601,7 @@ export function ProductDetail() {
                 </div>
                 <p className="text-muted-foreground mt-2">Quantity: {product.volume}</p>
               </div>
-              <p className="text-lg text-muted-foreground mb-8">{product.description}</p>
+              <p className="text-lg text-muted-foreground mb-8">{product.executiveSummary || product.description}</p>
 
               {/* Trust Badges */}
               <div className="grid grid-cols-3 gap-4 mb-8">
@@ -597,7 +710,7 @@ export function ProductDetail() {
             <h2 className="text-4xl mb-8">Product Description</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                {product.description}
+                {product.productDescription || product.description}
               </p>
               <h3 className="text-2xl mb-4 mt-8">How to Use</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -623,88 +736,63 @@ export function ProductDetail() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-3xl font-serif font-bold text-primary mb-12">
-              Specifications & Ingredients
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-              {/* LEFT COLUMN: Specifications (1/3 width) */}
-              <div className="lg:col-span-1">
-                <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-border">
-                  <h3 className="text-xl font-bold text-primary mb-6">Specifications</h3>
-                  <div className="space-y-4">
-                    <div className="flex justify-between py-3 border-b border-border">
-                      <span className="text-muted-foreground font-medium text-sm">Size</span>
-                      <span className="text-primary font-semibold text-sm">{product.volume}</span>
+            <h2 className="text-4xl mb-12 text-center">Product Specifications & Ingredients</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* LEFT COLUMN: Specifications */}
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl mb-6 text-primary">Specifications</h3>
+                <div className="space-y-4">
+                  {product.specifications ? product.specifications.map((spec: any, idx: number) => (
+                    <div key={idx} className="flex justify-between items-center pb-3 border-b border-border last:border-0">
+                      <span className="font-semibold">{spec.label}</span>
+                      <span className="text-muted-foreground">{spec.value}</span>
                     </div>
-                    <div className="flex justify-between py-3 border-b border-border">
-                      <span className="text-muted-foreground font-medium text-sm">Category</span>
-                      <span className="text-primary font-semibold text-sm">{product.category}</span>
-                    </div>
-                    <div className="flex justify-between py-3 border-b border-border">
-                      <span className="text-muted-foreground font-medium text-sm">Usage</span>
-                      <span className="text-primary font-semibold text-sm">2-3 times/week</span>
-                    </div>
-                    <div className="flex justify-between py-3 border-b border-border">
-                      <span className="text-muted-foreground font-medium text-sm">Suitable For</span>
-                      <span className="text-primary font-semibold text-sm">All types</span>
-                    </div>
-                    <div className="flex justify-between py-3 border-b border-border">
-                      <span className="text-muted-foreground font-medium text-sm">Storage</span>
-                      <span className="text-primary font-semibold text-sm">Cool, dry place</span>
-                    </div>
-                    <div className="flex justify-between py-3">
-                      <span className="text-muted-foreground font-medium text-sm">Shelf Life</span>
-                      <span className="text-primary font-semibold text-sm">24 months</span>
-                    </div>
-                  </div>
+                  )) : (
+                    <>
+                      <div className="flex justify-between items-center pb-3 border-b border-border">
+                        <span className="font-semibold">Product Size</span>
+                        <span className="text-muted-foreground">{product.volume}</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-3 border-b border-border">
+                        <span className="font-semibold">Category</span>
+                        <span className="text-muted-foreground">{product.category}</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-3 border-b border-border">
+                        <span className="font-semibold">Usage Frequency</span>
+                        <span className="text-muted-foreground">2-3 times per week</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-3 border-b border-border">
+                        <span className="font-semibold">Suitable For</span>
+                        <span className="text-muted-foreground">All skin/hair types</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-3 border-b border-border">
+                        <span className="font-semibold">Storage</span>
+                        <span className="text-muted-foreground">Cool, dry place</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="font-semibold">Shelf Life</span>
+                        <span className="text-muted-foreground">24 months</span>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
 
-              {/* RIGHT COLUMN: Ingredients (2/3 width) */}
-              <div className="lg:col-span-2">
-                <h3 className="text-xl font-bold text-primary mb-6">Key Ingredients</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {product.ingredients.map((ingredient: any, index: number) => {
-                    // Extract scientific name if present in parentheses e.g., "Saffron (Crocus sativus)"
-                    let displayName = ingredient.name;
-                    let scientificName = "";
-                    const match = ingredient.name.match(/^(.*?)\s*\((.*?)\)$/);
-                    if (match) {
-                      displayName = match[1];
-                      scientificName = match[2];
-                    }
-
-                    return (
-                      <div key={index} className="flex items-start gap-4">
-                        <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 bg-cream">
-                          {ingredient.image ? (
-                            <ImageWithFallback
-                              src={ingredient.image}
-                              alt={displayName}
-                              className="w-full h-full object-cover"
-                            />
-                          ) : (
-                            <div className="w-full h-full flex items-center justify-center bg-primary/10 text-primary">
-                              <Leaf size={24} />
-                            </div>
-                          )}
-                        </div>
-                        <div className="flex-1 mt-1">
-                          <h4 className="text-base font-semibold text-primary">
-                            {displayName}
-                            {scientificName && (
-                              <span className="text-xs font-normal text-muted-foreground italic ml-1 block sm:inline">
-                                ({scientificName})
-                              </span>
-                            )}
-                          </h4>
-                          <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                            {ingredient.benefit}
-                          </p>
+              {/* RIGHT COLUMN: Ingredients */}
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl mb-6 text-primary">Key Ingredients</h3>
+                <div className="space-y-4">
+                  {product.ingredients.map((ingredient: any, index: number) => (
+                    <div key={index} className="pb-4 border-b border-border last:border-0">
+                      <div className="flex items-start gap-3">
+                        <Leaf className="text-primary mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="font-semibold mb-1">{ingredient.name}</h4>
+                          <p className="text-muted-foreground text-sm">{ingredient.benefit}</p>
                         </div>
                       </div>
-                    );
-                  })}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -726,75 +814,13 @@ export function ProductDetail() {
             <p className="text-xl text-muted-foreground">Real experiences from verified customers.</p>
           </motion.div>
 
-          <div className="relative">
-            <div className="flex gap-6 animate-scroll">
+          <div className="relative overflow-hidden">
+            <div className="flex gap-6 animate-scroll w-max">
               {[...Array(2)].map((_, setIndex) => (
-                <div key={setIndex} className="flex gap-6 w-max flex-nowrap">
-                  {[
-                    {
-                      name: 'Rajesh Kumar',
-                      location: 'Chennai',
-                      rating: 5,
-                      review: 'Absolutely amazing product! My hair has never felt healthier. The natural ingredients make all the difference.',
-                      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80'
-                    },
-                    {
-                      name: 'Sneha Kapoor',
-                      location: 'Pune',
-                      rating: 5,
-                      review: 'I\'ve been using this for 2 months and the results are incredible. Highly recommend to anyone looking for authentic Ayurvedic products.',
-                      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80'
-                    },
-                    {
-                      name: 'Arjun Nair',
-                      location: 'Kochi',
-                      rating: 5,
-                      review: 'Best investment for my skincare routine. Natural, effective, and truly delivers on its promises.',
-                      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80'
-                    },
-                    {
-                      name: 'Divya Iyer',
-                      location: 'Hyderabad',
-                      rating: 5,
-                      review: 'The quality is outstanding! You can feel the difference from the first use. Pure Ayurvedic goodness.',
-                      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80'
-                    },
-                    {
-                      name: 'Vikram Rao',
-                      location: 'Bangalore',
-                      rating: 5,
-                      review: 'Finally found a product that actually works! The traditional formulation is evident in the results.',
-                      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80'
-                    },
-                    {
-                      name: 'Kavita Singh',
-                      location: 'Jaipur',
-                      rating: 5,
-                      review: 'Love the natural approach! No harsh chemicals, just pure Ayurvedic ingredients that work wonders.',
-                      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80'
-                    },
-                    {
-                      name: 'Amit Patel',
-                      location: 'Ahmedabad',
-                      rating: 5,
-                      review: 'Exceptional quality and visible results. This is what authentic Ayurvedic products should be like.',
-                      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80'
-                    },
-                    {
-                      name: 'Neha Joshi',
-                      location: 'Kolkata',
-                      rating: 5,
-                      review: 'I\'m impressed with how quickly I saw results. The product is gentle yet effective. Will definitely repurchase!',
-                      image: 'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=100&q=80'
-                    },
-                  ].map((review, index) => (
+                <div key={setIndex} className="flex gap-6 flex-nowrap">
+                  {reviews.map((review, index) => (
                     <div key={`${setIndex}-${index}`} className="bg-white p-6 rounded-2xl shadow-lg w-[350px] h-[280px] flex-shrink-0 flex flex-col">
                       <div className="flex items-center gap-4 mb-4">
-                        <ImageWithFallback
-                          src={review.image}
-                          alt={review.name}
-                          className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                        />
                         <div className="min-w-0">
                           <h4 className="font-bold truncate">{review.name}</h4>
                           <p className="text-sm text-muted-foreground truncate">{review.location}</p>
@@ -948,13 +974,15 @@ export function ProductDetail() {
                     <Link to={`/product/${productId}`}>
                       <div className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:scale-105 group">
                         {relatedProduct.images && relatedProduct.images.length > 0 ? (
-                          <ImageWithFallback
-                            src={relatedProduct.images[0]}
-                            alt={relatedProduct.name}
-                            className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                          />
+                          <div className="w-full h-64 bg-white flex items-center justify-center overflow-hidden">
+                            <ImageWithFallback
+                              src={relatedProduct.images[0]}
+                              alt={relatedProduct.name}
+                              className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                            />
+                          </div>
                         ) : (
-                          <div className="w-full h-64 flex items-center justify-center bg-gradient-to-br from-primary/5 to-accent/5">
+                          <div className="w-full h-64 flex items-center justify-center bg-white">
                             <div className="text-center p-6">
                               <Leaf className="text-primary/30 mx-auto mb-2" size={48} />
                               <p className="text-muted-foreground text-sm">Product Image</p>
