@@ -24,7 +24,7 @@ export function Home() {
       price: '₹1225',
       mrp: '₹1749',
       discount: '30%',
-      image: '/images/zrika/Zrika_00.jpg'
+      image: '/images/zrika/Zrika_01.jpg'
     },
     {
       id: 'laya-face-care-oil',
@@ -35,7 +35,7 @@ export function Home() {
       price: '₹360',
       mrp: '₹450',
       discount: '20%',
-      image: '/images/laya/Laya_00.jpg'
+      image: '/images/laya/Laya_01.jpg'
     },
     {
       id: 'venika-hair-oil',

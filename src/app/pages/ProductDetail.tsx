@@ -65,8 +65,8 @@ const productData: Record<string, any> = {
     mrp: '₹500',
     description: 'Medhini, an exquisite blend crafted to embody nature’s cure for a clear scalp. With the nourishing depth of virgin coconut oil and the restorative strength of fenugreek, this elixir breathes life into every strand, bringing balance, vitality, and grace to your hair. Medhini purifies the scalp with gentle clarity, strengthens roots with natural resilience, and stimulates healthy growth for hair. Each drop is a harmony of tradition and refinement, transforming daily care into a ritual of indulgence. With Medhini, every strand is guided towards a journey of strength, clarity, and lustrous growth.',
     images: [
-      '/images/medhini/Medhini_01.jpg',
       '/images/medhini/Medhini_02.jpg',
+      '/images/medhini/Medhini_01.jpg',
       '/images/medhini/Medhini_03.jpg',
       '/images/medhini/Medhini_04.jpg',
       '/images/medhini/Medhini_02a.jpg',
@@ -98,9 +98,9 @@ const productData: Record<string, any> = {
     ],
     name: 'Vama Lip Balm',
     category: 'Lip Care',
-    price: '₹206.25',
+    price: '₹206',
     mrp: '₹275',
-    description: 'Vama Lip Balm is a naturally crafted lip care essential made with carefully selected ingredients to nourish and protect your lips. Its smooth, buttery texture glides effortlessly, keeping lips soft, moisturised, and comfortable throughout the day. Infused with a pleasant, gentle fragrance and available in three beautiful shades, VAMA adds a subtle touch of colour while caring for your lips. Free from harsh chemicals, sulphates, and other harmful additives, it is a safe and authentic choice for naturally healthy, beautiful lips.',
+    description: 'Vama Lip Balm is a naturally crafted lip care essential made with carefully selected ingredients to nourish and protect your lips. Its smooth, buttery texture glides effortlessly, keeping lips soft, moisturised, and comfortable throughout the day. Free from harsh chemicals, sulphates, and other harmful additives, it is a safe and authentic choice for naturally healthy, beautiful lips.',
     images: [
       '/images/vama/Vama_00.jpg',
       '/images/vama/Vama_01.jpg',
@@ -143,8 +143,8 @@ const productData: Record<string, any> = {
     mrp: '₹1749',
     description: 'Zrika is a magical elixir for your skin, enriched with the golden touch of pure Kashmiri saffron and the richness of 16 precious herbs. This exquisite blend, enriched with nutrient dense wood-pressed sesame oil and the velvety richness of goat milk, is meticulously crafted to drench your skin in deep nourishment and luminous vitality. With every touch, it imparts a delicate warmth and a natural radiance, as if kissed by sunlight. More than a skincare product, Zrika is a ritual of elegance—restoring, brightening, and unveiling the glow that lies within.',
     images: [
-      '/images/zrika/Zrika_00.jpg',
       '/images/zrika/Zrika_01.jpg',
+      '/images/zrika/Zrika_00.jpg',
       '/images/zrika/Zrika_02.jpg',
       '/images/zrika/Zrika_03.jpg',
       '/images/zrika/Zrika_04.jpg',
@@ -169,7 +169,7 @@ const productData: Record<string, any> = {
       { name: 'Goat Milk', benefit: 'Rich in vitamins, provides deep nourishment', image: '/images/ingredients/6.Goat_milk.jpeg' },
       { name: 'Sesame Oil (Wood-pressed)', benefit: 'Nutrient-dense base for deep absorption' }
     ],
-    directions: 'After cleansing, apply 2-3 drops to face and neck. Gently massage in upward circular motions until absorbed. Use daily, preferably at night, for best results. Can also be mixed with your moisturizer.',
+    directions: 'After cleansing, apply 2-3 drops to face and neck. Gently massage in upward circular motions until absorbed. Use daily, preferably at night, for best results.',
     volume: '10ml'
   },
   'laya-face-care-oil': {
@@ -189,8 +189,8 @@ const productData: Record<string, any> = {
     mrp: '₹450',
     description: 'Laya is a refined pre-bath face care oil, designed to reveal a luminous, eventoned complexion while diminishing tan and pigmentation. Licorice, a potent antioxidant that shields the skin from damage, boosts collagen production, and restores a healthy, youthful glow. Paired with Manjishta, an age old Ayurvedic herb known for its purifying, circulation-boosting, and anti-aging properties, this luxurious blend deeply hydrates and revitalises. With every use, Laya gently erases dullness and unevenness, unveiling skin that radiates clarity, brightness, and natural beauty.',
     images: [
-      '/images/laya/Laya_00.jpg',
       '/images/laya/Laya_01.jpg',
+      '/images/laya/Laya_00.jpg',
       '/images/laya/Laya_02.jpg',
       '/images/laya/Laya_03.jpg',
       '/images/laya/Laya_04.jpg',
