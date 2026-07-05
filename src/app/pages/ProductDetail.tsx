@@ -45,7 +45,7 @@ const productData: Record<string, any> = {
       { name: 'Sesame Oil', benefit: 'Deep conditioning and moisturizing base' },
       { name: 'Cow Milk', benefit: 'Rich in proteins for hair nourishment' }
     ],
-    directions: 'Warm the oil slightly. Massage gently into scalp and hair from roots to tips. Leave on for at least 2 hours or overnight for deep nourishment. Wash with a mild shampoo. Use 2-3 times a week for best results.',
+    directions: 'Take sufficient amount of Venika Hair Oil and apply it directly onto your scalp. Using your fingertips, gently massage the oil for at least 5 minutes to stimulate blood flow and improve absorption. Wash it off after 10 to 15 minutes with a mild, sulphate-free shampoo. (Avoid massaging if you are currently experiencing excessive hair fall; simply apply and rinse as instructed.)',
     volume: '100ml'
   },
   'medhini-anti-dandruff-oil': {
@@ -82,7 +82,7 @@ const productData: Record<string, any> = {
       { name: 'Fenugreek (Trigonella foenum-graecum)', benefit: 'Strengthens hair roots and promotes growth', image: '/images/ingredients/2.Fenugreek.jpg' },
       { name: 'Virgin Coconut Oil', benefit: 'Moisturizing base that nourishes scalp' }
     ],
-    directions: 'Apply oil to scalp and massage gently in circular motions. Leave on for 1-2 hours or overnight. Wash thoroughly with a mild shampoo. Use regularly for best results in controlling dandruff and promoting hair growth.',
+    directions: 'Take generous amount of Medhini Anti-Dandruff Hair Oil and apply it evenly to the scalp. Gently massage with your fingertips for at least 5 minutes to promote absorption and relaxation. Leave the oil on for 10 to 15 minutes before rinsing with a mild, natural shampoo. (If you are experiencing excessive hair fall, avoid massaging vigorously.)',
     volume: '100ml'
   },
   'vama-lip-balm': {
@@ -169,7 +169,7 @@ const productData: Record<string, any> = {
       { name: 'Goat Milk', benefit: 'Rich in vitamins, provides deep nourishment', image: '/images/ingredients/6.Goat_milk.jpeg' },
       { name: 'Sesame Oil (Wood-pressed)', benefit: 'Nutrient-dense base for deep absorption' }
     ],
-    directions: 'After cleansing, apply 2-3 drops to face and neck. Gently massage in upward circular motions until absorbed. Use daily, preferably at night, for best results.',
+    directions: 'Prepare your skin by ensuring it is freshly cleansed, allowing every drop of Zrika to deliver its full potency. Using the dropper, place 2–3 drops onto your face and neck. Massage in slow, upward strokes for about a minute to stimulate circulation and promote deep absorption. For best results, use at night. With consistent use for 10 days, your skin will appear smoother, more radiant, and beautifully rejuvenated.',
     volume: '10ml'
   },
   'laya-face-care-oil': {
@@ -211,7 +211,7 @@ const productData: Record<string, any> = {
       { name: 'Lodh Bark (Symplocos racemosa)', benefit: 'Traditional skin brightening herb' },
       { name: 'Sesame Oil', benefit: 'Nourishing base for deep penetration' }
     ],
-    directions: 'Apply oil evenly to face and neck before bathing. Gently massage for 2-3 minutes. Leave on for 30 - 60 minutes. Rinse with lukewarm water and cleanse as usual. Use regularly for visible reduction in tan and brighter skin.',
+    directions: 'Dispense 5–6 drops of Laya and gently massage over your face, neck, and areas of pigmentation using slow, upward strokes. Allow the oil to rest on your skin for about an hour before bathing, giving its potent natural actives time to penetrate deeply and work in harmony with your skin. This pre-bath ritual not only prepares your skin for cleansing but also infuses it with nourishing antioxidants and age-defying hydration. With regular use, it helps fade tan, soften dark spots, and even out skin tone, revealing a complexion that is visibly brighter, smoother, and more radiant. Each application becomes a moment of self-indulgence, embracing your skin in a veil of pure luxury.',
     volume: '15ml'
   },
 };
