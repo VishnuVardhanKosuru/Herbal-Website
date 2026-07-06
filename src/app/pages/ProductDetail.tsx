@@ -59,7 +59,7 @@ const productData: Record<string, any> = {
       { label: 'Storage', value: 'Cool dry place' },
       { label: 'Shelf life', value: '24 months' }
     ],
-    name: 'Medhini - Anti Dandruff & Hair Oil',
+    name: 'Medhini - Anti Dandruff and Hair growth oil',
     category: 'Haircare',
     price: '₹400',
     mrp: '₹500',
@@ -480,7 +480,7 @@ export function ProductDetail() {
       name: 'Aarthi R',
       location: 'Chennai',
       rating: 5,
-      review: 'Best investment for my skincare routine. Natural, effective, and truly delivers on its promises.'
+      review: 'Best investment for my haircare routine. Natural, effective, and truly delivers on its promises.'
     },
     {
       name: 'Megha Gupta',

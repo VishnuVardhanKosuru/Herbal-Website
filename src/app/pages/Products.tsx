@@ -45,7 +45,7 @@ export function Products() {
     },
     {
       id: 'medhini-anti-dandruff-oil',
-      name: 'Medhini - Anti Dandruff & Hair Oil',
+      name: 'Medhini - Anti Dandruff and Hair growth oil',
       category: 'Haircare',
       description: "Anti Dandruff & hair growth oil. Nature's cure for clear scalp",
       qty: '100ml',
