@@ -21,20 +21,45 @@ export function Contact() {
 
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
-  const handleInquirySubmit = (e: React.FormEvent) => {
+  const handleInquirySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission configured to send to business email
-    // In production, this would integrate with an email service
-    setShowSuccessPopup(true);
-    // Reset form
-    setInquiryForm({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+    setSubmitError('');
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "9e4e1ec0-376a-4e7b-80c3-cc67ceb5f7d2",
+          ...inquiryForm
+        }),
+      });
+      
+      const result = await response.json();
+      if (result.success) {
+        setShowSuccessPopup(true);
+        setInquiryForm({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitError(result.message || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      setSubmitError('Failed to send message. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleCallbackSubmit = (e: React.FormEvent) => {
@@ -76,7 +101,7 @@ export function Contact() {
     },
     {
       question: 'How can I contact your team?',
-      answer: 'You can reach us through multiple channels: WhatsApp (+91 6238416126), phone (+91 6238416126), or email (sujayaherbals2025@gmail.com). We\'re available Monday-Saturday, 9 AM - 7 PM. For instant responses, WhatsApp is the fastest option.'
+      answer: 'You can reach us through multiple channels: WhatsApp (+91 6238416126), phone (+91 6238416126), or email (biz@orgixa.com). We\'re available Monday-Saturday, 9 AM - 7 PM. For instant responses, WhatsApp is the fastest option.'
     },
     {
       question: 'Do you offer nationwide delivery?',
@@ -148,8 +173,8 @@ export function Contact() {
               </div>
               <h3 className="text-xl mb-2">Email</h3>
               <p className="text-muted-foreground mb-4">We'll respond within 24 hours</p>
-              <a href="mailto:sujayaherbals2025@gmail.com" className="text-primary hover:underline">
-                sujayaherbals2025@gmail.com
+              <a href="mailto:biz@orgixa.com" className="text-primary hover:underline">
+                biz@orgixa.com
               </a>
             </motion.div>
 
@@ -243,11 +268,17 @@ export function Contact() {
                     className="mt-2 w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
+                {submitError && (
+                  <div className="text-red-500 text-sm text-center">
+                    {submitError}
+                  </div>
+                )}
                 <button
                   type="submit"
-                  className="w-full bg-primary text-primary-foreground px-8 py-4 rounded-full hover:bg-primary-dark transition-all hover:scale-105"
+                  disabled={isSubmitting}
+                  className="w-full bg-primary text-primary-foreground px-8 py-4 rounded-full hover:bg-primary-dark transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
-                  Submit
+                  {isSubmitting ? 'Sending...' : 'Submit'}
                 </button>
               </form>
             </motion.div>
@@ -446,7 +477,7 @@ export function Contact() {
                   <div>
                     <h3 className="text-xl mb-2">Email</h3>
                     <p className="text-muted-foreground">
-                      sujayaherbals2025@gmail.com
+                      biz@orgixa.com
                     </p>
                   </div>
                 </div>
