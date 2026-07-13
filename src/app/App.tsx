@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router';
 import { Layout } from './components/Layout';
+import { Home } from './pages/Home';
 import { Suspense, lazy } from 'react';
 
-const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
 const About = lazy(() => import('./pages/About').then(module => ({ default: module.About })));
 const Products = lazy(() => import('./pages/Products').then(module => ({ default: module.Products })));
 const ProductDetail = lazy(() => import('./pages/ProductDetail').then(module => ({ default: module.ProductDetail })));
