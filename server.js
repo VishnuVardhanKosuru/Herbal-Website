@@ -33,6 +33,9 @@ app.use(
 );
 
 app.get('*', (req, res) => {
+  if (req.path.match(/\.(jpe?g|png|webp|svg|gif|ico|css|js)$/i)) {
+    return res.status(404).send('Not found');
+  }
   res.setHeader('Cache-Control', 'no-cache');
   res.sendFile(path.join(DIST, 'index.html'));
 });
