@@ -7,13 +7,34 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const DIST = path.join(__dirname, 'dist');
 
-// Serve the static files from the React app (Vite outputs to 'dist')
-app.use(express.static(path.join(__dirname, 'dist')));
+const ONE_YEAR = 31536000;
 
-// Handle React routing, return all requests to React app
+app.use(
+  express.static(DIST, {
+    etag: true,
+    lastModified: true,
+    setHeaders: (res, filePath) => {
+      // index.html must always be revalidated so new deploys are picked up.
+      if (filePath.endsWith('index.html')) {
+        res.setHeader('Cache-Control', 'no-cache');
+        return;
+      }
+      // Vite emits content-hashed filenames into /assets, so they can be cached forever.
+      if (filePath.includes(`${path.sep}assets${path.sep}`)) {
+        res.setHeader('Cache-Control', `public, max-age=${ONE_YEAR}, immutable`);
+        return;
+      }
+      // Everything else in public/ (images, fonts, icons) keeps a long but revalidated TTL.
+      res.setHeader('Cache-Control', `public, max-age=${ONE_YEAR}`);
+    },
+  })
+);
+
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  res.setHeader('Cache-Control', 'no-cache');
+  res.sendFile(path.join(DIST, 'index.html'));
 });
 
 app.listen(PORT, () => {

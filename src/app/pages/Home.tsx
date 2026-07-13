@@ -3,9 +3,11 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import { MessageCircle, Leaf, Award, Shield, Star, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import heroImage from '../../imports/New_Product_Image.JPG';
-import ayurvedicImage from '../../imports/ayurveda-formulas-001.jpg';
-import zrikaImage from '../../imports/WhatsApp_Image_2026-05-23_at_01.32.33.JPG';
+
+// Served from public/ so the browser can preload them from the HTML without
+// waiting for the JS bundle to parse (LCP request discovery).
+const heroImage = '/images/hero-products.jpg';
+const ayurvedicImage = '/images/ayurveda-formulas.jpg';
 
 export function Home() {
   const [currentReviewPage, setCurrentReviewPage] = useState(0);

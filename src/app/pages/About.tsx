@@ -1,7 +1,8 @@
 import { motion } from 'motion/react';
 import { Leaf, Award, Shield, Heart, Users, Sprout } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import ayurvedicImage from '../../imports/ayurveda-formulas-001.jpg';
+// Served from public/ so a WebP sibling can be picked up by <picture>.
+const ayurvedicImage = '/images/ayurveda-formulas.jpg';
 
 export function About() {
   const fadeInUp = {

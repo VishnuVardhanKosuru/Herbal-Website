@@ -31,6 +31,23 @@ export default defineConfig({
     },
   },
 
+  build: {
+    cssMinify: 'lightningcss',
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes('node_modules')) return
+          if (id.includes('react-router')) return 'router'
+          if (id.includes('/motion') || id.includes('framer-motion')) return 'motion'
+          if (id.includes('lucide-react')) return 'icons'
+          if (id.includes('/react/') || id.includes('/react-dom/') || id.includes('/scheduler/')) {
+            return 'react'
+          }
+        },
+      },
+    },
+  },
+
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
   assetsInclude: ['**/*.svg', '**/*.csv'],
 })

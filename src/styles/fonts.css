@@ -1,9 +1,28 @@
-/* Google Fonts - Elegant Serif for Headings + Modern Sans for Body */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+/* Google Fonts are loaded from index.html (preconnect + non-blocking stylesheet).
+   The fallback faces below are metric-matched to the webfonts so the swap from
+   fallback to webfont does not reflow text (CLS). */
+
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial'), local('Helvetica'), local('Liberation Sans');
+  size-adjust: 107%;
+  ascent-override: 90%;
+  descent-override: 22.4%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Cormorant Fallback';
+  src: local('Times New Roman'), local('Liberation Serif');
+  size-adjust: 84%;
+  ascent-override: 111%;
+  descent-override: 33%;
+  line-gap-override: 0%;
+}
 
 :root {
-  --font-serif: 'Cormorant Garamond', serif;
-  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Cormorant Garamond', 'Cormorant Fallback', serif;
+  --font-sans: 'Inter', 'Inter Fallback', sans-serif;
 }
 
 body {
