@@ -144,6 +144,9 @@ export function Home() {
                   src={heroImage}
                   alt="Ayurvedic herbs and products"
                   className="w-full h-[500px] object-cover"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="sync"
                 />
               </div>
             </motion.div>
@@ -247,6 +250,8 @@ export function Home() {
                           src={product.image}
                           alt={product.name}
                           className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                          decoding="async"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center bg-white">
@@ -342,6 +347,8 @@ export function Home() {
                 src={ayurvedicImage}
                 alt="Traditional Ayurvedic herbs and spices"
                 className="w-full h-[400px] object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </motion.div>
           </div>
@@ -432,6 +439,8 @@ export function Home() {
                           src={ingredient.image}
                           alt={ingredient.name}
                           className="w-full h-48 object-cover"
+                          loading="lazy"
+                          decoding="async"
                         />
                       ) : (
                         <div className="w-full h-48 bg-primary/10 flex items-center justify-center">

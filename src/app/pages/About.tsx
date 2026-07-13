@@ -69,6 +69,9 @@ export function About() {
                 src="/images/ayurvedic-stack.png"
                 alt="Ayurvedic tradition"
                 className="w-full h-[500px] object-cover"
+                loading="eager"
+                fetchPriority="high"
+                decoding="sync"
               />
             </motion.div>
             <motion.div
@@ -126,6 +129,8 @@ export function About() {
                 src={ayurvedicImage}
                 alt="Natural ingredients"
                 className="w-full h-[400px] object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </motion.div>
           </div>
