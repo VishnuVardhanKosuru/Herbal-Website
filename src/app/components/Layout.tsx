@@ -348,7 +348,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h4 className="mb-4">Contact</h4>
               <p className="text-primary-foreground/80">
-                Email: sujayaherbals2025@gmail.com<br />
+                Email: biz@sujayaherbals.com<br />
                 Phone: +91 6238416126<br />
                 WhatsApp: +91 6238416126
               </p>

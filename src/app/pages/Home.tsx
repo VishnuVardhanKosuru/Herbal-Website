@@ -104,8 +104,8 @@ export function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-cream overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -136,18 +136,18 @@ export function Home() {
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0.01, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
               <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <ImageWithFallback
+                <img
                   src={heroImage}
                   alt="Ayurvedic herbs and products"
                   className="w-full h-[500px] object-cover"
                   loading="eager"
-                  fetchPriority="high"
+                  fetchpriority="high"
                   decoding="sync"
                 />
               </div>

@@ -10,6 +10,12 @@ function webpSource(src?: string) {
   return src.replace(/\.(jpe?g|png)$/i, '.webp')
 }
 
+function mobileWebpSource(src?: string) {
+  if (import.meta.env.DEV) return undefined
+  if (typeof src !== 'string' || !src.startsWith('/images/')) return undefined
+  return src.replace(/\.(jpe?g|png)$/i, '-mobile.webp')
+}
+
 export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElement>) {
   const [didError, setDidError] = useState(false)
 
@@ -33,6 +39,8 @@ export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElemen
   }
 
   const webp = webpSource(src)
+  const mobileWebp = mobileWebpSource(src)
+
   const img = (
     <img
       src={src}
@@ -46,10 +54,11 @@ export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElemen
 
   if (!webp) return img
 
-  // display:contents keeps <picture> out of the layout so the img keeps sizing
-  // against its original parent (flex/grid/absolute containers).
+  // display:contents is known to cause severe layout bugs with replaced elements in WebKit/Safari
+  // causing images to be displaced or cropped. Using w-full h-full block is much safer.
   return (
-    <picture style={{ display: 'contents' }}>
+    <picture className="w-full h-full block">
+      {mobileWebp && <source media="(max-width: 768px)" srcSet={mobileWebp} type="image/webp" />}
       <source srcSet={webp} type="image/webp" />
       {img}
     </picture>

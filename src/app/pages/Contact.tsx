@@ -101,7 +101,7 @@ export function Contact() {
     },
     {
       question: 'How can I contact your team?',
-      answer: 'You can reach us through multiple channels: WhatsApp (+91 6238416126), phone (+91 6238416126), or email (biz@orgixa.com). We\'re available Monday-Saturday, 9 AM - 7 PM. For instant responses, WhatsApp is the fastest option.'
+      answer: 'You can reach us through multiple channels: WhatsApp (+91 6238416126), phone (+91 6238416126), or email (biz@sujayaherbals.com). We\'re available Monday-Saturday, 9 AM - 7 PM. For instant responses, WhatsApp is the fastest option.'
     },
     {
       question: 'Do you offer nationwide delivery?',
@@ -173,8 +173,8 @@ export function Contact() {
               </div>
               <h3 className="text-xl mb-2">Email</h3>
               <p className="text-muted-foreground mb-4">We'll respond within 24 hours</p>
-              <a href="mailto:biz@orgixa.com" className="text-primary hover:underline">
-                biz@orgixa.com
+              <a href="mailto:biz@sujayaherbals.com" className="text-primary hover:underline">
+                biz@sujayaherbals.com
               </a>
             </motion.div>
 
@@ -477,7 +477,7 @@ export function Contact() {
                   <div>
                     <h3 className="text-xl mb-2">Email</h3>
                     <p className="text-muted-foreground">
-                      biz@orgixa.com
+                      biz@sujayaherbals.com
                     </p>
                   </div>
                 </div>

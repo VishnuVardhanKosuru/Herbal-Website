@@ -296,7 +296,7 @@ export function ProductDetail() {
   };
 
   const handleEmail = () => {
-    window.location.href = 'mailto:info@sujayaherbals.com';
+    window.location.href = 'mailto:biz@sujayaherbals.com';
   };
 
   const nextImage = () => {
@@ -1073,7 +1073,7 @@ export function ProductDetail() {
                   </div>
                   <div className="text-left">
                     <p className="font-semibold text-foreground">Email</p>
-                    <p className="text-sm text-muted-foreground">info@sujayaherbals.com</p>
+                    <p className="text-sm text-muted-foreground">biz@sujayaherbals.com</p>
                   </div>
                 </button>
               </div>

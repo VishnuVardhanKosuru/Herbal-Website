@@ -72,7 +72,7 @@ export function RefundPolicy() {
                   To initiate a return, please follow these steps:
                 </p>
                 <ol className="list-decimal pl-6 space-y-3 text-muted-foreground">
-                  <li>Contact our customer support team via email at <strong>sujayaherbals2025@gmail.com</strong> or WhatsApp at <strong>+91 6238416126</strong></li>
+                  <li>Contact our customer support team via email at <strong>biz@sujayaherbals.com</strong> or WhatsApp at <strong>+91 6238416126</strong></li>
                   <li>Provide your order number and reason for return</li>
                   <li>Our team will review your request and provide a return authorization within 24-48 hours</li>
                   <li>Pack the product securely in its original packaging</li>
